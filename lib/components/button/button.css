@@ -1,0 +1,26 @@
+.button {
+  font-family: 'Artegra', 'Nunito Sans', Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+}
+.button--base {
+  padding: 10px 60px;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.label--base {
+  width: 250px;
+  height: 20px;
+}
+.button--primary {
+  color: #fff;
+  background-color: #000;
+}
