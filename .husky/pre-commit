@@ -50,13 +50,3 @@ npm run build ||
 
 echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'
 
-npm run publish ||
-(
-    echo '❌👷🔨❌ Better call Bob... Because your build failed ❌👷🔨❌
-            Next build failed: View the errors above to see why.
-    '
-    false;
-)
-
-echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'
-
