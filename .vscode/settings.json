@@ -1,0 +1,28 @@
+{
+  "extensions.ignoreRecommendations": false,
+  "eslint.validate": ["javascript", "typescript"],
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.tabSize": 2
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": [
+    "source.formatDocument",
+    "source.fixAll.eslint"
+  ],
+  "exportall.config.relExclusion": [
+    "/src/index.ts"
+  ]
+}
