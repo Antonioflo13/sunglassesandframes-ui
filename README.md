@@ -25,7 +25,7 @@ import { Button } from 'sunglassesandframes-ui';
 
 ## 🔗 Links
 
-[![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://sunglasses-and-frames-storybook.vercel.app/?path=/docs/configure-your-project--docs)
+[![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://sunglassesandframes-ui.vercel.app)
 
 ## Authors 👨🏻‍💻
 
