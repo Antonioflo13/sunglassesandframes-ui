@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build --mode library",
     "bump-version-patch": "npm version patch && echo '✅ Versione patch incrementata!'",
     "publish": "npm publish --access public",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",

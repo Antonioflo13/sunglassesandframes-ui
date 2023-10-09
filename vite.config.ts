@@ -6,18 +6,8 @@ import checker from 'vite-plugin-checker';
 import dts from 'vite-plugin-dts';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
-export default defineConfig({
-  plugins: [
-    react(),
-    dts({ include: 'lib' }),
-    libInjectCss(),
-    checker({
-      typescript: true,
-      eslint: {
-        lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
-      },
-    }),
-  ],
+const libraryMode = {
+  plugins: [react(), dts({ include: 'lib' }), libInjectCss()],
   build: {
     // do not copy the contents of the public folder to the dist folder
     copyPublicDir: false,
@@ -41,4 +31,23 @@ export default defineConfig({
       },
     },
   },
+};
+
+export default defineConfig(({ mode }) => {
+  switch (mode) {
+    case 'library':
+      return libraryMode;
+    default:
+      return {
+        plugins: [
+          react(),
+          checker({
+            typescript: true,
+            eslint: {
+              lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
+            },
+          }),
+        ],
+      };
+  }
 });
