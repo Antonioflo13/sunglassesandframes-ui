@@ -1,7 +1,7 @@
 {
   "name": "sunglassesandframes-ui",
   "private": false,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "type": "module",
   "main": "./dist/sunglassesandframes-ui.umd.cjs",
   "module": "./dist/sunglassesandframes-ui.js",
@@ -17,8 +17,8 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && npm version patch",
-    "postbuild": "npm run publish",
+    "build": "tsc && vite build",
+    "bump-version-patch": "npm version patch && echo '✅ Versione patch incrementata!'",
     "publish": "npm publish --access public",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
