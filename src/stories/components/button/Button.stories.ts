@@ -1,8 +1,9 @@
+import { Button } from '@components/button/Button';
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
 import { fireEvent, userEvent, within } from '@storybook/testing-library';
 
-import { Button } from '../../../../lib/components/button/Button';
+// import { Button } from '../../../../lib/components/button/Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {

@@ -1,4 +1,6 @@
 import { resolve } from 'path';
+// eslint-disable-next-line no-duplicate-imports
+import path from 'path';
 
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
@@ -48,6 +50,14 @@ export default defineConfig(({ mode }) => {
             },
           }),
         ],
+        resolve: {
+          alias: [
+            {
+              find: '@components',
+              replacement: path.resolve(__dirname, 'lib/components'),
+            },
+          ],
+        },
       };
   }
 });
