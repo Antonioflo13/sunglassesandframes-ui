@@ -56,6 +56,10 @@ export default defineConfig(({ mode }) => {
               find: '@components',
               replacement: path.resolve(__dirname, 'lib/components'),
             },
+            {
+              find: '@stories',
+              replacement: path.resolve(__dirname, 'src/stories'),
+            },
           ],
         },
       };
