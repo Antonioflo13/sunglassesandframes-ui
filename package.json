@@ -1,7 +1,7 @@
 {
-  "name": "sunglassesandframes-ui",
+  "name": "sunglassesandframes-uii",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.3",
   "type": "module",
   "main": "./dist/sunglassesandframes-ui.umd.cjs",
   "module": "./dist/sunglassesandframes-ui.js",
