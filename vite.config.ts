@@ -3,6 +3,7 @@ import { resolve } from 'path';
 import path from 'path';
 
 import react from '@vitejs/plugin-react';
+import { terser } from 'rollup-plugin-terser';
 import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
 import dts from 'vite-plugin-dts';
@@ -32,6 +33,7 @@ const libraryMode = {
           'react-dom': 'ReactDOM',
         },
       },
+      plugins: [terser()],
     },
   },
 };
