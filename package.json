@@ -1,11 +1,12 @@
 {
   "name": "sunglassesandframes-uii",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.0.7",
   "type": "module",
   "main": "./dist/sunglassesandframes-ui.umd.cjs",
   "module": "./dist/sunglassesandframes-ui.js",
   "types": "./dist/sunglassesandframes-ui.d.ts",
+  "license": "MIT",
   "exports": {
     ".": {
       "import": "./dist/sunglassesandframes-ui.js",
@@ -39,7 +40,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "rollup-plugin-terser": "^7.0.2"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^7.4.6",

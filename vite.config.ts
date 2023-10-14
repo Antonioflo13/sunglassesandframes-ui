@@ -3,6 +3,7 @@ import { resolve } from 'path';
 import path from 'path';
 
 import react from '@vitejs/plugin-react';
+import { terser } from 'rollup-plugin-terser';
 import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
 import dts from 'vite-plugin-dts';
@@ -11,6 +12,7 @@ import { libInjectCss } from 'vite-plugin-lib-inject-css';
 const libraryMode = {
   plugins: [react(), dts({ include: 'lib' }), libInjectCss()],
   build: {
+    minify: true,
     // do not copy the contents of the public folder to the dist folder
     copyPublicDir: false,
     lib: {
@@ -31,6 +33,7 @@ const libraryMode = {
           'react-dom': 'ReactDOM',
         },
       },
+      plugins: [terser()],
     },
   },
 };
