@@ -11,6 +11,7 @@ import { libInjectCss } from 'vite-plugin-lib-inject-css';
 const libraryMode = {
   plugins: [react(), dts({ include: 'lib' }), libInjectCss()],
   build: {
+    minify: true,
     // do not copy the contents of the public folder to the dist folder
     copyPublicDir: false,
     lib: {
