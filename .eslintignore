@@ -3,3 +3,4 @@ package-lock.json
 public
 dist
 storybook-static
+coverage

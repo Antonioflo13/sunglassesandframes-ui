@@ -1,0 +1,58 @@
+/* font-families */
+@font-face {
+    font-family: Artegra;
+    src: url('../../assets/font/ArtegraSansExtended-Regular.otf');
+    font-display: swap;
+}
+.artegra {
+    font-family: 'Artegra', serif;
+}
+
+.helvetica-medium {
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.helvetica-light {
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.helvetica-regular {
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* font-sizes */
+
+.label-sm {
+    font-size: 12px;
+}
+
+.label-md {
+    font-size: 14px;
+}
+
+.label-lg {
+    font-size: 16px;
+}
+
+.label-xl {
+    font-size: 20px;
+}
+
+/* types */
+.label-in-stock {
+    color: #E10000;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.label-selected {
+    color: #000;
+    line-height: normal;
+    text-decoration-line: underline;
+}
