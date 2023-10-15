@@ -1,5 +1,5 @@
 import './Label.css';
-import { FontFamilies, TextSizes } from './labelTypes';
+import { FontFamilies, LabelTypes, TextSizes } from './labelTypes';
 
 /**
  * Props for a label component.
@@ -14,7 +14,7 @@ export interface LabelProps {
   /**
    * Additional CSS class for styling the label component.
    */
-  labelType?: 'in-stock' | 'selected';
+  labelType?: LabelTypes;
 
   /**
    * The font family to use for the label text.
@@ -37,7 +37,7 @@ export const Label = ({
   label,
   labelType,
   fontFamily,
-  textSize = TextSizes.Sm,
+  textSize = 'sm',
   ...props
 }: LabelProps): JSX.Element => {
   return (
