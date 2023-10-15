@@ -1,5 +1,4 @@
 import { Button } from '@components/button/Button';
-import { Types } from '@components/button/buttonTypes';
 import metaLabel, { Selected } from '@stories/components/Label/Label.stories';
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
@@ -35,7 +34,7 @@ export const Default: Story = {
 export const Outlined: Story = {
   args: {
     ...Selected.args,
-    type: Types.Outlined,
+    type: 'outlined',
   },
 };
 

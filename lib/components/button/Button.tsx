@@ -8,7 +8,7 @@ interface ButtonProps {
   type?: Types;
 
   // Determines the size of the button
-  size?: Sizes.Base;
+  size?: Sizes;
 
   // The text label that appears on the button
   label: string;
@@ -21,19 +21,15 @@ interface ButtonProps {
  * @returns {JSX.Element} - The JSX element representing the label.
  */
 export const Button = ({
-  type = Types.Primary,
-  size = Sizes.Base,
+  type = 'primary',
+  size = 'base',
   labelType,
   label,
   fontFamily,
   ...props
 }: ButtonProps & LabelProps): JSX.Element => {
   return (
-    <button
-      type="button"
-      className={`button-${size} button-${type}`}
-      {...props}
-    >
+    <button type="button" className={`button-${size} button-${type}`} {...props}>
       <Label label={label} labelType={labelType} fontFamily={fontFamily} />
     </button>
   );
