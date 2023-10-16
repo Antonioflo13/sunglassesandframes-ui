@@ -1,4 +1,4 @@
-import { Button } from '@components/button/Button';
+import { Button } from '@components/Button/Button';
 import metaLabel, { Selected } from '@stories/components/Label/Label.stories';
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
