@@ -4,8 +4,18 @@
     src: url('../../assets/font/ArtegraSansExtended-Regular.otf');
     font-display: swap;
 }
+@font-face {
+    font-family: Artegra-Bold;
+    src: url('../../assets/font/ArtegraSansExtended-Bold.otf');
+    font-display: swap;
+}
+
 .artegra {
     font-family: 'Artegra', serif;
+}
+
+.artegra-bold {
+    font-family: 'Artegra-Bold', serif;
 }
 
 .helvetica-medium {
