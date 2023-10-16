@@ -1,6 +1,4 @@
-import { FontFamilies } from '@components/Label/labelTypes';
 import { Button } from '@components/button/Button';
-import { Types } from '@components/button/buttonTypes';
 import metaLabel, { Selected } from '@stories/components/Label/Label.stories';
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
@@ -29,15 +27,15 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     label: 'Button',
-    fontFamily: FontFamilies.Artegra
+    fontFamily: 'artegra',
   },
 };
 
 export const Outlined: Story = {
   args: {
     ...Selected.args,
-    type: Types.Outlined,
-  }
+    type: 'outlined',
+  },
 };
 
 Default.play = async({ canvasElement, args }): Promise<void> => {

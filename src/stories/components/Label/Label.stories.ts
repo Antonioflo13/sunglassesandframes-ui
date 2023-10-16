@@ -1,5 +1,4 @@
 import { Label } from '@components/Label/Label';
-import { FontFamilies, LabelTypes, TextSizes } from '@components/Label/labelTypes';
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
@@ -26,24 +25,24 @@ type Story = StoryObj<typeof metaLabel>;
 export const Default: Story = {
   args: {
     label: 'Label',
-    fontFamily: FontFamilies.Artegra,
+    fontFamily: 'artegra',
   },
 };
 
 export const InStock: Story = {
   args: {
     label: '120',
-    fontFamily: FontFamilies.HelveticaRegular,
-    labelType: LabelTypes.inStock,
-    textSize: TextSizes.Lg,
+    fontFamily: 'helvetica-regular',
+    labelType: 'in-stock',
+    textSize: 'lg',
   },
 };
 
 export const Selected: Story = {
   args: {
     label: 'LABEL SELECTED',
-    fontFamily: FontFamilies.HelveticaLight,
-    labelType: LabelTypes.Selected,
+    fontFamily: 'helvetica-light',
+    labelType: 'selected',
   },
 };
 

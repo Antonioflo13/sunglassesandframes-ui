@@ -1,18 +1,5 @@
-export enum LabelTypes {
-    inStock = 'in-stock',
-    Selected = 'selected'
-}
+export type LabelTypes = 'in-stock' | 'selected';
 
-export enum FontFamilies {
-    Artegra = 'artegra',
-    HelveticaRegular = 'helvetica-regular',
-    HelveticaLight = 'helvetica-light',
-    HelveticaMedium = 'helvetica-medium',
-}
+export type FontFamilies = 'artegra' | 'helvetica-light' | 'helvetica-regular' | 'helvetica-medium';
 
-export enum TextSizes {
-    Sm = 'sm',
-    Md = 'md',
-    Lg = 'lg',
-    Xl = 'xl',
-}
+export type TextSizes = 'sm' | 'md' | 'lg' | 'xl';

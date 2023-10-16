@@ -1,8 +1,2 @@
-export enum Types {
-    Primary = 'primary',
-    Outlined = 'outlined'
-}
-
-export enum Sizes {
-    Base = 'base'
-}
+export type Types = 'primary' | 'outlined';
+export type Sizes = 'base';
