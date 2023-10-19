@@ -5,10 +5,10 @@ export type ImageWrapperProps = {
 }
 
 export enum TypeImage {
-    swiper1 = 'swiper1',
-    swiper2 = 'swiper2',
-    image1 = 'image1',
-    image2 = 'image2',
+    swiperPrimary = 'swiperPrimary',
+    swiperSecondary = 'swiperSecondary',
+    imagePrimary = 'imagePrimary',
+    imageSecondary = 'imageSecondary',
     plp = 'plp',
     pdp = 'pdp',
 

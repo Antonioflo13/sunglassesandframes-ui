@@ -18,16 +18,37 @@ const meta: Meta<typeof ImageWrapper> = {
 export default meta;
 type Story = StoryObj<typeof ImageWrapper>;
 
-export const Image1: Story = {
+export const SwiperPrimary: Story = {
   args: {
     children: '<img src="https://via.placeholder.com/370" alt="alt" />',
-    typeImage: TypeImage.image1
+    typeImage: TypeImage.swiperPrimary
   },
 };
 
-export const Image2: Story = {
+export const SwiperSecondary: Story = {
   args: {
     children: '<img src="https://via.placeholder.com/370" alt="alt" />',
-    typeImage: TypeImage.image2
+    typeImage: TypeImage.swiperSecondary
+  },
+};
+
+export const ImagePrimary: Story = {
+  args: {
+    children: '<img src="https://via.placeholder.com/370" alt="alt" />',
+    typeImage: TypeImage.imagePrimary
+  },
+};
+
+export const Plp: Story = {
+  args: {
+    children: '<img src="https://via.placeholder.com/370" alt="alt" />',
+    typeImage: TypeImage.plp
+  },
+};
+
+export const Pdp: Story = {
+  args: {
+    children: '<img src="https://via.placeholder.com/370" alt="alt" />',
+    typeImage: TypeImage.pdp
   },
 };
