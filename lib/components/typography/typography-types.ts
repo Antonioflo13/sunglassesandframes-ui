@@ -1,4 +1,4 @@
-export type LabelTypes = 'in-stock' | 'selected';
+export type TypographyTypes = 'in-stock' | 'selected';
 
 export type FontFamilies = 'artegra' | 'helvetica-light' | 'helvetica-regular' | 'helvetica-medium';
 

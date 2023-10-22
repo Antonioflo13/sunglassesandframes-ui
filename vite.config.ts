@@ -9,6 +9,21 @@ import checker from 'vite-plugin-checker';
 import dts from 'vite-plugin-dts';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
+const alises = [
+  {
+    find: '@blocks',
+    replacement: path.resolve(__dirname, 'lib/blocks'),
+  },
+  {
+    find: '@components',
+    replacement: path.resolve(__dirname, 'lib/components'),
+  },
+  {
+    find: '@stories',
+    replacement: path.resolve(__dirname, 'src/stories'),
+  },
+];
+
 const libraryMode = {
   plugins: [react(), dts({ include: 'lib' }), libInjectCss()],
   build: {
@@ -54,16 +69,7 @@ export default defineConfig(({ mode }) => {
           }),
         ],
         resolve: {
-          alias: [
-            {
-              find: '@components',
-              replacement: path.resolve(__dirname, 'lib/components'),
-            },
-            {
-              find: '@stories',
-              replacement: path.resolve(__dirname, 'src/stories'),
-            },
-          ],
+          alias: alises,
         },
       };
   }

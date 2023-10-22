@@ -1,11 +1,11 @@
-import { Label } from '@components/Label/Label';
+import { Typography } from '@components/typography/typography';
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
 
-const metaLabel = {
-  title: 'sunglassesandframes/Components/Label',
-  component: Label,
+const metaTypography = {
+  title: 'sunglassesandframes/Components/Typography',
+  component: Typography,
   parameters: {
     layout: 'centered',
   },
@@ -16,10 +16,10 @@ const metaLabel = {
       control: 'select',
     },
   },
-} satisfies Meta<typeof Label>;
+} satisfies Meta<typeof Typography>;
 
-export default metaLabel;
-type Story = StoryObj<typeof metaLabel>;
+export default metaTypography;
+type Story = StoryObj<typeof metaTypography>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Default: Story = {

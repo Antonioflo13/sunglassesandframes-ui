@@ -1,5 +1,5 @@
 import { Button } from '@components/button/Button';
-import metaLabel, { Selected } from '@stories/components/Label/Label.stories';
+import metaTypography, { Selected } from '@stories/components/typography/Typography.stories';
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
 import { fireEvent, userEvent, within } from '@storybook/testing-library';
@@ -16,7 +16,7 @@ const meta = {
   tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    ...metaLabel.argTypes,
+    ...metaTypography.argTypes,
   },
 } satisfies Meta<typeof Button>;
 

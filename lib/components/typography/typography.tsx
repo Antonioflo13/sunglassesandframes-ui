@@ -1,11 +1,11 @@
-import './Label.css';
-import { FontFamilies, LabelTypes, TextSizes } from './labelTypes';
+import './label.css';
+import { FontFamilies, TextSizes, TypographyTypes } from './typography-types';
 
 /**
  * Props for a label component.
  * @interface
  */
-export interface LabelProps {
+export interface TypographyProps {
   /**
    * The label text to display.
    */
@@ -14,7 +14,7 @@ export interface LabelProps {
   /**
    * Additional CSS class for styling the label component.
    */
-  labelType?: LabelTypes;
+  labelType?: TypographyTypes;
 
   /**
    * The font family to use for the label text.
@@ -30,16 +30,16 @@ export interface LabelProps {
 /**
  * Label component for displaying text.
  *
- * @param {LabelProps} props - The props for the Label component.
+ * @param {TypographyProps} props - The props for the Label component.
  * @returns {JSX.Element} - The JSX element representing the label.
  */
-export const Label = ({
+export const Typography = ({
   label,
   labelType,
   fontFamily,
   textSize = 'sm',
   ...props
-}: LabelProps): JSX.Element => {
+}: TypographyProps): JSX.Element => {
   return (
     <label className={`${fontFamily} label-${textSize} label-${labelType}`} {...props}>
       {label}
