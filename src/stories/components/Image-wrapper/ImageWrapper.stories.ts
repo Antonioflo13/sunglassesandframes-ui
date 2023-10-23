@@ -1,7 +1,7 @@
-import { ImageWrapper, TypeImage } from '@components/ImageWrapper';
+import { ImageWrapper } from '@components/image-wrapper';
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ImgComponent } from './ImgComponent';
+import { Img } from './Img';
 
 const meta: Meta<typeof ImageWrapper> = {
   title: 'sunglassesandframes/Components/ImageWrapper',
@@ -22,35 +22,42 @@ type Story = StoryObj<typeof ImageWrapper>;
 
 export const SwiperPrimary: Story = {
   args: {
-    children: ImgComponent,
-    typeImage: TypeImage.swiperPrimary,
+    children: Img('370x370'),
+    typeImage: 'swiper-primary',
   },
 };
 
 export const SwiperSecondary: Story = {
   args: {
-    children: ImgComponent,
-    typeImage: TypeImage.swiperSecondary,
+    children: Img('350x350'),
+    typeImage: 'swiper-secondary',
   },
 };
 
 export const ImagePrimary: Story = {
   args: {
-    children: ImgComponent,
-    typeImage: TypeImage.imagePrimary,
+    children: Img('370x200'),
+    typeImage: 'image-primary',
+  },
+};
+
+export const ImageSecondary: Story = {
+  args: {
+    children: Img('230x110'),
+    typeImage: 'image-secondary',
   },
 };
 
 export const Plp: Story = {
   args: {
-    children: ImgComponent,
-    typeImage: TypeImage.plp,
+    children: Img('160x130'),
+    typeImage: 'plp',
   },
 };
 
 export const Pdp: Story = {
   args: {
-    children: ImgComponent,
-    typeImage: TypeImage.pdp,
+    children: Img('390x440'),
+    typeImage: 'pdp',
   },
 };
