@@ -1,16 +1,23 @@
-import { Label, LabelProps } from '../Label/Label';
-
 import './button.css';
-import { Sizes, Types } from './buttonTypes';
+
+import { Typography, TypographyProps } from '../typography/typography';
+
+import { Sizes, Types } from './button-types';
 
 interface ButtonProps {
-  // Specifies the type of the button
+  /**
+   * Specifies the type of the button
+   */
   type?: Types;
 
-  // Determines the size of the button
+  /**
+   * Determines the size of the button
+   */
   size?: Sizes;
 
-  // The text label that appears on the button
+  /**
+   *  The text label that appears on the button
+   */
   label: string;
 }
 
@@ -27,10 +34,10 @@ export const Button = ({
   label,
   fontFamily,
   ...props
-}: ButtonProps & LabelProps): JSX.Element => {
+}: ButtonProps & TypographyProps): JSX.Element => {
   return (
-    <button type="button" className={`button-${size} button-${type}`} {...props}>
-      <Label label={label} labelType={labelType} fontFamily={fontFamily} />
+    <button type="button" className={`button button-${size} button-${type}`} {...props}>
+      <Typography label={label} labelType={labelType} fontFamily={fontFamily} />
     </button>
   );
 };
