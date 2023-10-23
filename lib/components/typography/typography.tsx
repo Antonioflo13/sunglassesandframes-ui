@@ -1,30 +1,13 @@
 import './label.css';
-import { FontFamilies, TextSizes, TypographyTypes } from './typography-types';
+import { FontFamilies, LabelTag, TextSizes, TypographyTypes } from './typography-types';
 
-/**
- * Props for a label component.
- * @interface
- */
 export interface TypographyProps {
-  /**
-   * The label text to display.
-   */
-  label: string;
-
-  /**
-   * Additional CSS class for styling the label component.
-   */
+  labelTag?: LabelTag;
   labelType?: TypographyTypes;
-
-  /**
-   * The font family to use for the label text.
-   */
+  label: string;
   fontFamily: FontFamilies;
-
-  /**
-   * The size of the label.
-   */
   textSize?: TextSizes;
+  className?: string;
 }
 
 /**
@@ -34,15 +17,17 @@ export interface TypographyProps {
  * @returns {JSX.Element} - The JSX element representing the label.
  */
 export const Typography = ({
-  label,
+  labelTag = 'span',
   labelType,
+  label,
   fontFamily,
   textSize = 'sm',
-  ...props
+  className
 }: TypographyProps): JSX.Element => {
+  const LabelTag = labelTag;
   return (
-    <label className={`${fontFamily} label-${textSize} label-${labelType}`} {...props}>
+    <LabelTag className={`${fontFamily} label-${textSize} label-${labelType} ${className}`}>
       {label}
-    </label>
+    </LabelTag>
   );
 };

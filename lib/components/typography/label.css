@@ -1,4 +1,7 @@
-/* font-families */
+h1 {
+  margin: 0;
+}
+
 @font-face {
   font-family: Artegra;
   src: url('../../assets/font/ArtegraSansExtended-Regular.otf');
