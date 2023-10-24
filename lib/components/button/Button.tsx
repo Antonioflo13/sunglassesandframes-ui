@@ -1,8 +1,8 @@
 import './button.css';
 
-import { Typography, TypographyProps } from '../typography/typography';
+import { Typography, TypographyProps } from '../Typography/Typography';
 
-import { Sizes, Types } from './button-types';
+import { Sizes, Types } from '.';
 
 interface ButtonProps {
   /**

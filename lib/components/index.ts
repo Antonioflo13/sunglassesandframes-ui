@@ -1,3 +1,3 @@
-export * from './button';
-export * from './header-item';
-export * from './image-wrapper';
+export * from './Button';
+export * from './HeaderItem';
+export * from './ImageWrapper';

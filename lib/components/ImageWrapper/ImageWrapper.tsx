@@ -1,4 +1,4 @@
-import './image-wrapper.css';
+import './ImageWrapper.css';
 
 import { ImageWrapperProps } from '.';
 

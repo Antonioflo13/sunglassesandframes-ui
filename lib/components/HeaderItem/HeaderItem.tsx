@@ -1,7 +1,8 @@
 import { ReactNode, useMemo } from 'react';
 
-import { Button } from '../button/Button';
-import { HeaderItems, HeaderItemTypes } from '../header-item/header-item-types';
+import { Button } from '../Button/Button';
+
+import { HeaderItems, HeaderItemTypes } from './types';
 
 interface HeaderProps {
   item: HeaderItems;

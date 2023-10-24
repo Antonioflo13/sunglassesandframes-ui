@@ -1,5 +1,5 @@
-import './label.css';
-import { FontFamilies, LabelTag, TextSizes, TypographyTypes } from './typography-types';
+import './Typography.css';
+import { FontFamilies, LabelTag, TextSizes, TypographyTypes } from '.';
 
 export interface TypographyProps {
   labelTag?: LabelTag;

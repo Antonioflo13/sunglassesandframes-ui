@@ -1,5 +1,5 @@
-import './announcement-bar.css';
-import { Typography } from '../../components/typography';
+import './AnnouncementBar.css';
+import { Typography } from '../../components/Typography';
 
 interface AnnouncementBarProps {
   label: string;

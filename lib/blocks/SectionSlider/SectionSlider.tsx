@@ -1,6 +1,6 @@
 import './SectionSlider.css';
-import { ImageWrapper } from '@components/image-wrapper';
-import { Typography } from '@components/typography';
+import { ImageWrapper } from '@components/ImageWrapper';
+import { Typography } from '@components/Typography';
 
 import { SectionSliderProps } from '.';
 
