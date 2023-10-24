@@ -2,7 +2,24 @@ import './SectionSlider.css';
 import { ImageWrapper } from '@components/ImageWrapper';
 import { Typography } from '@components/Typography';
 
-import { SectionSliderProps } from '.';
+import { Slider } from '.';
+
+/**
+ * Props for a SectionSlider component.
+ * @param {SectionSliderProps} props
+ */
+
+export type SectionSliderProps = {
+   /**
+   * title
+   */
+  title: string;
+
+  /**
+   * slider
+   */
+  slider: Slider[];
+}
 
 export const SectionSlider = ({ title, slider }: SectionSliderProps): JSX.Element => {
   return (
