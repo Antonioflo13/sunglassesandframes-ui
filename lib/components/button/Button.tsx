@@ -1,8 +1,8 @@
-import './button.css';
+import './Button.css';
 
 import { Typography, TypographyProps } from '../Typography/Typography';
 
-import { Sizes, Types } from '.';
+import { Sizes, Types } from './types';
 
 interface ButtonProps {
   /**
@@ -30,14 +30,14 @@ interface ButtonProps {
 export const Button = ({
   type = 'primary',
   size = 'base',
-  labelType,
+  typographyType,
   label,
   fontFamily,
   ...props
 }: ButtonProps & TypographyProps): JSX.Element => {
   return (
     <button type="button" className={`button button-${size} button-${type}`} {...props}>
-      <Typography label={label} labelType={labelType} fontFamily={fontFamily} />
+      <Typography label={label} typographyType={typographyType} fontFamily={fontFamily} />
     </button>
   );
 };

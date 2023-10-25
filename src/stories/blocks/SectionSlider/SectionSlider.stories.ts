@@ -16,26 +16,25 @@ type Story = StoryObj<typeof metaSectionSlider>;
 export const Default: Story = {
   args: {
     title: 'section title',
-    slider: [
+    items: [
       {
         id: 0,
-        src: 'https://via.placeholder.com/600x400',
+        src: 'https://via.placeholder.com/230x110',
         alt: 'alt',
-        title: 'post title'
+        title: 'post title',
       },
       {
         id: 1,
-        src: 'https://via.placeholder.com/600x400',
+        src: 'https://via.placeholder.com/230x110',
         alt: 'alt',
-        title: 'post title'
+        title: 'post title',
       },
       {
         id: 2,
-        src: 'https://via.placeholder.com/600x400',
+        src: 'https://via.placeholder.com/230x110',
         alt: 'alt',
-        title: 'post title'
-      }
+        title: 'post title',
+      },
     ],
-
   },
 };

@@ -1,6 +1,6 @@
-export type Slider = {
-    id: number;
-    src: string;
-    alt: string;
-    title: string;
-}
+export type SliderItem = {
+  id: number;
+  src: string;
+  alt: string;
+  title: string;
+};

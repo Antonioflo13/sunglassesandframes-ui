@@ -1,4 +1,4 @@
-import { Typography } from '@components/Typography/Typography';
+import { Typography } from '@components/Typography';
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
@@ -33,7 +33,7 @@ export const InStock: Story = {
   args: {
     label: '120',
     fontFamily: 'helvetica-regular',
-    labelType: 'in-stock',
+    typographyType: 'in-stock',
     textSize: 'lg',
   },
 };
@@ -42,7 +42,7 @@ export const Selected: Story = {
   args: {
     label: 'LABEL SELECTED',
     fontFamily: 'helvetica-light',
-    labelType: 'selected',
+    typographyType: 'selected',
   },
 };
 

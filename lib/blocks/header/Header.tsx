@@ -1,4 +1,5 @@
-import './header.css';
+import './Header.css';
+
 import { ReactNode } from 'react';
 
 import { HeaderItem } from '../../components/HeaderItem/HeaderItem';

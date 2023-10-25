@@ -1,4 +1,5 @@
 import './AnnouncementBar.css';
+
 import { Typography } from '../../components/Typography';
 
 interface AnnouncementBarProps {
