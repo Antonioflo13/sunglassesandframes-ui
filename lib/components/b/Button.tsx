@@ -1,6 +1,6 @@
 import './Button.css';
 
-import { Typography, TypographyProps } from '../Typography/Typography';
+import { Typography, TypographyProps } from '../t/Typography';
 
 import { Sizes, Types } from './types';
 

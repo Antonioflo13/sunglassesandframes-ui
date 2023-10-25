@@ -1,4 +1,4 @@
-import { AnnouncementBar } from '@blocks/AnnouncementBar/AnnouncementBar';
+import { AnnouncementBar } from '@blocks/a/AnnouncementBar';
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';

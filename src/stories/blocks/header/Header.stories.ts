@@ -1,5 +1,5 @@
-import { Header } from '@blocks/Header/Header';
-import { HeaderItemTypes } from '@components/HeaderItem/types';
+import { Header } from '@blocks/h/Header';
+import { HeaderItemTypes } from '@components/h/types';
 import { sunglassesLogo } from '@stories/components/example/logo/sunglassesLogo';
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';

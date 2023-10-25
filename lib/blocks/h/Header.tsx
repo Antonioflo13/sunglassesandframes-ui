@@ -2,8 +2,8 @@ import './Header.css';
 
 import { ReactNode } from 'react';
 
-import { HeaderItem } from '../../components/HeaderItem/HeaderItem';
-import type { HeaderItems } from '../../components/HeaderItem/types';
+import { HeaderItem } from '../../components/h/HeaderItem';
+import type { HeaderItems } from '../../components/h/types';
 
 interface HeaderProps {
   /**
