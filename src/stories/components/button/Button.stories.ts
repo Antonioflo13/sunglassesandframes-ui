@@ -1,5 +1,5 @@
 import { Button } from '@components/b/Button';
-import metaTypography, { Selected } from '@stories/components/Typography/Typography.stories';
+import metaTypography, { Selected } from '@stories/components/t/Typography.stories';
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
 import { fireEvent, userEvent, within } from '@storybook/testing-library';
