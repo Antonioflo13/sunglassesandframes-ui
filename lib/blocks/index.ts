@@ -1,2 +1,3 @@
-export * from './announcement-bar';
-export * from './header';
+export * from './AnnouncementBar';
+export * from './Header';
+export * from './SectionSlider';
