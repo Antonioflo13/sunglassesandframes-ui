@@ -1,6 +1,6 @@
 import { ReactNode, useMemo } from 'react';
 
-import { Button } from '../b/Button';
+import { Button } from '../Button/Button';
 
 import { HeaderItems, HeaderItemTypes } from './types';
 

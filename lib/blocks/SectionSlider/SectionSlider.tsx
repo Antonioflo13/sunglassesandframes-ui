@@ -1,7 +1,7 @@
 import './SectionSlider.css';
 
-import { ImageWrapper } from '../../components/i';
-import { Typography } from '../../components/t';
+import { ImageWrapper } from '../../components/ImageWrapper';
+import { Typography } from '../../components/Typography';
 
 import { SliderItem } from './types';
 

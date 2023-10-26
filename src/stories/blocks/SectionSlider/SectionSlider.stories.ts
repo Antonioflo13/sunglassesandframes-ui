@@ -1,4 +1,4 @@
-import { SectionSlider } from '@blocks/s';
+import { SectionSlider } from '@blocks/SectionSlider';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const metaSectionSlider = {

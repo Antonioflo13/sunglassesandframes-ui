@@ -1,3 +1,3 @@
-export * from './b';
-export * from './h';
-export * from './i';
+export * from './Button';
+export * from './HeaderItem';
+export * from './ImageWrapper';

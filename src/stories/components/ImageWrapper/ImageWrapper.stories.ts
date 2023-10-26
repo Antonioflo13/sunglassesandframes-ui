@@ -1,4 +1,4 @@
-import { ImageWrapper } from '@components/i';
+import { ImageWrapper } from '@components/ImageWrapper';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Img } from './Img';

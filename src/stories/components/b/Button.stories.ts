@@ -1,4 +1,4 @@
-import { Button } from '@components/b/Button';
+import { Button } from '@components/Button/Button';
 import metaTypography, { Selected } from '@stories/components/t/Typography.stories';
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
