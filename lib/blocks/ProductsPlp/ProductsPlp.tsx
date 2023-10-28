@@ -1,8 +1,8 @@
 import './ProductsPlp.css';
 
-import { ImageWrapper } from '@components/ImageWrapper';
-import { Price } from '@components/Price';
-import { Typography } from '@components/Typography';
+import { ImageWrapper } from '../../components/ImageWrapper/ImageWrapper';
+import { Price } from '../../components/Price/Price';
+import { Typography } from '../../components/Typography/Typography';
 
 import { ProductsPlpProps } from './types';
 
