@@ -4,7 +4,7 @@ import { Typography, TypographyProps } from '../Typography/Typography';
 
 import { Sizes, Types } from './types';
 
-interface ButtonProps {
+export interface ButtonProps extends TypographyProps {
   /**
    * Specifies the type of the button
    */
@@ -19,6 +19,10 @@ interface ButtonProps {
    *  The text label that appears on the button
    */
   label: string;
+  /**
+   * A callback function to be executed when the button is clicked
+   */
+  callback?: () => void;
 }
 
 /**
@@ -33,10 +37,16 @@ export const Button = ({
   typographyType,
   label,
   fontFamily,
+  callback,
   ...props
-}: ButtonProps & TypographyProps): JSX.Element => {
+}: ButtonProps): JSX.Element => {
   return (
-    <button type="button" className={`button button-${size} button-${type}`} {...props}>
+    <button
+      type="button"
+      className={`button button-${size} button-${type}`}
+      {...props}
+      onClick={callback}
+    >
       <Typography label={label} typographyType={typographyType} fontFamily={fontFamily} />
     </button>
   );
