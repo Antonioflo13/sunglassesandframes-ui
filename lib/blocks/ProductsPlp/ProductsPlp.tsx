@@ -1,9 +1,10 @@
 import './ProductsPlp.css';
+
 import { ImageWrapper } from '@components/ImageWrapper';
 import { Price } from '@components/Price';
 import { Typography } from '@components/Typography';
 
-import { ProductsPlpProps } from '.';
+import { ProductsPlpProps } from './types';
 
 export const ProductsPlp = ({ title, products }: ProductsPlpProps): JSX.Element => {
   return (
@@ -18,7 +19,7 @@ export const ProductsPlp = ({ title, products }: ProductsPlpProps): JSX.Element 
         />
       )}
 
-      <div className='products'>
+      <div className="products">
         {products.map(product => (
           <div key={product.id}>
             <ImageWrapper typeImage="plp">
@@ -30,14 +31,14 @@ export const ProductsPlp = ({ title, products }: ProductsPlpProps): JSX.Element 
               fontFamily="helvetica-medium"
               textSize="lg"
               label={product.productName}
-              className='product-name'
+              className="product-name"
             />
             <Typography
               Tag="h1"
               fontFamily="helvetica-regular"
               textSize="md"
               label={product.designer}
-              className='designer'
+              className="designer"
             />
           </div>
         ))}

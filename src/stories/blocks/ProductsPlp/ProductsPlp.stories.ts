@@ -21,7 +21,7 @@ export const Default: Story = {
       {
         id: '0',
         image: {
-          src: 'https://via.placeholder.com/370x370',
+          src: 'https://via.placeholder.com/160x130',
           alt: 'image',
         },
         productName: 'Product id',
@@ -31,14 +31,15 @@ export const Default: Story = {
       {
         id: '1',
         image: {
-          src: 'https://via.placeholder.com/370x370',
+          src: 'https://via.placeholder.com/160x130',
           alt: 'image',
         },
         productName: 'product id',
         designer: 'Designer',
         price: '123',
-      }
-    ] }
+      },
+    ],
+  },
 };
 
 export const WithoutTitle: Story = {
@@ -47,7 +48,7 @@ export const WithoutTitle: Story = {
       {
         id: '0',
         image: {
-          src: 'https://via.placeholder.com/370x370',
+          src: 'https://via.placeholder.com/160x130',
           alt: 'image',
         },
         productName: 'Product id',
@@ -57,12 +58,13 @@ export const WithoutTitle: Story = {
       {
         id: '1',
         image: {
-          src: 'https://via.placeholder.com/370x370',
+          src: 'https://via.placeholder.com/160x130',
           alt: 'image',
         },
         productName: 'product id',
         designer: 'Designer',
         price: '123',
-      }
-    ] }
+      },
+    ],
+  },
 };
