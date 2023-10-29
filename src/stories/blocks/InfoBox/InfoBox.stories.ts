@@ -28,20 +28,6 @@ export const Default: Story = {
       label: 'Page subtitle',
       fontFamily: 'helvetica-regular',
     },
-    description: {
-      label:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non sem sed odio eleifend porttitor. Quisque a vulputate odio, ac congue nisl. Sed id augue vel elit placerat porttitor. Sed id dignissim urna.',
-      fontFamily: 'helvetica-regular',
-    },
-    date: {
-      label: '28/10/2023',
-      fontFamily: 'helvetica-regular',
-    },
-    button: {
-      label: 'BUTTONS',
-      fontFamily: 'artegra-bold',
-      callback: () => console.log('clicked'),
-    },
   },
 };
 
