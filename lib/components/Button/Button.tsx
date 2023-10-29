@@ -18,7 +18,7 @@ export interface ButtonProps extends TypographyProps {
   /**
    *  The text label that appears on the button
    */
-  label: string;
+  label: string | number;
   /**
    * A callback function to be executed when the button is clicked
    */
