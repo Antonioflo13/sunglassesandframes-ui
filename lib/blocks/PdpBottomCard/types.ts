@@ -5,7 +5,7 @@ export type PdpBottomCardProps = {
   product: {
     name: string;
     price: string;
-    discountPrice?: number;
+    discountPrice?: string | number;
     designer: string;
     availableNumber: number;
   };

@@ -29,15 +29,6 @@ export const Default: Story = {
   },
 };
 
-export const InStock: Story = {
-  args: {
-    label: '120',
-    fontFamily: 'helvetica-regular',
-    typographyType: 'in-stock',
-    textSize: 'lg',
-  },
-};
-
 export const Selected: Story = {
   args: {
     label: 'LABEL SELECTED',
@@ -47,14 +38,6 @@ export const Selected: Story = {
 };
 
 Default.play = async({ canvasElement, args }): Promise<void> => {
-  const canvas = within(canvasElement);
-
-  await userEvent.click(canvas.getByText(args.label));
-
-  await expect(canvas.getByText(args.label)).toBeInTheDocument();
-};
-
-InStock.play = async({ canvasElement, args }): Promise<void> => {
   const canvas = within(canvasElement);
 
   await userEvent.click(canvas.getByText(args.label));

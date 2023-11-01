@@ -27,6 +27,29 @@ export const Default: Story = {
   },
 };
 
+export const Discount: Story = {
+  args: {
+    product: {
+      name: 'PRODUCT ID',
+      price: '123',
+      designer: 'Designer',
+      availableNumber: 0,
+      discountPrice: '100',
+    },
+  },
+};
+
+export const IsAvalaible: Story = {
+  args: {
+    product: {
+      name: 'PRODUCT ID',
+      price: '123',
+      designer: 'Designer',
+      availableNumber: 10,
+    },
+  },
+};
+
 Default.play = async({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
 

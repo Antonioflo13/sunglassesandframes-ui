@@ -10,7 +10,12 @@ export const PdpBottomCard = ({ product }: PdpBottomCardProps): JSX.Element => {
       <div className="pdp-bottom-card-item">
         <Typography label={product.name} fontFamily="helvetica-medium" textSize="xl" />
         <Typography label={product.designer} fontFamily="helvetica-regular" textSize="lg" />
-        <Price price={product.price} />
+        <div className="container-pdp-bottom-card-price">
+          {product.discountPrice && (
+            <Price price={product.discountPrice} textSize="lg" discount={true} />
+          )}
+          <Price price={product.price} textSize="lg" />
+        </div>
       </div>
       <div className="pdp-bottom-card-item">
         <Typography label={product.designer} fontFamily="helvetica-regular" textSize="lg" />
