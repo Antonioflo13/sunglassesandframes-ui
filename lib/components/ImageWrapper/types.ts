@@ -6,7 +6,7 @@ export type ImageWrapperProps = {
   /**
    * The label text to display
    */
-  typeImage: TypeImage;
+  typeImage?: TypeImage;
 };
 
 export type TypeImage =

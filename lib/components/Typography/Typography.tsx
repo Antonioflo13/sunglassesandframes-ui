@@ -16,7 +16,7 @@ export type TypographyProps = {
   /**
    * The label text to display
    */
-  label: string;
+  label: string | number;
 
   /**
    * The font family to use for the label text

@@ -59,12 +59,6 @@ h1 {
 }
 
 /* types */
-.label-in-stock {
-  color: #e10000;
-  font-weight: 400;
-  line-height: normal;
-}
-
 .label-selected {
   color: #000;
   line-height: normal;

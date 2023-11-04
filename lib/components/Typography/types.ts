@@ -9,4 +9,4 @@ export type FontFamilies =
 
 export type TextSizes = 'sm' | 'md' | 'lg' | 'xl';
 
-export type Tag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
+export type Tag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';

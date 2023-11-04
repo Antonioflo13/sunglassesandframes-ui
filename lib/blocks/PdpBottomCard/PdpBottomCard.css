@@ -1,0 +1,29 @@
+.container-pdp-bottom-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.pdp-bottom-card-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-pdp-bottom-card-price {
+  display: flex;
+  gap: 10px;
+}
+
+.container-available-product {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.not-available {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: red;
+}

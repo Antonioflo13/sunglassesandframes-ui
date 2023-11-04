@@ -5,7 +5,7 @@ import { ReactNode } from 'react';
 import { HeaderItem } from '../../components/HeaderItem/HeaderItem';
 import type { HeaderItems } from '../../components/HeaderItem/types';
 
-interface HeaderProps {
+export interface HeaderProps {
   /**
    *  An array of header items to display in the header
    */

@@ -2,7 +2,7 @@ import './AnnouncementBar.css';
 
 import { Typography } from '../../components/Typography';
 
-interface AnnouncementBarProps {
+export interface AnnouncementBarProps {
   label: string;
 }
 

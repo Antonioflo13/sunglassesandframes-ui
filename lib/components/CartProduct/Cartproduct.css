@@ -1,0 +1,29 @@
+.container-cart-product {
+  position: relative;
+  display: flex;
+  padding: 10px 0;
+}
+
+.container-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.container-product-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-product-quantity {
+  display: flex;
+  align-items: center;
+}
+
+.button-remove {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
