@@ -1,0 +1,26 @@
+.container-cart {
+  padding: 10px;
+}
+
+.containter-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 15px;
+  padding-bottom: 11px;
+}
+
+.containter-info > div:not(.container-icon) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-icons {
+  display: flex;
+}
+
+.container-icon {
+  display: flex;
+  gap: 6px;
+  width: 50%;
+}

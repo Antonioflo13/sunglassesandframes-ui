@@ -19,6 +19,12 @@ export interface ButtonProps extends TypographyProps {
    *  The text label that appears on the button
    */
   label: string | number;
+
+  /**
+   *  Extend class name component
+   */
+  className?: string;
+
   /**
    * A callback function to be executed when the button is clicked
    */
@@ -38,12 +44,13 @@ export const Button = ({
   label,
   fontFamily,
   callback,
+  className,
   ...props
 }: ButtonProps): JSX.Element => {
   return (
     <button
       type="button"
-      className={`button button-${size} button-${type}`}
+      className={`button button-${size} button-${type} ${className}`}
       {...props}
       onClick={callback}
     >

@@ -21,7 +21,7 @@ export const Price = ({
       <span className={discount ? 'discount' : ''} dangerouslySetInnerHTML={{ __html: euro }} />
       <Typography
         className={discount ? 'discount' : ''}
-        Tag="h1"
+        Tag="span"
         fontFamily="helvetica-regular"
         textSize={textSize}
         label={price}

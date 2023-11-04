@@ -10,3 +10,6 @@ export { Header } from './blocks/Header/Header';
 export { SectionSlider } from './blocks/SectionSlider/SectionSlider';
 export { ProductsPlp } from './blocks/ProductsPlp/ProductsPlp';
 export { PdpImage } from './blocks/PdpImage/PdpImage';
+export { PdpBottomCard } from './blocks/PdpBottomCard/PdpBottomCard';
+export { InfoBox } from './blocks/InfoBox/InfoBox';
+export { Cart } from './blocks/Cart/Cart';

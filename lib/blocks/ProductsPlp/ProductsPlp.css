@@ -1,30 +1,28 @@
 .container-plp {
-    width: 390px;
-    height: 250px;
-    background-color: greenyellow;
-    padding: 10px;
+  height: 250px;
+  padding: 10px;
 }
 
 .title {
-    margin-bottom: 10px;
-    text-transform: uppercase;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .products {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .price {
-    height: 20px;
-    margin-top: 10px;
+  height: 20px;
+  margin-top: 10px;
 }
 
 .product-name {
-    text-transform: uppercase;
-    height: 20px;
+  text-transform: uppercase;
+  height: 20px;
 }
 
 .designer {
-    height: 20px;
+  height: 20px;
 }
