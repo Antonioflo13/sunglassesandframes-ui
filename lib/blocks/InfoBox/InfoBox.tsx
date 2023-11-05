@@ -1,7 +1,6 @@
-import './Infobox.css';
-
 import { Button, ImageWrapper, Typography } from '../../components';
 
+import styles from './Infobox.module.css';
 import { InfoBoxprops } from './types';
 
 export const InfoBox = ({
@@ -13,7 +12,7 @@ export const InfoBox = ({
   button,
 }: InfoBoxprops): JSX.Element => {
   return (
-    <section className="container-info-box">
+    <section className={styles['container-info-box']}>
       <ImageWrapper typeImage="image-primary">{children}</ImageWrapper>
       {title && <Typography label={title.label} fontFamily={title.fontFamily} />}
       {subtitle && <Typography label={subtitle.label} fontFamily={subtitle.fontFamily} />}

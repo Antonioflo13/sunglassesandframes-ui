@@ -1,35 +1,7 @@
-import './Button.css';
+import { Typography } from '../Typography';
 
-import { Typography, TypographyProps } from '../Typography/Typography';
-
-import { Sizes, Types } from './types';
-
-export interface ButtonProps extends TypographyProps {
-  /**
-   * Specifies the type of the button
-   */
-  type?: Types;
-
-  /**
-   * Determines the size of the button
-   */
-  size?: Sizes;
-
-  /**
-   *  The text label that appears on the button
-   */
-  label: string | number;
-
-  /**
-   *  Extend class name component
-   */
-  className?: string;
-
-  /**
-   * A callback function to be executed when the button is clicked
-   */
-  callback?: () => void;
-}
+import styles from './Button.module.css';
+import { ButtonProps } from './types';
 
 /**
  * Button component: A customizable button element with various styling options.
@@ -51,7 +23,12 @@ export const Button = ({
   return (
     <button
       type="button"
-      className={`button button-${size} button-${type} ${className}`}
+      className={`
+      ${styles['button']} 
+      ${styles[`button-${size}`]}
+      ${styles[`button-${type}`]} 
+      ${className}
+      `}
       {...props}
       onClick={callback}
     >

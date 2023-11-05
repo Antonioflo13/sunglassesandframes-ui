@@ -1,19 +1,18 @@
-import './Cartproduct.css';
-
 import { Button, ImageWrapper, Price, Typography } from '../../components';
 
+import styles from './Cartproduct.module.css';
 import { CartProductProps } from './types';
 
 export function CartProduct({ children, product, updateCart }: CartProductProps): JSX.Element {
   return (
-    <section className="container-cart-product">
+    <section className={styles['container-cart-product']}>
       <ImageWrapper typeImage="plp">{children}</ImageWrapper>
-      <div className="container-details">
-        <div className="container-product-name">
+      <div className={styles['container-details']}>
+        <div className={styles['container-product-name']}>
           <Typography label={product.titleProduct} fontFamily="helvetica-medium" textSize="lg" />
           <Price price={product.details.price?.amount || 0} textSize="lg" />
         </div>
-        <div className="container-product-quantity">
+        <div className={styles['container-product-quantity']}>
           <Button
             type="outlined"
             label="-"
@@ -46,7 +45,7 @@ export function CartProduct({ children, product, updateCart }: CartProductProps)
           textSize="sm"
         /> */}
         <Button
-          className="button-remove"
+          className={styles['button-remove']}
           type="outlined"
           typographyType="selected"
           label="Remove"

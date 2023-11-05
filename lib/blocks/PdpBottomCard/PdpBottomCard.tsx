@@ -1,26 +1,25 @@
-import './PdpBottomCard.css';
-
 import { Button, Price, Typography } from '../../components';
 
+import styles from './PdpBottomCard.module.css';
 import { PdpBottomCardProps } from './types';
 
 export const PdpBottomCard = ({ product }: PdpBottomCardProps): JSX.Element => {
   return (
-    <section id="bottom-card" className="container-pdp-bottom-card">
-      <div className="pdp-bottom-card-item">
+    <section id="bottom-card" className={styles['container-pdp-bottom-card']}>
+      <div className={styles['pdp-bottom-card-item']}>
         <Typography label={product.name} fontFamily="helvetica-medium" textSize="xl" />
 
-        <div className="container-pdp-bottom-card-price">
+        <div className={styles['container-pdp-bottom-card-price']}>
           {product.discountPrice && (
             <Price price={product.discountPrice} textSize="lg" discount={true} />
           )}
           <Price price={product.price.amount} textSize="lg" />
         </div>
       </div>
-      <div className="pdp-bottom-card-item">
+      <div className={styles['pdp-bottom-card-item']}>
         <Typography label={product.vendor} fontFamily="helvetica-regular" textSize="lg" />
-        <div className="container-available-product">
-          {product.totalInventory === 0 && <div className="not-available" />}
+        <div className={styles['container-available-product']}>
+          {product.totalInventory === 0 && <div className={styles['not-available']} />}
           <Typography label={`${product.totalInventory} in stock`} fontFamily="helvetica-regular" />
         </div>
       </div>

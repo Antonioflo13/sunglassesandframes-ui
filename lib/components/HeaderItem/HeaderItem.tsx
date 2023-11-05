@@ -1,9 +1,8 @@
-import './Headeritem.css';
-
 import { ReactNode, useMemo } from 'react';
 
 import { Button } from '../Button/Button';
 
+import styles from './Headeritem.module.css';
 import { HeaderItems, HeaderItemTypes } from './types';
 
 interface HeaderProps {
@@ -15,7 +14,7 @@ export const HeaderItem = ({ item, children }: HeaderProps): JSX.Element => {
   const component = useMemo(() => {
     switch (item.type) {
       case HeaderItemTypes.Img:
-        return <div className="header-item-logo">{children}</div>;
+        return <div className={styles['header-item-logo']}>{children}</div>;
       case HeaderItemTypes.Icon:
         return (
           <>

@@ -1,6 +1,6 @@
-import './Price.css';
-
 import { TextSizes, Typography } from '../Typography';
+
+import styles from './Price.module.css';
 
 export type PriceProps = {
   price: string | number;
@@ -17,10 +17,13 @@ export const Price = ({
 }: PriceProps): JSX.Element => {
   const euro = '€';
   return (
-    <div className={`container-price ${className}`}>
-      <span className={discount ? 'discount' : ''} dangerouslySetInnerHTML={{ __html: euro }} />
+    <div className={`${styles['container-price']} ${className}`}>
+      <span
+        className={discount ? styles['discount'] : ''}
+        dangerouslySetInnerHTML={{ __html: euro }}
+      />
       <Typography
-        className={discount ? 'discount' : ''}
+        className={discount ? styles['discount'] : ''}
         Tag="span"
         fontFamily="helvetica-regular"
         textSize={textSize}
