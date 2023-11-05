@@ -20,9 +20,12 @@ export const Default: Story = {
   args: {
     product: {
       name: 'PRODUCT ID',
-      price: '123',
-      designer: 'Designer',
-      availableNumber: 0,
+      price: {
+        amount: '310.0',
+        currencyCode: 'EUR',
+      },
+      vendor: 'Designer',
+      totalInventory: 0,
     },
   },
 };
@@ -31,9 +34,12 @@ export const Discount: Story = {
   args: {
     product: {
       name: 'PRODUCT ID',
-      price: '123',
-      designer: 'Designer',
-      availableNumber: 0,
+      price: {
+        amount: '310.0',
+        currencyCode: 'EUR',
+      },
+      vendor: 'Designer',
+      totalInventory: 0,
       discountPrice: '100',
     },
   },
@@ -43,9 +49,12 @@ export const IsAvalaible: Story = {
   args: {
     product: {
       name: 'PRODUCT ID',
-      price: '123',
-      designer: 'Designer',
-      availableNumber: 10,
+      price: {
+        amount: '310.0',
+        currencyCode: 'EUR',
+      },
+      vendor: 'Designer',
+      totalInventory: 10,
     },
   },
 };
