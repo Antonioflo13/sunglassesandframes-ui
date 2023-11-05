@@ -1,14 +1,14 @@
-import { ProductsPlp } from '@blocks/ProductsPlp';
+import { ProductsList } from '@blocks/ProductsList';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const metaproductsPlp = {
-  title: 'sunglassesandframes/Blocks/ProductsPlp',
-  component: ProductsPlp,
+  title: 'sunglassesandframes/Blocks/ProductsList',
+  component: ProductsList,
   parameters: {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof ProductsPlp>;
+} satisfies Meta<typeof ProductsList>;
 
 export default metaproductsPlp;
 type Story = StoryObj<typeof metaproductsPlp>;
@@ -38,6 +38,16 @@ export const Default: Story = {
         designer: 'Designer',
         price: '123',
       },
+      {
+        id: '2',
+        image: {
+          src: 'https://via.placeholder.com/160x130',
+          alt: 'image',
+        },
+        productName: 'product id',
+        designer: 'Designer',
+        price: '123',
+      },
     ],
   },
 };
@@ -57,6 +67,16 @@ export const WithoutTitle: Story = {
       },
       {
         id: '1',
+        image: {
+          src: 'https://via.placeholder.com/160x130',
+          alt: 'image',
+        },
+        productName: 'product id',
+        designer: 'Designer',
+        price: '123',
+      },
+      {
+        id: '2',
         image: {
           src: 'https://via.placeholder.com/160x130',
           alt: 'image',

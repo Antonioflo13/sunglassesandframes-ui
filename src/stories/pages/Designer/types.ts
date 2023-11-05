@@ -1,11 +1,11 @@
 import { AnnouncementBarProps } from '@blocks/AnnouncementBar';
 import { HeaderProps } from '@blocks/Header';
 import { InfoBoxprops } from '@blocks/InfoBox/types';
-import { ProductsPlpProps } from '@blocks/ProductsPlp';
+import { ProductsListProps } from '@blocks/ProductsList';
 
 export type DesignerProps = {
   announcementBarProps: AnnouncementBarProps;
   headerProps: HeaderProps;
   infoBoxProps: InfoBoxprops;
-  productsPlpProps: ProductsPlpProps;
+  productsPlpProps: ProductsListProps;
 };

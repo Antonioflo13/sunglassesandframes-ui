@@ -1,0 +1,38 @@
+.container-plp {
+  height: 250px;
+  padding: 10px;
+}
+
+.title {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.container-products {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 0.75rem;
+  row-gap: 7rem;
+}
+
+.price {
+  height: 20px;
+  margin-top: 10px;
+}
+
+.product-name {
+  text-transform: uppercase;
+  height: 20px;
+}
+
+.designer {
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .container-products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 4rem;
+    row-gap: 5rem;
+  }
+}

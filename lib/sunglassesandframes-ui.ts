@@ -8,7 +8,7 @@ export { Price } from './components/Price/Price';
 export { AnnouncementBar } from './blocks/AnnouncementBar/AnnouncementBar';
 export { Header } from './blocks/Header/Header';
 export { SectionSlider } from './blocks/SectionSlider/SectionSlider';
-export { ProductsPlp } from './blocks/ProductsPlp/ProductsPlp';
+export { ProductsList } from './blocks/ProductsList/ProductsList';
 export { PdpImage } from './blocks/PdpImage/PdpImage';
 export { PdpBottomCard } from './blocks/PdpBottomCard/PdpBottomCard';
 export { InfoBox } from './blocks/InfoBox/InfoBox';

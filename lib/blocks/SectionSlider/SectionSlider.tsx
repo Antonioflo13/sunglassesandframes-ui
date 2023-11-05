@@ -26,7 +26,7 @@ export const SectionSlider = ({ title, items }: SectionSliderProps): JSX.Element
   return (
     <section className="container">
       <Typography
-        Tag="h1"
+        Tag="h3"
         className="title-section"
         fontFamily="helvetica-medium"
         textSize="sm"
