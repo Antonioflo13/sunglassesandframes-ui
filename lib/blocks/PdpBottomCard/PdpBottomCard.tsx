@@ -6,25 +6,22 @@ import { PdpBottomCardProps } from './types';
 
 export const PdpBottomCard = ({ product }: PdpBottomCardProps): JSX.Element => {
   return (
-    <section className="container-pdp-bottom-card">
+    <section id="bottom-card" className="container-pdp-bottom-card">
       <div className="pdp-bottom-card-item">
         <Typography label={product.name} fontFamily="helvetica-medium" textSize="xl" />
-        <Typography label={product.designer} fontFamily="helvetica-regular" textSize="lg" />
+
         <div className="container-pdp-bottom-card-price">
           {product.discountPrice && (
             <Price price={product.discountPrice} textSize="lg" discount={true} />
           )}
-          <Price price={product.price} textSize="lg" />
+          <Price price={product.price.amount} textSize="lg" />
         </div>
       </div>
       <div className="pdp-bottom-card-item">
-        <Typography label={product.designer} fontFamily="helvetica-regular" textSize="lg" />
+        <Typography label={product.vendor} fontFamily="helvetica-regular" textSize="lg" />
         <div className="container-available-product">
-          {product.availableNumber === 0 && <div className="not-available" />}
-          <Typography
-            label={`${product.availableNumber} in stock`}
-            fontFamily="helvetica-regular"
-          />
+          {product.totalInventory === 0 && <div className="not-available" />}
+          <Typography label={`${product.totalInventory} in stock`} fontFamily="helvetica-regular" />
         </div>
       </div>
       <Button label="BUTTONS" fontFamily="artegra-bold" />

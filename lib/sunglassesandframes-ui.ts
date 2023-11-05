@@ -13,3 +13,4 @@ export { PdpImage } from './blocks/PdpImage/PdpImage';
 export { PdpBottomCard } from './blocks/PdpBottomCard/PdpBottomCard';
 export { InfoBox } from './blocks/InfoBox/InfoBox';
 export { Cart } from './blocks/Cart/Cart';
+export { PdpMobile } from './blocks/PdpMobile/PdpMobile';

@@ -24,7 +24,7 @@ export const Price = ({
         Tag="span"
         fontFamily="helvetica-regular"
         textSize={textSize}
-        label={price}
+        label={Number(price).toFixed()}
       />
     </div>
   );

@@ -45,6 +45,7 @@ export const Button = ({
   fontFamily,
   callback,
   className,
+  textSize,
   ...props
 }: ButtonProps): JSX.Element => {
   return (
@@ -54,7 +55,12 @@ export const Button = ({
       {...props}
       onClick={callback}
     >
-      <Typography label={label} typographyType={typographyType} fontFamily={fontFamily} />
+      <Typography
+        label={label}
+        typographyType={typographyType}
+        fontFamily={fontFamily}
+        textSize={textSize}
+      />
     </button>
   );
 };
