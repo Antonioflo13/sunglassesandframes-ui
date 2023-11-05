@@ -1,12 +1,12 @@
-import './ProductsPlp.css';
+import './ProductsList.css';
 
 import { ImageWrapper } from '../../components/ImageWrapper/ImageWrapper';
 import { Price } from '../../components/Price/Price';
 import { Typography } from '../../components/Typography/Typography';
 
-import { ProductsPlpProps } from './types';
+import { ProductsListProps } from './types';
 
-export const ProductsPlp = ({ title, products }: ProductsPlpProps): JSX.Element => {
+export const ProductsList = ({ title, products }: ProductsListProps): JSX.Element => {
   return (
     <section className="container-plp">
       {title && (
@@ -19,9 +19,9 @@ export const ProductsPlp = ({ title, products }: ProductsPlpProps): JSX.Element 
         />
       )}
 
-      <div className="products">
+      <div className="container-products">
         {products.map(product => (
-          <div key={product.id}>
+          <div className="container-product" key={product.id}>
             <ImageWrapper typeImage="plp">
               <img src={product.image.src} alt={product.image.alt} />
             </ImageWrapper>

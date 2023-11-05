@@ -1,6 +1,6 @@
 import { Default as AnnouncementBarDefault } from '@stories/blocks/AnnouncementBar/AnnouncementBar.stories';
 import { Default as HeaderDefault } from '@stories/blocks/Header/Header.stories';
-import { Default as ProductsPlpDefault } from '@stories/blocks/ProductsPlp/ProductsPlp.stories';
+import { Default as ProductsListDefault } from '@stories/blocks/ProductsList/ProductsList.stories';
 import { Default as SectionSliderDefault } from '@stories/blocks/SectionSlider/SectionSlider.stories';
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -24,6 +24,6 @@ export const Default: Story = {
     announcementBarProps: AnnouncementBarDefault.args,
     headerProps: HeaderDefault.args,
     sectionSliderProps: SectionSliderDefault.args,
-    productsPlpProps: ProductsPlpDefault.args,
+    productsPlpProps: ProductsListDefault.args,
   },
 };

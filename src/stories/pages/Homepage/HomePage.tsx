@@ -1,6 +1,6 @@
 import { AnnouncementBar } from '@blocks/AnnouncementBar';
 import { Header } from '@blocks/Header';
-import { ProductsPlp } from '@blocks/ProductsPlp';
+import { ProductsList } from '@blocks/ProductsList';
 import { SectionSlider } from '@blocks/SectionSlider';
 
 import { HomepageProps } from './types';
@@ -16,7 +16,7 @@ export const HomePage = ({
       <AnnouncementBar {...announcementBarProps} />
       <Header {...headerProps} />
       <SectionSlider {...sectionSliderProps} />
-      <ProductsPlp {...productsPlpProps} />
+      <ProductsList {...productsPlpProps} />
     </>
   );
 };

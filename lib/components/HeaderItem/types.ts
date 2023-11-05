@@ -4,19 +4,8 @@ export enum HeaderItemTypes {
   Label = 'label',
 }
 
-export interface Img {
-  type: HeaderItemTypes.Img;
+export type HeaderItems = {
+  type: HeaderItemTypes.Img | HeaderItemTypes.Icon | HeaderItemTypes.Label;
   label?: string;
-}
-
-export interface Icon {
-  type: HeaderItemTypes.Icon;
-  label: string;
-}
-
-export interface Label {
-  type: HeaderItemTypes.Label;
-  label: string;
-}
-
-export type HeaderItems = Img | Icon | Label;
+  callback?: () => void;
+};

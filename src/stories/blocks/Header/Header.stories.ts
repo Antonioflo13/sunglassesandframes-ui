@@ -24,15 +24,19 @@ export const Default: Story = {
       {
         type: HeaderItemTypes.Label,
         label: 'Home',
+        callback: () => console.log('ciao'),
       },
-      { type: HeaderItemTypes.Img },
+      { type: HeaderItemTypes.Img,
+        callback: () => console.log('ciao') },
       {
         type: HeaderItemTypes.Icon,
         label: 'Icon',
+        callback: () => console.log('ciao'),
       },
       {
         type: HeaderItemTypes.Label,
         label: 'Cart (0)',
+        callback: () => console.log('ciao'),
       },
     ],
     children: sunglassesLogo(),

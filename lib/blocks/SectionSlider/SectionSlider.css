@@ -1,16 +1,18 @@
 .container {
   height: 160px;
+  padding: 10px 0 10px 10px;
 }
 
 .title-section {
   text-transform: uppercase;
-  padding-top: 10px;
-  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 .container-slider {
   display: flex;
-  overflow: auto;
+  justify-content: space-between;
+  gap: 10px;
+  overflow-y: hidden;
 }
 
 .container-slider::-webkit-scrollbar {
@@ -20,9 +22,6 @@
 .container-item {
   position: relative;
   height: 100%;
-  width: 100%;
-  margin-left: 10px;
-  margin-top: 10px;
 }
 
 .title-item {

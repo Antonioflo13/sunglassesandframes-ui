@@ -1,7 +1,7 @@
 import { AnnouncementBar } from '@blocks/AnnouncementBar';
 import { Header } from '@blocks/Header';
 import { InfoBox } from '@blocks/InfoBox/InfoBox';
-import { ProductsPlp } from '@blocks/ProductsPlp';
+import { ProductsList } from '@blocks/ProductsList';
 
 import { DesignerProps } from './types';
 
@@ -16,7 +16,7 @@ export const Designer = ({
       <AnnouncementBar {...announcementBarProps} />
       <Header {...headerProps} />
       <InfoBox {...infoBoxProps} />
-      <ProductsPlp {...productsPlpProps} />
+      <ProductsList {...productsPlpProps} />
     </>
   );
 };
