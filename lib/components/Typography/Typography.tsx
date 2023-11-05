@@ -1,38 +1,5 @@
-import './Typography.css';
-
-import { FontFamilies, Tag, TextSizes, TypographyTypes } from './types';
-
-export type TypographyProps = {
-  /**
-   * The tag to use for the label
-   */
-  Tag?: Tag;
-
-  /**
-   * Additional CSS class for styling the label component
-   */
-  typographyType?: TypographyTypes;
-
-  /**
-   * The label text to display
-   */
-  label: string | number;
-
-  /**
-   * The font family to use for the label text
-   */
-  fontFamily: FontFamilies;
-
-  /**
-   * The size of the label
-   */
-  textSize?: TextSizes;
-
-  /**
-   * className for styling the label
-   */
-  className?: string;
-};
+import styles from './Typography.module.css';
+import { TypographyProps } from './types';
 
 /**
  * Label component for displaying text
@@ -49,7 +16,14 @@ export const Typography = ({
   className,
 }: TypographyProps): JSX.Element => {
   return (
-    <Tag className={`${fontFamily} label-${textSize} label-${typographyType} ${className}`}>
+    <Tag
+      className={`
+      ${styles[`${fontFamily}`]} 
+      ${styles[`label-${textSize}`]} 
+      ${styles[`label-${typographyType}`]} 
+      ${className}
+      `}
+    >
       {label}
     </Tag>
   );

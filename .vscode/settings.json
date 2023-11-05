@@ -23,6 +23,7 @@
     "source.fixAll.eslint"
   ],
   "exportall.config.relExclusion": [
-    "/src/index.ts"
+    "/src/index.ts",
+    "/lib/blocks/index.ts"
   ]
 }

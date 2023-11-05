@@ -1,9 +1,9 @@
-import './Header.css';
-
 import { ReactNode } from 'react';
 
 import { HeaderItem } from '../../components/HeaderItem/HeaderItem';
 import type { HeaderItems } from '../../components/HeaderItem/types';
+
+import styles from './Header.module.css';
 
 export interface HeaderProps {
   /**
@@ -19,7 +19,7 @@ export interface HeaderProps {
 
 export function Header({ items, children, ...props }: HeaderProps): JSX.Element {
   return (
-    <header className="header" {...props}>
+    <header className={styles['header']} {...props}>
       {items.splice(0, 2).map((item, idx) => (
         <HeaderItem key={idx} item={item}>
           {children}

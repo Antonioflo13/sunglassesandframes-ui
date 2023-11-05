@@ -1,8 +1,7 @@
-import './SectionSlider.css';
-
 import { ImageWrapper } from '../../components/ImageWrapper';
 import { Typography } from '../../components/Typography';
 
+import styles from './SectionSlider.module.css';
 import { SliderItem } from './types';
 
 /**
@@ -24,23 +23,23 @@ export type SectionSliderProps = {
 
 export const SectionSlider = ({ title, items }: SectionSliderProps): JSX.Element => {
   return (
-    <section className="container">
+    <section className={styles['container']}>
       <Typography
         Tag="h3"
-        className="title-section"
+        className={styles['title-section']}
         fontFamily="helvetica-medium"
         textSize="sm"
         label={title}
       />
-      <div className="container-slider">
+      <div className={styles['container-slider']}>
         {items.map(item => (
-          <div className="container-item" key={item.id}>
+          <div className={styles['container-item']} key={item.id}>
             <ImageWrapper typeImage="image-secondary">
-              <img className="image" src={item.src} alt={item.alt} />
+              <img className={styles['image']} src={item.src} alt={item.alt} />
             </ImageWrapper>
             <Typography
-              Tag="h1"
-              className="title-item"
+              Tag="h3"
+              className={styles['title-item']}
               fontFamily="helvetica-medium"
               textSize="md"
               typographyType="shadow"

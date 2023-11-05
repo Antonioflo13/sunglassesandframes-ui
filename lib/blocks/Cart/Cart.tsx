@@ -1,7 +1,6 @@
-import './Cart.css';
-
 import { Button, CartProduct, ImageWrapper, Price, Typography } from '../../components';
 
+import styles from './Cart.module.css';
 import { CartProps } from './types';
 
 export const Cart = ({
@@ -13,7 +12,7 @@ export const Cart = ({
   goToCheckout,
 }: CartProps): JSX.Element => {
   return (
-    <section className="container-cart">
+    <section className={styles['container-cart']}>
       <Button label="buttons" fontFamily="artegra-bold" callback={goToCheckout} />
       {products.map((product, idx) => (
         <CartProduct key={idx} product={product} updateCart={updateCart}>
@@ -21,10 +20,10 @@ export const Cart = ({
         </CartProduct>
       ))}
       <hr />
-      <div className="containter-info">
-        <div className="container-icons">
+      <div className={styles['containter-info']}>
+        <div className={styles['container-icons']}>
           {icons.map((icon, idx) => (
-            <div className="container-icon" key={idx}>
+            <div className={styles['container-icon']} key={idx}>
               <ImageWrapper>{icon}</ImageWrapper>
               <Typography label="text" fontFamily="helvetica-regular" textSize="sm" />
             </div>
