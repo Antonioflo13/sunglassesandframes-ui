@@ -6,8 +6,9 @@ import react from '@vitejs/plugin-react';
 import { terser } from 'rollup-plugin-terser';
 import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 import dts from 'vite-plugin-dts';
-import { libInjectCss } from 'vite-plugin-lib-inject-css';
+// import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 const alises = [
   {
@@ -25,7 +26,7 @@ const alises = [
 ];
 
 const libraryMode = {
-  plugins: [react(), dts({ include: 'lib' }), libInjectCss()],
+  plugins: [react(), dts({ include: 'lib' }), cssInjectedByJsPlugin()],
   build: {
     minify: true,
     // do not copy the contents of the public folder to the dist folder

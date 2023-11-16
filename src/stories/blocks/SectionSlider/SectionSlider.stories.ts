@@ -1,4 +1,5 @@
 import { SectionSlider } from '@blocks/SectionSlider';
+import { Img } from '@stories/components/ImageWrapper/Img';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const metaSectionSlider = {
@@ -19,20 +20,17 @@ export const Default: Story = {
     items: [
       {
         id: 0,
-        src: 'https://via.placeholder.com/230x110',
-        alt: 'alt',
+        image: Img('230x110'),
         title: 'post title',
       },
       {
         id: 1,
-        src: 'https://via.placeholder.com/230x110',
-        alt: 'alt',
+        image: Img('230x110'),
         title: 'post title',
       },
       {
         id: 2,
-        src: 'https://via.placeholder.com/230x110',
-        alt: 'alt',
+        image: Img('230x110'),
         title: 'post title',
       },
     ],
