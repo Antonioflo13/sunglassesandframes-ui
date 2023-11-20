@@ -4,6 +4,10 @@ import styles from './Price.module.css';
 
 export type PriceProps = {
   price: string | number;
+
+  /**
+   *  Extend class name component
+   */
   className?: string;
   discount?: boolean;
   textSize?: TextSizes;

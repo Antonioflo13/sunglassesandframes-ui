@@ -1,21 +1,22 @@
-import { ReactNode, useMemo } from 'react';
+import { useMemo } from 'react';
 
 import { Button } from '../Button/Button';
 
 import styles from './Headeritem.module.css';
-import { HeaderItems, HeaderItemTypes } from './types';
+import { HeaderItemModel } from './types';
 
 interface HeaderProps {
-  item: HeaderItems;
-  children: ReactNode;
+  item: HeaderItemModel;
 }
 
-export const HeaderItem = ({ item, children }: HeaderProps): JSX.Element => {
+export const HeaderItem = ({ item }: HeaderProps): JSX.Element => {
   const component = useMemo(() => {
     switch (item.type) {
-      case HeaderItemTypes.Img:
-        return <div className={styles['header-item-logo']}>{children}</div>;
-      case HeaderItemTypes.Icon:
+      case 'logo':
+        return <div className={styles['header-item-logo']} onClick={item.callback}>{item.image?.element}</div>;
+      case 'img':
+        return <div style={{ width: item.image?.width }} onClick={item.callback}>{item.image?.element}</div>;
+      case 'icon':
         return (
           <>
             {item.label && (
@@ -42,7 +43,7 @@ export const HeaderItem = ({ item, children }: HeaderProps): JSX.Element => {
           </>
         );
     }
-  }, [children, item.callback, item.label, item.type]);
+  }, [item.callback, item.image, item.label, item.type]);
 
   return <>{component}</>;
 };

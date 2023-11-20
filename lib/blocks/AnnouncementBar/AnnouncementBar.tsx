@@ -4,6 +4,9 @@ import styles from './AnnouncementBar.module.css';
 
 export interface AnnouncementBarProps {
   label: string;
+  /**
+   *  Extend class name component
+   */
   className?: string;
 }
 
