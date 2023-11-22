@@ -1,5 +1,4 @@
 import { Header } from '@blocks/Header/Header';
-import { HeaderItemTypes } from '@components/HeaderItem/types';
 import { sunglassesLogo } from '@stories/components/example/logo/sunglassesLogo';
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
@@ -22,24 +21,27 @@ export const Default: Story = {
   args: {
     items: [
       {
-        type: HeaderItemTypes.Label,
+        type: 'label',
         label: 'Home',
         callback: () => console.log('ciao'),
       },
-      { type: HeaderItemTypes.Img,
-        callback: () => console.log('ciao') },
+      { type: 'logo',
+        image: {
+          element: sunglassesLogo()
+        },
+        callback: () => console.log('ciao')
+      },
       {
-        type: HeaderItemTypes.Icon,
-        label: 'Icon',
+        type: 'icon',
+        label: 'icon',
         callback: () => console.log('ciao'),
       },
       {
-        type: HeaderItemTypes.Label,
+        type: 'label',
         label: 'Cart (0)',
         callback: () => console.log('ciao'),
       },
     ],
-    children: sunglassesLogo(),
   },
 };
 

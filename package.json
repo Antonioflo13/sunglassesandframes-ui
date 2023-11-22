@@ -1,7 +1,7 @@
 {
   "name": "sunglassesandframes-uii",
   "private": false,
-  "version": "0.0.13",
+  "version": "0.0.30",
   "type": "module",
   "main": "./dist/sunglassesandframes-ui.umd.cjs",
   "module": "./dist/sunglassesandframes-ui.js",
@@ -43,7 +43,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup-plugin-terser": "^7.0.2",
-    "swiper": "^11.0.3"
+    "swiper": "^11.0.3",
+    "vite-plugin-css-injected-by-js": "^3.3.0"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^7.5.2",

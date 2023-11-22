@@ -1,27 +1,37 @@
+import React, { useCallback } from 'react';
+
 import { ImageWrapper } from '../../components/ImageWrapper';
 import { Typography } from '../../components/Typography';
 
 import styles from './SectionSlider.module.css';
-import { SliderItem } from './types';
-
-/**
- * Props for a SectionSlider component.
- * @param {SectionSliderProps} props
- */
-
-export type SectionSliderProps = {
-  /**
-   * title
-   */
-  title: string;
-
-  /**
-   * items
-   */
-  items: SliderItem[];
-};
+import { SectionSliderProps, SliderItem } from './types';
 
 export const SectionSlider = ({ title, items }: SectionSliderProps): JSX.Element => {
+
+  const baseComponent = useCallback((item: SliderItem) =>
+    <div className={styles['container-item']}>
+      <ImageWrapper typeImage="image-secondary">
+        {item.image}
+      </ImageWrapper>
+      <Typography
+        Tag="h3"
+        className={styles['title-item']}
+        fontFamily="helvetica-medium"
+        textSize="md"
+        typographyType="shadow"
+        label={item.title}
+      />
+    </div>, []);
+
+  const component = useCallback((item: SliderItem) => {
+    switch (item.itemWrapper) {
+      case undefined:
+        return baseComponent(item);
+      default:
+        return item.itemWrapper(baseComponent(item));
+    }
+  }, [baseComponent]);
+
   return (
     <section className={styles['container']}>
       <Typography
@@ -33,19 +43,10 @@ export const SectionSlider = ({ title, items }: SectionSliderProps): JSX.Element
       />
       <div className={styles['container-slider']}>
         {items.map(item => (
-          <div className={styles['container-item']} key={item.id}>
-            <ImageWrapper typeImage="image-secondary">
-              <img className={styles['image']} src={item.src} alt={item.alt} />
-            </ImageWrapper>
-            <Typography
-              Tag="h3"
-              className={styles['title-item']}
-              fontFamily="helvetica-medium"
-              textSize="md"
-              typographyType="shadow"
-              label={item.title}
-            />
-          </div>
+          <React.Fragment key={item.id}>
+            {component(item)}
+          </React.Fragment>
+
         ))}
       </div>
     </section>

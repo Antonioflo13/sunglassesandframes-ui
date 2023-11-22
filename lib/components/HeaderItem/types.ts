@@ -1,11 +1,14 @@
-export enum HeaderItemTypes {
-  Img = 'img',
-  Icon = 'icon',
-  Label = 'label',
-}
+import { ReactNode } from 'react';
 
-export type HeaderItems = {
-  type: HeaderItemTypes.Img | HeaderItemTypes.Icon | HeaderItemTypes.Label;
+type HeaderItemTypes = 'img' | 'icon' | 'label' | 'logo';
+
+export type HeaderItemModel = {
+  type: HeaderItemTypes;
   label?: string;
+  wrapper?: (children: ReactNode) => JSX.Element;
+  image?: {
+    element: JSX.Element;
+    width?: `${number}px`;
+  };
   callback?: () => void;
 };

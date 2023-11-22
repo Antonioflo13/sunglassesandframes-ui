@@ -1,37 +1,37 @@
-import { ReactNode } from 'react';
+import React, { useCallback } from 'react';
 
+import { HeaderItemModel } from '../../components/HeaderItem';
 import { HeaderItem } from '../../components/HeaderItem/HeaderItem';
-import type { HeaderItems } from '../../components/HeaderItem/types';
 
 import styles from './Header.module.css';
+import { HeaderProps } from './types';
 
-export interface HeaderProps {
-  /**
-   *  An array of header items to display in the header
-   */
-  items: HeaderItems[];
+export function Header({ items, className, ...props }: HeaderProps): JSX.Element {
+  const component = useCallback((item: HeaderItemModel) => {
+    switch (item.wrapper) {
+      case undefined:
+        return <HeaderItem item={item}/>;
+      default:
+        return item.wrapper(<HeaderItem item={item}/>);
+    }
+  }, []);
 
-  /**
-   *  Additional React elements or content to display inside the headerItem when HeaderItem type is img
-   */
-  children: ReactNode;
-}
-
-export function Header({ items, children, ...props }: HeaderProps): JSX.Element {
   return (
-    <header className={styles['header']} {...props}>
-      {items.splice(0, 2).map((item, idx) => (
-        <HeaderItem key={idx} item={item}>
-          {children}
-        </HeaderItem>
-      ))}
+    <nav className={`${styles['header']} ${className}`} {...props}>
       <div>
-        {items.splice(0, 2).map((item, idx) => (
-          <HeaderItem key={idx} item={item}>
-            {children}
-          </HeaderItem>
+        {[...items].splice(0,2).map((item, idx) => (
+          <React.Fragment key={idx}>
+            {component(item)}
+          </React.Fragment>
         ))}
       </div>
-    </header>
+      <div>
+        {[...items].splice(2,3).map((item, idx) => (
+          <React.Fragment key={idx}>
+            {component(item)}
+          </React.Fragment>
+        ))}
+      </div>
+    </nav>
   );
 }
