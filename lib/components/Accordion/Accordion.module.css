@@ -1,0 +1,21 @@
+.container {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.accordion {
+    padding: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordionIcon {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
