@@ -20,7 +20,7 @@ const metaTypography = {
         type: 'number',
       },
     },
-    name: {
+    alt: {
       control: {
         type: 'text',
       },
@@ -36,6 +36,6 @@ export const Default: Story = {
   args: {
     src: '',
     size: 18,
-    name: 'icon',
+    alt: 'icon',
   },
 };

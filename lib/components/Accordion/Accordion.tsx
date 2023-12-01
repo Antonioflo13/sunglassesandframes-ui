@@ -32,8 +32,8 @@ export const Accordion = ({ accordion }: AccordionProps): JSX.Element => {
           <li className={styles.accordion} key={key}>
             <div className={styles.header}>
               <Typography label={item.title} fontFamily="helvetica-regular" textSize="sm" />
-              <button className={styles.accordionIcon} onClick={() => toggleAccordion(key)}>
-                {item.open ? <IconWrapper src='' name='minus' /> : <IconWrapper src='' name='plus' />}
+              <button className={styles.accordionIcon} onClick={(): void => toggleAccordion(key)}>
+                {item.open ? <IconWrapper src='' alt='minus' /> : <IconWrapper src='' alt='plus' />}
               </button>
             </div>
             <AnimatePresence>
