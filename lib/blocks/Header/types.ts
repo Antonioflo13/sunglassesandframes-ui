@@ -1,10 +1,17 @@
 import { HeaderItemModel } from '../../components/HeaderItem';
 
+type BlocksPosition = 'left' | 'middle-left' | 'center' | 'middle-right' | 'right'
+
+type Blocks = {
+ type: BlocksPosition;
+ items: HeaderItemModel[];
+}
+
 export interface HeaderProps {
     /**
      *  An array of header items to display in the header
      */
-    items: HeaderItemModel[];
+    blocks: Blocks[];
 
     /**
      *  Extend class name component

@@ -19,27 +19,74 @@ type Story = StoryObj<typeof metaHeader>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Default: Story = {
   args: {
-    items: [
+    blocks: [
       {
-        type: 'label',
-        label: 'Home',
-        callback: () => console.log('ciao'),
+        type: 'left',
+        items: [{
+          type: 'label',
+          label: 'HOME',
+          callback: () => console.log('ciao'),
+        }],
       },
-      { type: 'logo',
-        image: {
-          element: sunglassesLogo()
+      {
+        type: 'middle-left',
+        items: [{
+          type: 'label',
+          label: 'MAGAZINE',
+          callback: () => console.log('ciao'),
         },
-        callback: () => console.log('ciao')
+        {
+          type: 'label',
+          label: 'DESIGNER',
+          callback: () => console.log('ciao'),
+        },
+        {
+          type: 'label',
+          label: 'SHOP BY',
+          callback: () => console.log('ciao'),
+        }]
       },
       {
-        type: 'icon',
-        label: 'icon',
-        callback: () => console.log('ciao'),
+        type: 'center',
+        items: [
+          { type: 'logo',
+            image: {
+              element: sunglassesLogo()
+            },
+            callback: () => console.log('ciao')
+          },
+
+        ],
       },
       {
-        type: 'label',
-        label: 'Cart (0)',
-        callback: () => console.log('ciao'),
+        type: 'middle-right',
+        items: [
+          {
+            type: 'label',
+            label: 'icon',
+            callback: () => console.log('ciao'),
+          },
+          {
+            type: 'label',
+            label: 'CART (0)',
+            callback: () => console.log('ciao'),
+          },
+        ],
+      },
+      {
+        type: 'right',
+        items: [
+          {
+            type: 'label',
+            label: 'icon',
+            callback: () => console.log('ciao'),
+          },
+          {
+            type: 'label',
+            label: 'CART (0)',
+            callback: () => console.log('ciao'),
+          },
+        ],
       },
     ],
   },
