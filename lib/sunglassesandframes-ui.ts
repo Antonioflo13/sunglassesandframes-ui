@@ -3,6 +3,7 @@ export { Button } from './components/Button/Button';
 export { Typography } from './components/Typography/Typography';
 export { ImageWrapper } from './components/ImageWrapper/ImageWrapper';
 export { Price } from './components/Price/Price';
+export { Accordion } from './components/Accordion/Accordion';
 
 // Blocks
 export { AnnouncementBar } from './blocks/AnnouncementBar/AnnouncementBar';
