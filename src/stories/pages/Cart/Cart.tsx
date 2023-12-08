@@ -1,6 +1,6 @@
-import { AnnouncementBar } from '@blocks/AnnouncementBar';
 import { Cart } from '@blocks/Cart';
 import { Header } from '@blocks/Header';
+import PageWrapper from '@components/PageWrapper/PageWrapper';
 
 import { CartPageProps } from './types';
 
@@ -10,10 +10,9 @@ export const CartPage = ({
   CartProps,
 }: CartPageProps): JSX.Element => {
   return (
-    <>
-      <AnnouncementBar {...announcementBarProps} />
+    <PageWrapper announcementBarProps={announcementBarProps}>
       <Header {...headerProps} />
       <Cart {...CartProps} />
-    </>
+    </PageWrapper>
   );
 };

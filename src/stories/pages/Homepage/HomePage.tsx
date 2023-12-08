@@ -1,7 +1,6 @@
-import { AnnouncementBar } from '@blocks/AnnouncementBar';
-import { Header } from '@blocks/Header';
 import { ProductsList } from '@blocks/ProductsList';
 import { SectionSlider } from '@blocks/SectionSlider';
+import PageWrapper from '@components/PageWrapper/PageWrapper';
 
 import { HomepageProps } from './types';
 
@@ -12,11 +11,9 @@ export const HomePage = ({
   productsPlpProps,
 }: HomepageProps): JSX.Element => {
   return (
-    <>
-      <AnnouncementBar {...announcementBarProps} />
-      <Header {...headerProps} />
+    <PageWrapper announcementBarProps={announcementBarProps} withNavbar={headerProps}>
       <SectionSlider {...sectionSliderProps} />
       <ProductsList {...productsPlpProps} />
-    </>
+    </PageWrapper>
   );
 };

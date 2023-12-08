@@ -1,6 +1,6 @@
 .container-plp {
   height: 250px;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .title {
@@ -16,8 +16,8 @@
 }
 
 .price {
-  height: 20px;
-  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 .product-name {
