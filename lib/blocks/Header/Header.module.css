@@ -39,10 +39,10 @@
   }
 
   .blocks-middle-left {
-    display: inline-block;
+    display: flex;
   }
 
   .blocks-middle-right {
-    display: inline-block;
+    display: flex;
   }
 }
