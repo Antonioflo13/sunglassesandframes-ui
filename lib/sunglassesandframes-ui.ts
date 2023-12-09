@@ -8,10 +8,10 @@ export { Accordion } from './components/Accordion/Accordion';
 // Blocks
 export { AnnouncementBar } from './blocks/AnnouncementBar/AnnouncementBar';
 export { Header } from './blocks/Header/Header';
-export { SectionSlider } from './blocks/SectionSlider/SectionSlider';
-export { ProductsList } from './blocks/ProductsList/ProductsList';
+export { Grid } from './blocks/Grid/Grid';
 export { PdpImage } from './blocks/PdpImage/PdpImage';
 export { PdpBottomCard } from './blocks/PdpBottomCard/PdpBottomCard';
 export { InfoBox } from './blocks/InfoBox/InfoBox';
 export { Cart } from './blocks/Cart/Cart';
 export { PdpMobile } from './blocks/PdpMobile/PdpMobile';
+export { Slider } from './blocks/Slider/Slider';

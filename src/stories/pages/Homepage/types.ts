@@ -1,11 +1,10 @@
 import { AnnouncementBarProps } from '@blocks/AnnouncementBar';
 import { HeaderProps } from '@blocks/Header';
-import { ProductsListProps } from '@blocks/ProductsList';
-import { SectionSliderProps } from '@blocks/SectionSlider';
+import { SliderProps } from '@blocks/Slider';
 
 export type HomepageProps = {
   announcementBarProps: AnnouncementBarProps;
   headerProps: HeaderProps;
-  sectionSliderProps: SectionSliderProps;
-  productsPlpProps: ProductsListProps;
+  sliderWithProductsAndTitle: SliderProps;
+  sliderWithDesignersAndTitle: SliderProps;
 };

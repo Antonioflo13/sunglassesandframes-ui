@@ -22,40 +22,45 @@ export const Default: Story = {
     blocks: [
       {
         type: 'left',
-        items: [{
-          type: 'label',
-          label: 'HOME',
-          callback: () => console.log('ciao'),
-        }],
+        items: [
+          {
+            type: 'label',
+            label: 'HOME',
+            callback: () => console.log('ciao'),
+          },
+        ],
       },
       {
         type: 'middle-left',
-        items: [{
-          type: 'label',
-          label: 'MAGAZINE',
-          callback: () => console.log('ciao'),
-        },
-        {
-          type: 'label',
-          label: 'DESIGNER',
-          callback: () => console.log('ciao'),
-        },
-        {
-          type: 'label',
-          label: 'SHOP BY',
-          callback: () => console.log('ciao'),
-        }]
+        gap: '50px',
+        items: [
+          {
+            type: 'label',
+            label: 'MAGAZINE',
+            callback: () => console.log('ciao'),
+          },
+          {
+            type: 'label',
+            label: 'DESIGNER',
+            callback: () => console.log('ciao'),
+          },
+          {
+            type: 'label',
+            label: 'SHOP BY',
+            callback: () => console.log('ciao'),
+          },
+        ],
       },
       {
         type: 'center',
         items: [
-          { type: 'logo',
+          {
+            type: 'logo',
             image: {
-              element: sunglassesLogo()
+              element: sunglassesLogo(),
             },
-            callback: () => console.log('ciao')
+            callback: () => console.log('ciao'),
           },
-
         ],
       },
       {

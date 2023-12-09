@@ -1,5 +1,5 @@
 import { PdpMobile } from '@blocks/PdpMobile/PdpMobile';
-import PageWrapper from '@components/PageWrapper/PageWrapper';
+import { PageWrapper } from '@components/PageWrapper';
 
 import { PdpMobilePageProps } from './types';
 

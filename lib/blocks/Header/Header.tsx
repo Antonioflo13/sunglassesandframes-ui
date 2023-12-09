@@ -10,9 +10,9 @@ export function Header({ blocks, className, ...props }: HeaderProps): JSX.Elemen
   const component = useCallback((item: HeaderItemModel) => {
     switch (item.wrapper) {
       case undefined:
-        return <HeaderItem item={item}/>;
+        return <HeaderItem item={item} />;
       default:
-        return item.wrapper(<HeaderItem item={item}/>);
+        return item.wrapper(<HeaderItem item={item} />);
     }
   }, []);
 
@@ -20,14 +20,15 @@ export function Header({ blocks, className, ...props }: HeaderProps): JSX.Elemen
     <nav className={`${styles['header']} ${className}`} {...props}>
       <div className={styles['blocks-container']}>
         {blocks.map((block, idx) => (
-          <div className={`${styles['blocks-item']} ${styles[`blocks-${block.type}`]}`} key={idx}>
+          <div
+            style={{ gap: block.gap }}
+            className={`${styles['blocks-item']} ${styles[`blocks-${block.type}`]}`}
+            key={idx}
+          >
             {block.items.map((item, idx) => (
-              <React.Fragment key={idx}>
-                {component(item)}
-              </React.Fragment>
+              <React.Fragment key={idx}>{component(item)}</React.Fragment>
             ))}
           </div>
-
         ))}
       </div>
     </nav>

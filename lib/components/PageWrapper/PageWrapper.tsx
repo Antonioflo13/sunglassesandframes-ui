@@ -6,7 +6,7 @@ import { Header } from '../../blocks/Header/Header';
 import styles from './PageWrapper.module.css';
 import { PageWrapperProps } from './types';
 
-const PageWrapper = ({
+export const PageWrapper = ({
   children,
   announcementBarProps,
   withNavbar,
@@ -38,5 +38,3 @@ const PageWrapper = ({
     </motion.div>
   );
 };
-
-export default PageWrapper;

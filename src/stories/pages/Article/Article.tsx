@@ -1,6 +1,6 @@
-import { InfoBox } from '@blocks/InfoBox/InfoBox';
-import { ProductsList } from '@blocks/ProductsList';
-import PageWrapper from '@components/PageWrapper/PageWrapper';
+import { Grid } from '@blocks/Grid';
+import { InfoBox } from '@blocks/InfoBox';
+import { PageWrapper } from '@components/PageWrapper';
 
 import { ArticleProps } from './types';
 
@@ -13,7 +13,7 @@ export const Article = ({
   return (
     <PageWrapper announcementBarProps={announcementBarProps} withNavbar={headerProps}>
       <InfoBox {...infoBoxProps} />
-      <ProductsList {...productsPlpProps} />
+      <Grid {...productsPlpProps} />
     </PageWrapper>
   );
 };

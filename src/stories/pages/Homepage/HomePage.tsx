@@ -1,19 +1,18 @@
-import { ProductsList } from '@blocks/ProductsList';
-import { SectionSlider } from '@blocks/SectionSlider';
-import PageWrapper from '@components/PageWrapper/PageWrapper';
+import { Slider } from '@blocks/Slider';
+import { PageWrapper } from '@components/PageWrapper';
 
 import { HomepageProps } from './types';
 
 export const HomePage = ({
   announcementBarProps,
   headerProps,
-  sectionSliderProps,
-  productsPlpProps,
+  sliderWithProductsAndTitle,
+  sliderWithDesignersAndTitle,
 }: HomepageProps): JSX.Element => {
   return (
     <PageWrapper announcementBarProps={announcementBarProps} withNavbar={headerProps}>
-      <SectionSlider {...sectionSliderProps} />
-      <ProductsList {...productsPlpProps} />
+      <Slider {...sliderWithDesignersAndTitle} />
+      <Slider {...sliderWithProductsAndTitle} />
     </PageWrapper>
   );
 };

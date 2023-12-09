@@ -1,0 +1,28 @@
+.container-product-info {
+  position: relative;
+  max-width: 160px;
+  padding-top: 10px;
+}
+
+.price {
+  padding-bottom: 5px;
+}
+
+.product-name {
+  text-transform: uppercase;
+  height: 20px;
+}
+
+.designer {
+  height: 20px;
+}
+@media (min-width: 768px) {
+  .container-product-info {
+    max-width: 250px;
+  }
+  .price {
+    position: absolute;
+    right: 0;
+    padding: 0;
+  }
+}

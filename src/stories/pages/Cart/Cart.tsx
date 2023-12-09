@@ -1,6 +1,6 @@
 import { Cart } from '@blocks/Cart';
 import { Header } from '@blocks/Header';
-import PageWrapper from '@components/PageWrapper/PageWrapper';
+import { PageWrapper } from '@components/PageWrapper';
 
 import { CartPageProps } from './types';
 
