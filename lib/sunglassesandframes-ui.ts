@@ -4,6 +4,7 @@ export { Typography } from './components/Typography/Typography';
 export { ImageWrapper } from './components/ImageWrapper/ImageWrapper';
 export { Price } from './components/Price/Price';
 export { Accordion } from './components/Accordion/Accordion';
+export { PageWrapper } from './components/PageWrapper/PageWrapper';
 
 // Blocks
 export { AnnouncementBar } from './blocks/AnnouncementBar/AnnouncementBar';

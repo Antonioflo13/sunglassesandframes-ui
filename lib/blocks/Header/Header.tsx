@@ -17,19 +17,21 @@ export function Header({ blocks, className, ...props }: HeaderProps): JSX.Elemen
   }, []);
 
   return (
-    <nav className={`${styles['header']} ${className}`} {...props}>
-      <div className={styles['blocks-container']}>
-        {blocks.map((block, idx) => (
-          <div
-            style={{ gap: block.gap }}
-            className={`${styles['blocks-item']} ${styles[`blocks-${block.type}`]}`}
-            key={idx}
-          >
-            {block.items.map((item, idx) => (
-              <React.Fragment key={idx}>{component(item)}</React.Fragment>
-            ))}
-          </div>
-        ))}
+    <nav className={`${className}`} {...props}>
+      <div className={`${styles['header']}`}>
+        <div className={styles['blocks-container']}>
+          {blocks.map((block, idx) => (
+            <div
+              style={{ gap: block.gap }}
+              className={`${styles['blocks-item']} ${styles[`blocks-${block.type}`]}`}
+              key={idx}
+            >
+              {block.items.map((item, idx) => (
+                <React.Fragment key={idx}>{component(item)}</React.Fragment>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </nav>
   );
