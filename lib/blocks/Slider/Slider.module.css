@@ -11,6 +11,9 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .container-carosuel {
+    padding: 20px 0;
+  }
   .container-title {
     text-align: center;
     padding-bottom: 20px;

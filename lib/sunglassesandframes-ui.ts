@@ -5,6 +5,8 @@ export { ImageWrapper } from './components/ImageWrapper/ImageWrapper';
 export { Price } from './components/Price/Price';
 export { Accordion } from './components/Accordion/Accordion';
 export { PageWrapper } from './components/PageWrapper/PageWrapper';
+export { Article } from './components/Article/Article';
+export { Product } from './components/Product/Product';
 
 // Blocks
 export { AnnouncementBar } from './blocks/AnnouncementBar/AnnouncementBar';

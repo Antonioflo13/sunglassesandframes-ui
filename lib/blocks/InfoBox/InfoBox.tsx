@@ -10,9 +10,10 @@ export const InfoBox = ({
   description,
   date,
   button,
+  className,
 }: InfoBoxprops): JSX.Element => {
   return (
-    <section className={styles['container-info-box']}>
+    <section className={`${styles['container-info-box']} ${className ? className : ''}`}>
       <ImageWrapper typeImage="image-primary">{children}</ImageWrapper>
       {title && <Typography label={title.label} fontFamily={title.fontFamily} />}
       {subtitle && <Typography label={subtitle.label} fontFamily={subtitle.fontFamily} />}

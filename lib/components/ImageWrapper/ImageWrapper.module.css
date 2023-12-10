@@ -54,3 +54,9 @@
     height: 250px;
   }
 }
+
+@media only screen and (min-width: 1100px) {
+  .image-primary {
+    height: 250px;
+  }
+}

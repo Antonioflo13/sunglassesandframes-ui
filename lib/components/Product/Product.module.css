@@ -1,6 +1,8 @@
+.container-product {
+  width: 140px;
+}
 .container-product-info {
   position: relative;
-  max-width: 160px;
   padding-top: 10px;
 }
 
@@ -16,9 +18,16 @@
 .designer {
   height: 20px;
 }
+
+@media (min-width: 360px) {
+  .container-product {
+    width: 160px;
+  }
+}
+
 @media (min-width: 768px) {
-  .container-product-info {
-    max-width: 250px;
+  .container-product {
+    width: 250px;
   }
   .price {
     position: absolute;
