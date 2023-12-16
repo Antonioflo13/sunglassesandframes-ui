@@ -12,6 +12,7 @@ export const PdpMobile = ({
   products,
   initialSlide,
   callback,
+  pdpBottomCardButtonLabel,
   pdpBottomCardCallback,
 }: PdpMobileProps): JSX.Element => {
   const [headerHeight, setHeaderHeight] = useState<number>(0);
@@ -55,7 +56,11 @@ export const PdpMobile = ({
               </SwiperSlide>
             ))}
           </Swiper>
-          <PdpBottomCard product={product} callback={pdpBottomCardCallback} />
+          <PdpBottomCard
+            product={product}
+            callback={pdpBottomCardCallback}
+            buttonLabel={pdpBottomCardButtonLabel}
+          />
         </SwiperSlide>
       ))}
     </Swiper>

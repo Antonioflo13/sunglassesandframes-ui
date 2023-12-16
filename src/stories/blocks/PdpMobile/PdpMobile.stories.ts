@@ -18,6 +18,7 @@ type Story = StoryObj<typeof metaPdpMobile>;
 export const Default: Story = {
   args: {
     initialSlide: 0,
+    pdpBottomCardButtonLabel: 'ADD TO SHOPPING BAG',
     products: [
       {
         id: 'gid://shopify/Product/8523554685264',

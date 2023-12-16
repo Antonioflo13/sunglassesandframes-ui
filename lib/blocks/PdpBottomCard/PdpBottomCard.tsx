@@ -3,7 +3,11 @@ import { Button, Price, Typography } from '../../components';
 import styles from './PdpBottomCard.module.css';
 import { PdpBottomCardProps } from './types';
 
-export const PdpBottomCard = ({ product, callback }: PdpBottomCardProps): JSX.Element => {
+export const PdpBottomCard = ({
+  product,
+  buttonLabel,
+  callback,
+}: PdpBottomCardProps): JSX.Element => {
   return (
     <section id="bottom-card" className={styles['container-pdp-bottom-card']}>
       <div className={styles['pdp-bottom-card-item']}>
@@ -27,7 +31,7 @@ export const PdpBottomCard = ({ product, callback }: PdpBottomCardProps): JSX.El
           <Typography label={`${product.totalInventory} in stock`} fontFamily="helvetica-regular" />
         </div>
       </div>
-      <Button label="BUTTONS" fontFamily="artegra-bold" callback={callback} />
+      <Button label={buttonLabel} fontFamily="artegra-bold" callback={callback} />
     </section>
   );
 };

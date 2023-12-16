@@ -1,4 +1,3 @@
-
 export type PdpMobileProps = {
   products: {
     id: string;
@@ -13,11 +12,14 @@ export type PdpMobileProps = {
     price: {
       amount: number | string;
       currencyCode: string;
-    };}[];
+    };
+  }[];
 
   initialSlide: number;
 
   callback: (index: number) => void;
+
+  pdpBottomCardButtonLabel: string;
 
   pdpBottomCardCallback?: () => void;
 };
