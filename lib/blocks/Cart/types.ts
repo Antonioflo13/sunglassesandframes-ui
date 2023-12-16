@@ -8,18 +8,19 @@ export type CartProduct = {
   details: {
     price?: { amount: number; currencyCode: string };
   };
+  image?: JSX.Element;
 };
 
 export type updateCartArgs = {
   mode: 'add' | 'remove' | 'removeAll';
-  idLineItems: CartProduct['idLineItems'];
+  cartItem: CartProduct;
 };
 
 export type CartProps = {
-  children: ReactNode;
   products: CartProduct[];
   icons: ReactNode[];
   totalPrice: { amount: number; currencyCode: string };
-  updateCart: ({ mode, idLineItems }: updateCartArgs) => void;
+  updateCart: ({ mode, cartItem }: updateCartArgs) => void;
+  buttonLabel: string;
   goToCheckout: () => void;
 };

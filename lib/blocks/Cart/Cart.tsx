@@ -4,20 +4,18 @@ import styles from './Cart.module.css';
 import { CartProps } from './types';
 
 export const Cart = ({
-  children,
   products,
   updateCart,
   icons,
   totalPrice,
   goToCheckout,
+  buttonLabel
 }: CartProps): JSX.Element => {
   return (
     <section className={styles['container-cart']}>
-      <Button label="buttons" fontFamily="artegra-bold" callback={goToCheckout} />
+      <Button label={buttonLabel} fontFamily="artegra-bold" callback={goToCheckout} />
       {products.map((product, idx) => (
-        <CartProduct key={idx} product={product} updateCart={updateCart}>
-          {children}
-        </CartProduct>
+        <CartProduct key={idx} product={product} updateCart={updateCart}/>
       ))}
       <hr />
       <div className={styles['containter-info']}>
@@ -38,7 +36,7 @@ export const Cart = ({
           <Typography label="Calculated at checkout" fontFamily="helvetica-regular" textSize="sm" />
         </div>
       </div>
-      <Button label="buttons" fontFamily="artegra-bold" callback={goToCheckout} />
+      <Button label={buttonLabel} fontFamily="artegra-bold" callback={goToCheckout} />
     </section>
   );
 };

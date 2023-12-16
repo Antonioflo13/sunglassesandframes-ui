@@ -10,6 +10,7 @@ export const PdpMobilePage = ({
 }: PdpMobilePageProps): JSX.Element => {
   return (
     <PageWrapper
+      withAnnouncementBar={false}
       announcementBarProps={announcementBarProps}
       withNavbar={headerProps}
       withSpacing={false}

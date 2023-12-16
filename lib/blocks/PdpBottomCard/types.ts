@@ -12,4 +12,5 @@ export type PdpBottomCardProps = {
     vendor: string;
     totalInventory: number;
   };
+  callback?: () => void;
 };

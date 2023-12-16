@@ -20,6 +20,7 @@ type Story = StoryObj<typeof metaCart>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Default: Story = {
   args: {
+    buttonLabel: 'BUTTONS',
     products: [
       {
         id: '1',
@@ -32,6 +33,8 @@ export const Default: Story = {
             currencyCode: 'eur',
           },
         },
+        image: Img('230x110'),
+
       },
       {
         id: '2',
@@ -44,6 +47,7 @@ export const Default: Story = {
             currencyCode: 'eur',
           },
         },
+        image: Img('230x110'),
       },
     ],
     icons: [icon(returnBox), icon(verify)],
@@ -51,6 +55,5 @@ export const Default: Story = {
       amount: 123,
       currencyCode: 'eur',
     },
-    children: Img('160x130'),
   },
 };
