@@ -1,0 +1,23 @@
+.containter-cart-summary-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 15px;
+  padding-bottom: 11px;
+}
+
+.containter-cart-summary-mobile > div:not(.container-icon) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-icons {
+  display: flex;
+}
+
+.container-icon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 50%;
+}

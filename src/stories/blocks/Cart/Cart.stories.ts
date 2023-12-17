@@ -34,7 +34,6 @@ export const Default: Story = {
           },
         },
         image: Img('230x110'),
-
       },
       {
         id: '2',
@@ -50,7 +49,12 @@ export const Default: Story = {
         image: Img('230x110'),
       },
     ],
-    icons: [icon(returnBox), icon(verify)],
+    icons: [
+      { icon: icon(verify),
+        label: 'Original and Certified' },
+      { icon: icon(returnBox),
+        label: '14 days return delivery' },
+    ],
     totalPrice: {
       amount: 123,
       currencyCode: 'eur',
