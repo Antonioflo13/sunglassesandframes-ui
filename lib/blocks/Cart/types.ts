@@ -1,5 +1,4 @@
-import { CartSummaryDesktopProps } from '@blocks/CartSummaryDesktop';
-import { CartSummaryMobileProps } from '@blocks/CartSummaryMobile';
+import { ReactNode } from 'react';
 
 export type CartProduct = {
   idLineItems: string;
@@ -19,7 +18,10 @@ export type updateCartArgs = {
 
 export type CartProps = {
   products: CartProduct[];
-  icons: CartSummaryMobileProps['icons'] | CartSummaryDesktopProps['icons'];
+  icons: {
+    icon: ReactNode;
+    label: string;
+  }[];
   totalPrice: { amount: number; currencyCode: string };
   updateCart: ({ mode, cartItem }: updateCartArgs) => void;
   buttonLabel: string;
