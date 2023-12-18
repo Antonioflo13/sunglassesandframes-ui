@@ -35,6 +35,7 @@ export const Slider = ({
           <Typography
             label={title.label}
             fontFamily={title.fontFamily}
+            textSize={title.textSize}
             className={styles['title']}
           />
         </div>
