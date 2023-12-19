@@ -4,7 +4,7 @@
     text-align: center;
 }
 
-.container-results {
+.results-designers, .results-products {
     margin-top: 20px;
     margin-bottom: 30px;
 }
@@ -16,6 +16,10 @@
 .more-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+.results-products {
+    text-align: left;
 }
 
 @media (max-width: 768px) {
