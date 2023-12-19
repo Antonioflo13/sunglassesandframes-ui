@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-type HeaderItemTypes = 'img' | 'icon' | 'label' | 'logo';
+type HeaderItemTypes = 'img' | 'label' | 'logo';
 
 export type HeaderItemModel = {
   type: HeaderItemTypes;

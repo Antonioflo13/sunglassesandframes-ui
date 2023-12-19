@@ -12,7 +12,7 @@ export interface AnnouncementBarProps {
 
 export const AnnouncementBar = ({ label, className, ...props }: AnnouncementBarProps): JSX.Element => {
   return (
-    <div className={`${styles['announcement-bar']} ${className}`} {...props}>
+    <div id='announcement-bar' className={`${styles['announcement-bar']} ${className}`} {...props}>
       <Typography label={label} fontFamily="helvetica-regular" textSize="sm" />
     </div>
   );

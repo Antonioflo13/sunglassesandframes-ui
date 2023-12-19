@@ -1,7 +1,7 @@
 {
   "name": "sunglassesandframes-uii",
   "private": false,
-  "version": "0.0.30",
+  "version": "0.0.70",
   "type": "module",
   "main": "./dist/sunglassesandframes-ui.umd.cjs",
   "module": "./dist/sunglassesandframes-ui.js",
@@ -35,6 +35,7 @@
     "test-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build"
   },
   "peerDependencies": {
+    "framer-motion": "^10.16.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "swiper": "^11.0.3"

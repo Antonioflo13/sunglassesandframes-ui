@@ -6,31 +6,32 @@ import { HeaderItem } from '../../components/HeaderItem/HeaderItem';
 import styles from './Header.module.css';
 import { HeaderProps } from './types';
 
-export function Header({ items, className, ...props }: HeaderProps): JSX.Element {
+export function Header({ blocks, className, ...props }: HeaderProps): JSX.Element {
   const component = useCallback((item: HeaderItemModel) => {
     switch (item.wrapper) {
       case undefined:
-        return <HeaderItem item={item}/>;
+        return <HeaderItem item={item} />;
       default:
-        return item.wrapper(<HeaderItem item={item}/>);
+        return item.wrapper(<HeaderItem item={item} />);
     }
   }, []);
 
   return (
-    <nav className={`${styles['header']} ${className}`} {...props}>
-      <div>
-        {[...items].splice(0,2).map((item, idx) => (
-          <React.Fragment key={idx}>
-            {component(item)}
-          </React.Fragment>
-        ))}
-      </div>
-      <div>
-        {[...items].splice(2,3).map((item, idx) => (
-          <React.Fragment key={idx}>
-            {component(item)}
-          </React.Fragment>
-        ))}
+    <nav className={`${className}`} {...props}>
+      <div className={`${styles['header']}`}>
+        <div className={styles['blocks-container']}>
+          {blocks.map((block, idx) => (
+            <div
+              style={{ gap: block.gap }}
+              className={`${styles['blocks-item']} ${styles[`blocks-${block.type}`]}`}
+              key={idx}
+            >
+              {block.items.map((item, idx) => (
+                <React.Fragment key={idx}>{component(item)}</React.Fragment>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </nav>
   );

@@ -1,44 +1,53 @@
-import { Button, CartProduct, ImageWrapper, Price, Typography } from '../../components';
+
+import { Button, CartProduct } from '../../components';
+import { CartSummaryDesktop } from '../CartSummaryDesktop';
+import { CartSummaryMobile } from '../CartSummaryMobile';
 
 import styles from './Cart.module.css';
 import { CartProps } from './types';
 
 export const Cart = ({
-  children,
   products,
   updateCart,
   icons,
   totalPrice,
   goToCheckout,
+  buttonLabel,
+  className,
 }: CartProps): JSX.Element => {
   return (
-    <section className={styles['container-cart']}>
-      <Button label="buttons" fontFamily="artegra-bold" callback={goToCheckout} />
-      {products.map((product, idx) => (
-        <CartProduct key={idx} product={product} updateCart={updateCart}>
-          {children}
-        </CartProduct>
-      ))}
-      <hr />
-      <div className={styles['containter-info']}>
-        <div className={styles['container-icons']}>
-          {icons.map((icon, idx) => (
-            <div className={styles['container-icon']} key={idx}>
-              <ImageWrapper>{icon}</ImageWrapper>
-              <Typography label="text" fontFamily="helvetica-regular" textSize="sm" />
-            </div>
+    <section className={`${styles['container-cart']} ${className ? className : ''}`}>
+      <Button
+        className={styles['cart-mobile']}
+        label={buttonLabel}
+        fontFamily="artegra-bold"
+        callback={goToCheckout}
+      />
+      <div className={styles['container-product-summary']}>
+        <div className={styles['container-product']}>
+          {products.map((product, idx) => (
+            <CartProduct key={idx} product={product} updateCart={updateCart} />
           ))}
         </div>
-        <div>
-          <Typography label="TOTAL" fontFamily="helvetica-medium" textSize="sm" />
-          <Price price={totalPrice.amount || 0} textSize="lg" />
-        </div>
-        <div>
-          <Typography label="SHIPPING" fontFamily="helvetica-medium" textSize="sm" />
-          <Typography label="Calculated at checkout" fontFamily="helvetica-regular" textSize="sm" />
-        </div>
+        <CartSummaryMobile
+          className={styles['cart-mobile']}
+          icons={icons}
+          totalPrice={totalPrice}
+        />
+        <CartSummaryDesktop
+          className={styles['cart-desktop']}
+          icons={icons}
+          totalPrice={totalPrice}
+          buttonLabel={buttonLabel}
+          goToCheckout={goToCheckout}
+        />
       </div>
-      <Button label="buttons" fontFamily="artegra-bold" callback={goToCheckout} />
+      <Button
+        className={styles['cart-mobile']}
+        label={buttonLabel}
+        fontFamily="artegra-bold"
+        callback={goToCheckout}
+      />
     </section>
   );
 };

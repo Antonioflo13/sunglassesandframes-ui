@@ -1,7 +1,6 @@
-import { AnnouncementBar } from '@blocks/AnnouncementBar';
-import { Header } from '@blocks/Header';
+import { Grid } from '@blocks/Grid';
 import { InfoBox } from '@blocks/InfoBox/InfoBox';
-import { ProductsList } from '@blocks/ProductsList';
+import { PageWrapper } from '@components/PageWrapper';
 
 import { DesignerProps } from './types';
 
@@ -12,11 +11,9 @@ export const Designer = ({
   productsPlpProps,
 }: DesignerProps): JSX.Element => {
   return (
-    <>
-      <AnnouncementBar {...announcementBarProps} />
-      <Header {...headerProps} />
+    <PageWrapper announcementBarProps={announcementBarProps} withNavbar={headerProps}>
       <InfoBox {...infoBoxProps} />
-      <ProductsList {...productsPlpProps} />
-    </>
+      <Grid {...productsPlpProps} />
+    </PageWrapper>
   );
 };
