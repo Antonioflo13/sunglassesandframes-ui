@@ -1,7 +1,9 @@
 import { Default as AnnouncementBarDefault } from '@stories/blocks/AnnouncementBar/AnnouncementBar.stories';
 import { Default as HeaderDefault } from '@stories/blocks/Header/Header.stories';
-import { Default as ProductsListDefault } from '@stories/blocks/ProductsList/ProductsList.stories';
-import { Default as SectionSliderDefault } from '@stories/blocks/SectionSlider/SectionSlider.stories';
+import {
+  WithDesignerAndTitle as SliderWithDesignerAndTitle,
+  WithProductsAndTitle as SliderWithProductsAndTitle,
+} from '@stories/blocks/Slider/Slider.stories';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { HomePage } from './HomePage';
@@ -23,7 +25,7 @@ export const Default: Story = {
   args: {
     announcementBarProps: AnnouncementBarDefault.args,
     headerProps: HeaderDefault.args,
-    sectionSliderProps: SectionSliderDefault.args,
-    productsPlpProps: ProductsListDefault.args,
+    sliderWithProductsAndTitle: SliderWithProductsAndTitle.args,
+    sliderWithDesignersAndTitle: SliderWithDesignerAndTitle.args,
   },
 };

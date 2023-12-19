@@ -26,6 +26,7 @@ export const Default: Story = {
     announcementBarProps: AnnouncementBarDefault.args,
     headerProps: HeaderDefault.args,
     CartProps: {
+      buttonLabel: 'BUTTONS',
       products: [
         {
           id: '1',
@@ -38,6 +39,7 @@ export const Default: Story = {
               currencyCode: 'eur',
             },
           },
+          image: Img('230x110'),
         },
         {
           id: '2',
@@ -50,15 +52,20 @@ export const Default: Story = {
               currencyCode: 'eur',
             },
           },
+          image: Img('230x110'),
         },
       ],
-      icons: [icon(returnBox), icon(verify)],
+      icons: [
+        { icon: icon(verify),
+          label: 'Original and Certified' },
+        { icon: icon(returnBox),
+          label: '14 days return delivery' },
+      ],
       totalPrice: {
         amount: 123,
         currencyCode: 'eur',
       },
-      children: Img('160x130'),
-      updateCart: ({ mode, idLineItems }) => console.log(mode, idLineItems),
+      updateCart: ({ mode, cartItem }) => console.log(mode, cartItem),
       goToCheckout: () => console.log('ciao'),
     },
   },

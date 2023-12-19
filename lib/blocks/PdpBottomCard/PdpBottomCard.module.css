@@ -21,9 +21,13 @@
   gap: 5px;
 }
 
-.not-available {
+.circle {
   width: 4px;
   height: 4px;
   border-radius: 50%;
+  background-color: #00ff47;
+}
+
+.not-available {
   background-color: red;
 }

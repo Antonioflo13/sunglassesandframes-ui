@@ -1,6 +1,6 @@
 import { Default as AnnouncementBarDefault } from '@stories/blocks/AnnouncementBar/AnnouncementBar.stories';
+import { WithArticle as GridWithArticle } from '@stories/blocks/Grid/Grid.stories';
 import { Default as HeaderDefault } from '@stories/blocks/Header/Header.stories';
-import { WithDate as InfoBoxDefault } from '@stories/blocks/InfoBox/InfoBox.stories';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Magazine } from './Magazine';
@@ -22,6 +22,6 @@ export const Default: Story = {
   args: {
     announcementBarProps: AnnouncementBarDefault.args,
     headerProps: HeaderDefault.args,
-    articles: [InfoBoxDefault.args, InfoBoxDefault.args, InfoBoxDefault.args],
+    gridProps: GridWithArticle.args,
   },
 };

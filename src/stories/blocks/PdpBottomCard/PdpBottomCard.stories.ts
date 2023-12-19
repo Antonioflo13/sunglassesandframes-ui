@@ -18,6 +18,7 @@ type Story = StoryObj<typeof metaPdpImage>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Default: Story = {
   args: {
+    buttonLabel: 'ADD TO SHOPPING BAG',
     product: {
       name: 'PRODUCT ID',
       price: {
@@ -32,6 +33,7 @@ export const Default: Story = {
 
 export const Discount: Story = {
   args: {
+    buttonLabel: 'ADD TO SHOPPING BAG',
     product: {
       name: 'PRODUCT ID',
       price: {
@@ -47,6 +49,7 @@ export const Discount: Story = {
 
 export const IsAvalaible: Story = {
   args: {
+    buttonLabel: 'ADD TO SHOPPING BAG',
     product: {
       name: 'PRODUCT ID',
       price: {

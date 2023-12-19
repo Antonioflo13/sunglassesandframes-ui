@@ -14,5 +14,6 @@ export type TypeImage =
   | 'swiper-secondary'
   | 'image-primary'
   | 'image-secondary'
+  | 'article'
   | 'plp'
   | 'pdp';

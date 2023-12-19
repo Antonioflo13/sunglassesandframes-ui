@@ -18,12 +18,5 @@
   },
   "editor.formatOnSave": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": [
-    "source.formatDocument",
-    "source.fixAll.eslint"
-  ],
-  "exportall.config.relExclusion": [
-    "/src/index.ts",
-    "/lib/blocks/index.ts"
-  ]
+  "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"]
 }

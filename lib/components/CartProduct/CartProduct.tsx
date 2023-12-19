@@ -3,10 +3,10 @@ import { Button, ImageWrapper, Price, Typography } from '../../components';
 import styles from './Cartproduct.module.css';
 import { CartProductProps } from './types';
 
-export function CartProduct({ children, product, updateCart }: CartProductProps): JSX.Element {
+export function CartProduct({ product, updateCart }: CartProductProps): JSX.Element {
   return (
     <section className={styles['container-cart-product']}>
-      <ImageWrapper typeImage="plp">{children}</ImageWrapper>
+      <ImageWrapper typeImage="plp">{product.image}</ImageWrapper>
       <div className={styles['container-details']}>
         <div className={styles['container-product-name']}>
           <Typography label={product.titleProduct} fontFamily="helvetica-medium" textSize="lg" />
@@ -20,8 +20,8 @@ export function CartProduct({ children, product, updateCart }: CartProductProps)
             textSize="md"
             callback={(): void =>
               updateCart({
-                mode: 'add',
-                idLineItems: product.idLineItems,
+                mode: 'remove',
+                cartItem: product,
               })
             }
           />
@@ -33,8 +33,8 @@ export function CartProduct({ children, product, updateCart }: CartProductProps)
             textSize="md"
             callback={(): void =>
               updateCart({
-                mode: 'remove',
-                idLineItems: product.idLineItems,
+                mode: 'add',
+                cartItem: product,
               })
             }
           />
@@ -54,7 +54,7 @@ export function CartProduct({ children, product, updateCart }: CartProductProps)
           callback={(): void =>
             updateCart({
               mode: 'removeAll',
-              idLineItems: product.idLineItems,
+              cartItem: product,
             })
           }
         />

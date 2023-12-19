@@ -1,0 +1,11 @@
+.container-info-article {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+
+@media (min-width: 1100px) {
+  .container-article {
+    max-width: 340px;
+  }
+}

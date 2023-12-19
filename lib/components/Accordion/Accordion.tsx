@@ -1,12 +1,12 @@
 
-import { IconWrapper } from '@components/IconWrapper';
-import { Typography } from '@components/Typography';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 
-import styles from './Accordion.module.css';
+import { IconWrapper } from '../IconWrapper';
+import { Typography } from '../Typography';
 
-import { AccordionProps } from '.';
+import styles from './Accordion.module.css';
+import { AccordionProps } from './types';
 
 export const Accordion = ({ accordion }: AccordionProps): JSX.Element => {
   const [accordionState, setAccordionState] = useState(accordion);

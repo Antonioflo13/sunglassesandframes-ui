@@ -41,4 +41,6 @@ export type InfoBoxprops = {
    *
    */
   button?: ButtonProps;
+
+  className?: string;
 };

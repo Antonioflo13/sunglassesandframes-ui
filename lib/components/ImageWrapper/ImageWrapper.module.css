@@ -22,14 +22,41 @@
 }
 
 .image-secondary {
+  max-width: 230px;
   height: 110px;
-  width: 230px;
+}
+
+.article {
+  height: 200px;
 }
 
 .plp {
+  width: 160px;
   height: 130px;
 }
 
 .pdp {
   height: 440px;
+}
+
+@media only screen and (min-width: 768px) {
+  .image-secondary {
+    max-width: 340px;
+    height: 130px;
+  }
+  .plp {
+    width: 250px;
+    height: 250px;
+  }
+
+  .article {
+    max-width: 340px;
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .image-primary {
+    height: 250px;
+  }
 }

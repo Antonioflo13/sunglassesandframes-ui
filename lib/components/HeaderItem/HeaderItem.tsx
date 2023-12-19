@@ -16,19 +16,6 @@ export const HeaderItem = ({ item }: HeaderProps): JSX.Element => {
         return <div className={styles['header-item-logo']} onClick={item.callback}>{item.image?.element}</div>;
       case 'img':
         return <div style={{ width: item.image?.width }} onClick={item.callback}>{item.image?.element}</div>;
-      case 'icon':
-        return (
-          <>
-            {item.label && (
-              <Button
-                type="outlined"
-                label={item.label}
-                fontFamily="helvetica-medium"
-                callback={item.callback}
-              />
-            )}
-          </>
-        );
       default:
         return (
           <>

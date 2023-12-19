@@ -1,7 +1,7 @@
 import { Default as AnnouncementBarDefault } from '@stories/blocks/AnnouncementBar/AnnouncementBar.stories';
+import { Default as GridDefault } from '@stories/blocks/Grid/Grid.stories';
 import { Default as HeaderDefault } from '@stories/blocks/Header/Header.stories';
 import { WithDescription as InfoBoxWithDescription } from '@stories/blocks/InfoBox/InfoBox.stories';
-import { WithoutTitle as ProductsListWithoutTitle } from '@stories/blocks/ProductsList/ProductsList.stories';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Designer } from './Designer';
@@ -24,6 +24,6 @@ export const Default: Story = {
     announcementBarProps: AnnouncementBarDefault.args,
     headerProps: HeaderDefault.args,
     infoBoxProps: InfoBoxWithDescription.args,
-    productsPlpProps: ProductsListWithoutTitle.args,
+    productsPlpProps: GridDefault.args,
   },
 };
