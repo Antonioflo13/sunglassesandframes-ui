@@ -3,7 +3,7 @@ import { Img } from '@stories/components/ImageWrapper/Img';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const metaGrid = {
-  title: 'sunglassesandframes/Blocks/ProductsList',
+  title: 'sunglassesandframes/Blocks/Grid',
   component: Grid,
   parameters: {
     layout: 'fullscreen',
