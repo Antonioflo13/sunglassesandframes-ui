@@ -1,5 +1,4 @@
 
-import { ProductsList } from '@blocks/ProductsList/ProductsList';
 import { SearchInput } from '@components/SearchInput';
 import { Typography } from '@components/Typography';
 
@@ -20,7 +19,7 @@ export const Search = ({ designers, products }: SearchProps): JSX.Element => {
       </div>
       <Typography className={styles['title-desktop']} label={`PRODUCTS (${products.length})`} fontFamily="helvetica-regular" textSize="lg" />
       <div className={styles['results']}>
-        <ProductsList products={products} />
+        <div>ciao</div>
       </div>
     </section>
   );
