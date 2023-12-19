@@ -10,16 +10,16 @@ import { SearchProps } from '.';
 export const Search = ({ designers, products }: SearchProps): JSX.Element => {
 
   return (
-    <section className={styles['container-search']}>
+    <section className={styles['container']}>
       <SearchInput />
-      <Typography label={`DESIGNER (${designers.length})`} fontFamily="helvetica-regular" textSize="lg" />
-      <div className={styles['result-designers-search']}>
+      <Typography className={styles['title-desktop']} label={`DESIGNER (${designers.length})`} fontFamily="helvetica-regular" textSize="lg" />
+      <div className={styles[`results ${designers.length > 1 && 'results-designers'} `]}>
         {designers.map(designer => (
           <Typography key={designer.id} label={designer.name} fontFamily="helvetica-regular" textSize="lg" />
         ))}
       </div>
-      <Typography label={`PRODUCTS (${products.length})`} fontFamily="helvetica-regular" textSize="lg" />
-      <div className={styles['result-products-search']}>
+      <Typography className={styles['title-desktop']} label={`PRODUCTS (${products.length})`} fontFamily="helvetica-regular" textSize="lg" />
+      <div className={styles['results']}>
         <ProductsList products={products} />
       </div>
     </section>

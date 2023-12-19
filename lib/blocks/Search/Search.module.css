@@ -1,17 +1,39 @@
-.container-search {
+.container {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
 
-.result-designers-search {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.results {
     margin-top: 20px;
     margin-bottom: 30px;
 }
 
-.result-products-search {
-    margin-top: 20px;
-    margin-bottom: 30px;
+
+.results-designers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
+
+.icon-search,
+.icon-close {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-search {
+    left: 15px;
+}
+
+.icon-close {
+    right: 15px;
+}
+
+@media (max-width: 768px) {
+
+    .title-desktop {
+        display: none;
+    }
+}
+  

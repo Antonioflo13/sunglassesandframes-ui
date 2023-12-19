@@ -1,4 +1,14 @@
-.container-searchInput {
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.container {
     margin-top: 15px;
     margin-bottom: 15px;
     position: relative;
@@ -18,13 +28,6 @@
     padding-left: 35px;
 }
 
-.icon-search,
-.icon-close {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 .icon-search {
     left: 15px;
 }
@@ -32,3 +35,17 @@
 .icon-close {
     right: 15px;
 }
+
+@media (max-width: 768px) {
+
+    .icon-search,
+    .icon-close {
+        display: none;
+    }
+
+    .input-search {
+        padding-left: 5px;
+    }
+
+}
+  
