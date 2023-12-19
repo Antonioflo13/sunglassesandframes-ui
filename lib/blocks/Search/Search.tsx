@@ -12,13 +12,13 @@ export const Search = ({ designers, products }: SearchProps): JSX.Element => {
     <section className={styles['container']}>
       <SearchInput />
       <Typography className={styles['title-desktop']} label={`DESIGNER (${designers.length})`} fontFamily="helvetica-regular" textSize="lg" />
-      <div className={styles[`results ${designers.length > 1 && 'results-designers'} `]}>
+      <div className={`${styles['container-results']} ${styles[`${designers.length === 1 ? 'single-item' : 'more-items'}`]}`}>
         {designers.map(designer => (
           <Typography key={designer.id} label={designer.name} fontFamily="helvetica-regular" textSize="lg" />
         ))}
       </div>
       <Typography className={styles['title-desktop']} label={`PRODUCTS (${products.length})`} fontFamily="helvetica-regular" textSize="lg" />
-      <div className={styles['results']}>
+      <div className={styles['container-results']}>
         <div>ciao</div>
       </div>
     </section>

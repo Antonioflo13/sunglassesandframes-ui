@@ -4,30 +4,18 @@
     text-align: center;
 }
 
-.results {
+.container-results {
     margin-top: 20px;
     margin-bottom: 30px;
 }
 
+.single-item {
+    text-align: center;
+}
 
-.results-designers {
+.more-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-}
-
-.icon-search,
-.icon-close {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.icon-search {
-    left: 15px;
-}
-
-.icon-close {
-    right: 15px;
 }
 
 @media (max-width: 768px) {

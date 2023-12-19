@@ -28,6 +28,13 @@ button, input[type="submit"], input[type="reset"] {
     padding-left: 35px;
 }
 
+.icon-search,
+.icon-close {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .icon-search {
     left: 15px;
 }
@@ -35,6 +42,15 @@ button, input[type="submit"], input[type="reset"] {
 .icon-close {
     right: 15px;
 }
+
+.icon-search {
+    left: 15px;
+}
+
+.icon-close {
+    right: 15px;
+}
+
 
 @media (max-width: 768px) {
 
