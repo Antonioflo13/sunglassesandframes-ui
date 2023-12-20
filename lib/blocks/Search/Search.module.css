@@ -2,39 +2,4 @@
     max-width: 800px;
     margin: 0 auto;
 }
-
-.title-desktop {
-    display: flex;
-    justify-content: center;
-}
-
-.search-designers, .search-products {
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-.search-designers {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    text-align: center;
-}
-
-
-@media (max-width: 768px) {
-
-    .title-desktop {
-        display: none;
-    }
-
-    .search-designers {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        gap: 10px;
-    }
-
-    .not-visible {
-        display: none;
-    }
-}
   

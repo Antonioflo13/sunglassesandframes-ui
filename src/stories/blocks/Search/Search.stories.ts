@@ -55,5 +55,15 @@ export const Default: Story = {
         type: 'product',
       },
     ],
+    mobileFilterLabels: [
+      {
+        label: 'DESIGNERS',
+        selected: true,
+      },
+      {
+        label: 'PRODUCTS',
+        selected: false,
+      }
+    ]
   },
 };

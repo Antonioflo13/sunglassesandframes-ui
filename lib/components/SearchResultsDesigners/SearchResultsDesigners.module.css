@@ -1,0 +1,30 @@
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.results {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .title {
+        display: none;
+    }
+
+    .results {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 10px;
+    }
+
+    .not-visible {
+        display: none;
+    }
+}

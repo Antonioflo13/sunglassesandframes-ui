@@ -1,8 +1,7 @@
-type FilterLabels = {
-    label: string;
-    selected: boolean;
-}
+import { MobileFilterLabels } from '@blocks/Search';
+import { Dispatch, SetStateAction } from 'react';
 
 export type MobileSearchFilterLabelsProps = {
-    filterLabels: FilterLabels[];
+    filterLabels: MobileFilterLabels[];
+    setFilterLabels: Dispatch<SetStateAction<MobileFilterLabels[]>>;
   }

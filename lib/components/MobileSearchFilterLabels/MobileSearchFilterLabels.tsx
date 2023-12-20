@@ -1,31 +1,29 @@
 
 import { Typography } from '@components/Typography';
-import { useState } from 'react';
 
 import styles from './MobileSearchFilterLabels.module.css';
 
 import { MobileSearchFilterLabelsProps } from '.';
 
-export const MobileSearchFilterLabels = ({ filterLabels }: MobileSearchFilterLabelsProps): JSX.Element => {
-  const [selectionsLabel, setSelectionsLabel] = useState(filterLabels);
+export const MobileSearchFilterLabels = ({ filterLabels, setFilterLabels }: MobileSearchFilterLabelsProps): JSX.Element => {
 
   const onClickLabel = (clickedLabel: string): void => {
-    const updatedSelections = selectionsLabel.map(selection => {
+    const updatedSelections = filterLabels.map(item => {
       return {
-        ...selection,
-        selected: selection.label === clickedLabel,
+        ...item,
+        selected: item.label === clickedLabel,
       };
     });
-    return setSelectionsLabel(updatedSelections);
+    return setFilterLabels(updatedSelections);
   };
 
   return (
     <section className={styles['container']}>
-      {selectionsLabel.map((selection, key) => (
-        <button key={key} onClick={(): void => onClickLabel(selection.label)}>
+      {filterLabels.map((item, key) => (
+        <button key={key} onClick={(): void => onClickLabel(item.label)}>
           <Typography
-            className={styles[`${selection.selected && 'label-selected'}`]}
-            label={selection.label}
+            className={styles[`${item.selected && 'label-selected'}`]}
+            label={item.label}
             fontFamily="helvetica-light"
             textSize="lg"
           />
