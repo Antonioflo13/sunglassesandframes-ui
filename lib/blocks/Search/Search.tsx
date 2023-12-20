@@ -46,16 +46,30 @@ export const Search = ({ designers, products }: SearchProps): JSX.Element => {
         ))}
       </div>
       <SearchInput />
-      <Typography className={styles['title-desktop']} label={`DESIGNER (${designers.length})`} fontFamily="helvetica-regular" textSize="lg" />
-      <div className={styles['search-designers']}>
-        {designers.map((designer, key) => (
-          <Typography key={key} label={designer.name} fontFamily="helvetica-regular" textSize="lg" />
-        ))}
-      </div>
-      <Typography className={styles['title-desktop']} label={`PRODUCTS (${products.length})`} fontFamily="helvetica-regular" textSize="lg" />
-      <div className={styles['search-products']}>
-        <Grid type="products" items={products} />
-      </div>
+      <Typography
+        className={styles['title-desktop']}
+        label={`DESIGNER (${designers.length})`}
+        fontFamily="helvetica-regular"
+        textSize="lg"
+      />
+      {selectionsLabel.find(selection => selection.selected)?.label === 'DESIGNERS'
+        && <div className={styles['search-designers']}>
+          {designers.map((designer, key) => (
+            <Typography key={key} label={designer.name} fontFamily="helvetica-regular" textSize="lg" />
+          ))}
+        </div>
+      }
+      <Typography
+        className={styles['title-desktop']}
+        label={`PRODUCTS (${products.length})`}
+        fontFamily="helvetica-regular"
+        textSize="lg"
+      />
+      {selectionsLabel.find(selection => selection.selected)?.label === 'PRODUCTS'
+        && <div className={styles['search-products']}>
+          <Grid type="products" items={products} />
+        </div>
+      }
     </section>
   );
 };
