@@ -11,8 +11,14 @@ export type MobileFilterLabels = {
     selected: boolean;
 }
 
+export type SearchIcons = {
+    search: string;
+    close: string;
+}
+
 export type SearchProps = {
     designers: Designer[];
     products: ProductModel[];
     mobileFilterLabels: MobileFilterLabels[];
+    searchIcons: SearchIcons;
 }

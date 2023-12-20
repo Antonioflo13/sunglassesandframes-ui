@@ -9,8 +9,6 @@ import { getViewButton, getViewItems, SearchResultsProductsProps } from '.';
 
 export const SearchResultsProducts = ({ products, mobileView }: SearchResultsProductsProps): JSX.Element => {
   const viewButton = getViewButton(products, mobileView);
-  console.log('viewButton', viewButton);
-  console.log('mobileView', mobileView);
   return (
     <section>
       <Typography

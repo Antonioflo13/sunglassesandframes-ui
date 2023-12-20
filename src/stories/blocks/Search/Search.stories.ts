@@ -112,6 +112,10 @@ export const Default: Story = {
         label: 'PRODUCTS',
         selected: false,
       }
-    ]
+    ],
+    searchIcons: {
+      search: 'lib/assets/Icons/search.svg',
+      close: 'lib/assets/Icons/close.svg',
+    }
   },
 };
