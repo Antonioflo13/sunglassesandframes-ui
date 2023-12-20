@@ -54,6 +54,11 @@ button, input[type="submit"], input[type="reset"] {
 
 @media (max-width: 768px) {
 
+    .container {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
     .icon-search,
     .icon-close {
         display: none;
