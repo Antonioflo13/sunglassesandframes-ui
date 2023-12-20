@@ -20,6 +20,9 @@ export const Search = ({ designers, products }: SearchProps): JSX.Element => {
     },
   ]);
 
+  const mobileViewDesigners = selectionsLabel.find(selection => selection.selected)?.label === 'DESIGNERS';
+  const mobileViewProducts = selectionsLabel.find(selection => selection.selected)?.label === 'PRODUCTS';
+
   const onClickLabel = (clickedLabel: string): void => {
     const updatedSelections = selectionsLabel.map(selection => {
       return {
@@ -52,24 +55,22 @@ export const Search = ({ designers, products }: SearchProps): JSX.Element => {
         fontFamily="helvetica-regular"
         textSize="lg"
       />
-      {selectionsLabel.find(selection => selection.selected)?.label === 'DESIGNERS'
-        && <div className={styles['search-designers']}>
-          {designers.map((designer, key) => (
-            <Typography key={key} label={designer.name} fontFamily="helvetica-regular" textSize="lg" />
-          ))}
-        </div>
-      }
+      <div className={`${styles['search-designers']} ${!mobileViewDesigners && styles['not-visible']}`}>
+        {designers.map((designer, key) => (
+          <Typography key={key} label={designer.name} fontFamily="helvetica-regular" textSize="lg" />
+        ))}
+      </div>
+
       <Typography
         className={styles['title-desktop']}
         label={`PRODUCTS (${products.length})`}
         fontFamily="helvetica-regular"
         textSize="lg"
       />
-      {selectionsLabel.find(selection => selection.selected)?.label === 'PRODUCTS'
-        && <div className={styles['search-products']}>
-          <Grid type="products" items={products} />
-        </div>
-      }
+      <div className={`${styles['search-products']} ${!mobileViewProducts && styles['not-visible']}`}>
+        <Grid type="products" items={products} />
+      </div>
+
     </section>
   );
 };

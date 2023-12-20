@@ -45,5 +45,9 @@
         text-align: left;
         gap: 10px;
     }
+
+    .not-visible {
+        display: none;
+    }
 }
   
