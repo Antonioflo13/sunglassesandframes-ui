@@ -3,14 +3,6 @@
     margin: 0 auto;
 }
 
-.mobile-filter-search {
-    display: none;
-}
-
-.label-selected {
-    border-bottom: solid 1px black;
-}
-
 .title-desktop {
     display: flex;
     justify-content: center;
@@ -32,11 +24,6 @@
 
     .title-desktop {
         display: none;
-    }
-
-    .mobile-filter-search {
-        display: flex;
-        gap: 10px;
     }
 
     .search-designers {

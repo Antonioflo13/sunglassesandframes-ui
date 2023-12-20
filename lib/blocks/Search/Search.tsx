@@ -1,15 +1,15 @@
 
 import { Grid } from '@blocks/Grid';
+import { MobileSearchFilterLabels } from '@components/MobileSearchFilterLabels';
 import { SearchInput } from '@components/SearchInput';
 import { Typography } from '@components/Typography';
-import { useState } from 'react';
 
 import styles from './Search.module.css';
 
 import { SearchProps } from '.';
 
 export const Search = ({ designers, products }: SearchProps): JSX.Element => {
-  const [selectionsLabel, setSelectionsLabel] = useState([
+  const mobileFilterLabels = [
     {
       label: 'DESIGNERS',
       selected: true,
@@ -17,37 +17,15 @@ export const Search = ({ designers, products }: SearchProps): JSX.Element => {
     {
       label: 'PRODUCTS',
       selected: false,
-    },
-  ]);
+    }
+  ];
 
-  const mobileViewDesigners = selectionsLabel.find(selection => selection.selected)?.label === 'DESIGNERS';
-  const mobileViewProducts = selectionsLabel.find(selection => selection.selected)?.label === 'PRODUCTS';
-
-  const onClickLabel = (clickedLabel: string): void => {
-    const updatedSelections = selectionsLabel.map(selection => {
-      return {
-        ...selection,
-        selected: selection.label === clickedLabel,
-      };
-    });
-
-    return setSelectionsLabel(updatedSelections);
-  };
+  const mobileViewDesigners = mobileFilterLabels.find(selection => selection.selected)?.label === 'DESIGNERS';
+  const mobileViewProducts = mobileFilterLabels.find(selection => selection.selected)?.label === 'PRODUCTS';
 
   return (
     <section className={styles['container']}>
-      <div className={styles['mobile-filter-search']}>
-        {selectionsLabel.map((selection, key) => (
-          <button key={key} onClick={(): void => onClickLabel(selection.label)}>
-            <Typography
-              className={styles[`${selection.selected && 'label-selected'}`]}
-              label={selection.label}
-              fontFamily="helvetica-light"
-              textSize="lg"
-            />
-          </button>
-        ))}
-      </div>
+      <MobileSearchFilterLabels filterLabels={mobileFilterLabels} />
       <SearchInput />
       <Typography
         className={styles['title-desktop']}
