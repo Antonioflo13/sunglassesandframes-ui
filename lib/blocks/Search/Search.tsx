@@ -1,5 +1,4 @@
-
-import { MobileSearchFilterLabels } from '@components/MobileSearchFilterLabels';
+import { MobileSearchView } from '@components/MobileSearchView';
 import { SearchInput } from '@components/SearchInput';
 import { SearchResultsDesigners } from '@components/SearchResultsDesigners';
 import { SearchResultsProducts } from '@components/SearchResultsProducts';
@@ -9,17 +8,23 @@ import styles from './Search.module.css';
 
 import { SearchProps } from '.';
 
-export const Search = ({ designers, products, mobileFilterLabels, searchIcons }: SearchProps): JSX.Element => {
-  const [filterLabels, setFilterLabels] = useState(mobileFilterLabels);
-  const designersMobileView = filterLabels.find(selection => selection.selected)?.label === 'DESIGNERS';
-  const productsMobileView = filterLabels.find(selection => selection.selected)?.label === 'PRODUCTS';
+export const Search = ({ designers, products, mobileSearchView, searchIcons, viewableProducts }: SearchProps): JSX.Element => {
+  const [filterLabels, setFilterLabels] = useState(mobileSearchView);
+  const isMobileView = {
+    designers: filterLabels.find(selection => selection.selected)?.label === 'DESIGNERS',
+    products: filterLabels.find(selection => selection.selected)?.label === 'PRODUCTS',
+  };
 
   return (
     <section className={styles['container']}>
-      <MobileSearchFilterLabels filterLabels={filterLabels} setFilterLabels={setFilterLabels} />
+      <MobileSearchView filterLabels={filterLabels} setFilterLabels={setFilterLabels} />
       <SearchInput searchIcons={searchIcons} />
-      <SearchResultsDesigners designers={designers} mobileView={designersMobileView} />
-      <SearchResultsProducts products={products} mobileView={productsMobileView} />
+      <SearchResultsDesigners designers={designers} isMobileView={isMobileView.designers} />
+      <SearchResultsProducts
+        products={products}
+        isMobileView={isMobileView.products}
+        viewableProducts={viewableProducts}
+      />
     </section>
   );
 };

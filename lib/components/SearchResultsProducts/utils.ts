@@ -1,15 +1,12 @@
 import { ProductModel } from '@components/Product/types';
 
-export const getViewButton = (products: ProductModel[], mobileView: boolean): boolean => {
-  if (mobileView) {
-    return products.length > 4;
+export const getViewButton = (productsLength: number, viewableProducts: number): boolean => {
+  if (productsLength > viewableProducts) {
+    return true;
   }
-  return products.length > 6;
+  return false;
 };
 
-export const getViewItems = (products: ProductModel[], mobileView: boolean): ProductModel[] => {
-  if (mobileView) {
-    return products.slice(0, 4);
-  }
-  return products.slice(0, 6);
+export const getViewItems = (products: ProductModel[], viewableProducts: number): ProductModel[] => {
+  return products.slice(0, viewableProducts);
 };

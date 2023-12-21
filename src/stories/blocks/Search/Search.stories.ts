@@ -24,7 +24,7 @@ export const Default: Story = {
         link: '/'
       },
       {
-        id: '0',
+        id: '1',
         name: 'Designer2',
         link: '/'
       }
@@ -103,7 +103,7 @@ export const Default: Story = {
         type: 'product',
       },
     ],
-    mobileFilterLabels: [
+    mobileSearchView: [
       {
         label: 'DESIGNERS',
         selected: true,
@@ -116,6 +116,7 @@ export const Default: Story = {
     searchIcons: {
       search: 'lib/assets/Icons/search.svg',
       close: 'lib/assets/Icons/close.svg',
-    }
+    },
+    viewableProducts: 6
   },
 };

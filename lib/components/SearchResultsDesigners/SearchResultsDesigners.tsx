@@ -5,7 +5,8 @@ import styles from './SearchResultsDesigners.module.css';
 
 import { SearchResultsDesignersProps } from '.';
 
-export const SearchResultsDesigners = ({ designers, mobileView }: SearchResultsDesignersProps): JSX.Element => {
+export const SearchResultsDesigners = ({ designers, isMobileView }: SearchResultsDesignersProps): JSX.Element => {
+  const singleResult = designers.length === 1;
   return (
     <section>
       <Typography
@@ -14,7 +15,11 @@ export const SearchResultsDesigners = ({ designers, mobileView }: SearchResultsD
         fontFamily="helvetica-regular"
         textSize="lg"
       />
-      <div className={`${styles['results']} ${!mobileView && styles['not-visible']}`}>
+      <div className={`
+          ${styles['results']} 
+          ${singleResult ? styles['item-center'] : styles['items-grid']} 
+          ${!isMobileView && styles['not-visible']}
+        `}>
         {designers.map((designer, key) => (
           <Typography key={key} label={designer.name} fontFamily="helvetica-regular" textSize="lg" />
         ))}

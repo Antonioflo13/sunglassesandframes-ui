@@ -7,8 +7,8 @@ import styles from './SearchResultsProducts.module.css';
 
 import { getViewButton, getViewItems, SearchResultsProductsProps } from '.';
 
-export const SearchResultsProducts = ({ products, mobileView }: SearchResultsProductsProps): JSX.Element => {
-  const viewButton = getViewButton(products, mobileView);
+export const SearchResultsProducts = ({ products, isMobileView, viewableProducts }: SearchResultsProductsProps): JSX.Element => {
+  const viewButton = getViewButton(products.length, viewableProducts);
   return (
     <section>
       <Typography
@@ -17,14 +17,14 @@ export const SearchResultsProducts = ({ products, mobileView }: SearchResultsPro
         fontFamily="helvetica-regular"
         textSize="lg"
       />
-      <div className={`${styles['results']} ${!mobileView && styles['not-visible']}`}>
-        <Grid type="products" items={getViewItems(products, mobileView)} />
+      <div className={`${!isMobileView && styles['not-visible']}`}>
+        <Grid className={styles['results']} type="products" items={getViewItems(products, viewableProducts)} />
+        <Button
+          className={`${viewButton ? styles['view-button'] : styles['not-view-button']}`}
+          label='VIEW ALL'
+          fontFamily='helvetica-regular'
+        />
       </div>
-      <Button
-        className={`${viewButton ? styles['view-button'] : styles['not-view-button']}`}
-        label='VIEW ALL'
-        fontFamily='helvetica-regular'
-      />
     </section>
   );
 };

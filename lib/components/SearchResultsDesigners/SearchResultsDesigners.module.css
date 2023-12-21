@@ -6,8 +6,16 @@
 .results {
     margin-top: 20px;
     margin-bottom: 30px;
+}
+
+.items-grid {
+    text-align: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 15px;
+}
+
+.item-center {
     text-align: center;
 }
 

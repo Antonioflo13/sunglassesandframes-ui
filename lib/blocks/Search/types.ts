@@ -6,7 +6,7 @@ export type Designer = {
     link: string;
 }
 
-export type MobileFilterLabels = {
+export type MobileSearchView = {
     label: string;
     selected: boolean;
 }
@@ -19,6 +19,7 @@ export type SearchIcons = {
 export type SearchProps = {
     designers: Designer[];
     products: ProductModel[];
-    mobileFilterLabels: MobileFilterLabels[];
+    mobileSearchView: MobileSearchView[];
     searchIcons: SearchIcons;
+    viewableProducts: number;
 }

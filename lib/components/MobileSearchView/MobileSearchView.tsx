@@ -1,11 +1,11 @@
 
 import { Typography } from '@components/Typography';
 
-import styles from './MobileSearchFilterLabels.module.css';
+import styles from './MobileSearchView.module.css';
 
-import { MobileSearchFilterLabelsProps } from '.';
+import { MobileSearchViewProps } from '.';
 
-export const MobileSearchFilterLabels = ({ filterLabels, setFilterLabels }: MobileSearchFilterLabelsProps): JSX.Element => {
+export const MobileSearchView = ({ filterLabels, setFilterLabels }: MobileSearchViewProps): JSX.Element => {
 
   const onClickLabel = (clickedLabel: string): void => {
     const updatedSelections = filterLabels.map(item => {
