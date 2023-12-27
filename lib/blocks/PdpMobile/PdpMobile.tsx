@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { Pagination, Virtual } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { PdpBottomCard, PdpImage } from '../../blocks';
+import { PdpImage, PdpMobileBuy } from '../../blocks';
 
 import { PdpMobileProps } from './types';
 
@@ -56,7 +56,7 @@ export const PdpMobile = ({
               </SwiperSlide>
             ))}
           </Swiper>
-          <PdpBottomCard
+          <PdpMobileBuy
             product={product}
             callback={pdpBottomCardCallback}
             buttonLabel={pdpBottomCardButtonLabel}

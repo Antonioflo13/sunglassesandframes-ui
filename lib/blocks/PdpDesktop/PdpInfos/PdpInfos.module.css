@@ -1,0 +1,13 @@
+.container-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.container-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

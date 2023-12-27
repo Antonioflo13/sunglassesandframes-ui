@@ -1,0 +1,29 @@
+.container-pdp-buy {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 18px;
+  padding-bottom: 10px;
+}
+
+.container-pdp-buy-price {
+  display: flex;
+  gap: 10px;
+}
+
+.container-available-product {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.circle {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #00ff47;
+}
+
+.not-available {
+  background-color: red;
+}

@@ -1,4 +1,4 @@
-export type PdpBottomCardProps = {
+export type PdpMobileBuyProps = {
   /**
    * Information about the product to be displayed in the card
    */

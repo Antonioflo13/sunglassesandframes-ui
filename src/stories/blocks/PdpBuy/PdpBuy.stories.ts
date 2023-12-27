@@ -1,19 +1,19 @@
-import { PdpMobileBuy } from '@blocks/PdpMobileBuy/PdpMobileBuy';
+import { PdpBuy } from '@blocks/PdpDesktop/PdpBuy/PdpBuy';
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 
-const metaPdpMobileBuy = {
-  title: 'sunglassesandframes/Blocks/PdpMobileBuy',
-  component: PdpMobileBuy,
+const metaPdpBuy = {
+  title: 'sunglassesandframes/Blocks/PdpBuy',
+  component: PdpBuy,
   parameters: {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof PdpMobileBuy>;
+} satisfies Meta<typeof PdpBuy>;
 
-export default metaPdpMobileBuy;
-type Story = StoryObj<typeof metaPdpMobileBuy>;
+export default metaPdpBuy;
+type Story = StoryObj<typeof metaPdpBuy>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Default: Story = {
