@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { useCallback } from 'react';
+import React, { useCallback } from 'react';
 
 import { Typography } from '../../components';
 
 import styles from './Sidebar.module.css';
-import { MenuItem, SidebarProps, ViewAll } from './types';
+import { MenuItem, SidebarProps } from './types';
 
 export const Sidebar = ({ menuItems, viewAllLabel, className }: SidebarProps): JSX.Element => {
   const sidebarVariants = {
@@ -20,31 +20,27 @@ export const Sidebar = ({ menuItems, viewAllLabel, className }: SidebarProps): J
     },
   };
 
-  const component = useCallback((item: MenuItem | ViewAll) => {
-    switch (item.wrapper) {
-      case undefined:
-        switch (item.type) {
-          case 'view-all':
-            return (
-              <li onClick={item.callback}>
-                <Typography label={item.label} fontFamily="helvetica-medium" />
-              </li>
-            );
-          default:
-            return (
-              <li onClick={item.callback}>
-                <Typography label={item.label} fontFamily="helvetica-light" />
-              </li>
-            );
-        }
-      default:
-        return item.wrapper(
-          <li onClick={item.callback}>
-            <Typography label={item.label} fontFamily="helvetica-light" />
-          </li>,
-        );
-    }
-  }, []);
+  const component = useCallback(
+    (item: MenuItem, isViewAll: boolean) => {
+      const findComponent = isViewAll ? (
+        <li onClick={item.callback}>
+          <Typography label={viewAllLabel} fontFamily="helvetica-medium" />
+        </li>
+      ) : (
+        <li onClick={item.callback}>
+          <Typography label={item.label} fontFamily="helvetica-light" />
+        </li>
+      );
+
+      switch (item.wrapper) {
+        case undefined:
+          return findComponent;
+        default:
+          return item.wrapper(findComponent);
+      }
+    },
+    [viewAllLabel],
+  );
 
   return (
     <motion.section
@@ -61,9 +57,11 @@ export const Sidebar = ({ menuItems, viewAllLabel, className }: SidebarProps): J
             {menuItem.subItems && (
               <ul className={styles['sidebar-sub-items-container']}>
                 {[...menuItem.subItems].splice(0, 3).map((subItem, idx) => (
-                  <li key={idx}>{component(subItem)}</li>
+                  <React.Fragment key={idx}>{component(subItem, false)}</React.Fragment>
                 ))}
-                {menuItem.subItems.length > 2 && component(viewAllLabel)}
+                {menuItem.subItems.length > 3 && menuItem.viewAll && (
+                  <React.Fragment>{component(menuItem.viewAll, true)}</React.Fragment>
+                )}
               </ul>
             )}
           </li>

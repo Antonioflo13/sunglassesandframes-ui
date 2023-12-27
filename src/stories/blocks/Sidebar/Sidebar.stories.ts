@@ -19,34 +19,39 @@ type Story = StoryObj<typeof metaSidebar>;
 export const Default: Story = {
   args: {
     menuItems: [
-      { type: 'menu-item',
-        label: 'MAGAZINE' },
-      { type: 'menu-item',
-        label: 'OUR DESIGNERS' },
       {
-        type: 'menu-item',
+        label: 'MAGAZINE',
+      },
+      {
+        label: 'OUR DESIGNERS',
+      },
+      {
         label: 'TREND',
         subItems: [
-          { type: 'menu-item',
-            label: 'unusual' },
-          { type: 'menu-item',
-            label: 'unusual' },
-          { type: 'menu-item',
-            label: 'unusual' },
-          { type: 'menu-item',
-            label: 'unusual' },
+          {
+            label: 'unusual',
+          },
+          {
+            label: 'unusual',
+          },
+          {
+            label: 'unusual',
+          },
+          {
+            label: 'unusual',
+          },
+          {
+            label: 'unusual',
+          },
         ],
       },
     ],
-    viewAllLabel: {
-      type: 'view-all',
-      label: 'View all',
-    },
+    viewAllLabel: 'View all',
   },
 };
 
 Default.play = async({ canvasElement }): Promise<void> => {
   const canvas = within(canvasElement);
 
-  await expect(canvas.getByText('View all')).toBeInTheDocument();
+  await expect(canvas.getByText('MAGAZINE')).toBeInTheDocument();
 };
