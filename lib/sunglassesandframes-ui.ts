@@ -18,3 +18,4 @@ export { InfoBox } from './blocks/InfoBox/InfoBox';
 export { Cart } from './blocks/Cart/Cart';
 export { PdpMobile } from './blocks/PdpMobile/PdpMobile';
 export { Slider } from './blocks/Slider/Slider';
+export { Sidebar } from './blocks/Sidebar/Sidebar';

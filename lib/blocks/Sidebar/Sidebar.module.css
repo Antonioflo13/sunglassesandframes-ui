@@ -1,0 +1,27 @@
+.sidebar {
+  padding: 10px 0;
+  overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-menu-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-transform: uppercase;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-sub-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 35px;
+  text-transform: capitalize;
+  list-style: none;
+}
