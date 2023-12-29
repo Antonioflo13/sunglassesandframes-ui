@@ -17,6 +17,11 @@ export type SearchIcons = {
     notFound: string;
 }
 
+export type CallBacks = {
+    onSearch: () => void;
+    onCloseSearch: () => void;
+}
+
 export type SearchProps = {
     designers: Designer[];
     products: ProductModel[];
@@ -24,6 +29,5 @@ export type SearchProps = {
     searchIcons: SearchIcons;
     viewableProducts: number;
     labelNotFound: string;
-    callBackSearch: (() => void) | undefined;
-    callBackCloseSearch: (() => void) | undefined;
+    callBacks: CallBacks;
 }

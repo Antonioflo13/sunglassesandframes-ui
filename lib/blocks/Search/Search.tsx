@@ -9,7 +9,16 @@ import styles from './Search.module.css';
 
 import { SearchProps } from '.';
 
-export const Search = ({ designers, products, mobileSearchView, searchIcons, viewableProducts, labelNotFound, callBackSearch, callBackCloseSearch }: SearchProps): JSX.Element => {
+export const Search = ({
+  designers,
+  products,
+  mobileSearchView,
+  searchIcons,
+  viewableProducts,
+  labelNotFound,
+  callBacks,
+}: SearchProps): JSX.Element => {
+
   const [filterLabels, setFilterLabels] = useState(mobileSearchView);
   const isMobileView = {
     designers: filterLabels.find(selection => selection.selected)?.label === 'DESIGNERS',
@@ -20,7 +29,7 @@ export const Search = ({ designers, products, mobileSearchView, searchIcons, vie
   return (
     <section className={styles['container']}>
       <MobileSearchView filterLabels={filterLabels} setFilterLabels={setFilterLabels} />
-      <SearchInput searchIcons={searchIcons} callBackSearch={callBackSearch} callBackCloseSearch={callBackCloseSearch} />
+      <SearchInput searchIcons={searchIcons} onSearch={callBacks.onSearch} onCloseSearch={callBacks.onCloseSearch} />
       {searchNotFound && <SearchResultsNotFound icon={searchIcons.notFound} labelNotFound={labelNotFound} />}
       <SearchResultsDesigners designers={designers} isMobileView={isMobileView.designers} />
       <SearchResultsProducts
