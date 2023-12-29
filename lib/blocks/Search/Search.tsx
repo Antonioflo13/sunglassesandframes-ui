@@ -13,7 +13,7 @@ export const Search = ({
   designers,
   products,
   mobileSearchView,
-  searchIcons,
+  assets,
   viewableProducts,
   labelNotFound,
   callBacks,
@@ -29,8 +29,8 @@ export const Search = ({
   return (
     <section className={styles['container']}>
       <MobileSearchView filterLabels={filterLabels} setFilterLabels={setFilterLabels} />
-      <SearchInput searchIcons={searchIcons} onSearch={callBacks.onSearch} onCloseSearch={callBacks.onCloseSearch} />
-      {searchNotFound && <SearchResultsNotFound icon={searchIcons.notFound} labelNotFound={labelNotFound} />}
+      <SearchInput searchIcons={assets.icons} onSearch={callBacks.onSearch} onCloseSearch={callBacks.onCloseSearch} />
+      {searchNotFound && <SearchResultsNotFound image={assets.images.notFound} labelNotFound={labelNotFound} />}
       <SearchResultsDesigners designers={designers} isMobileView={isMobileView.designers} />
       <SearchResultsProducts
         products={products}

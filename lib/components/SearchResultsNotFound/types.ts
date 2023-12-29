@@ -1,4 +1,6 @@
+import { Images } from '@blocks/Search';
+
 export type SearchResultsNotFoundProps = {
-    icon: string;
+    image: Images['notFound'];
     labelNotFound: string;
 }

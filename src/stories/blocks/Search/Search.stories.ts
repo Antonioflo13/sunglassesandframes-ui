@@ -113,10 +113,14 @@ export const Default: Story = {
         selected: false,
       }
     ],
-    searchIcons: {
-      search: 'lib/assets/Icons/search.svg',
-      close: 'lib/assets/Icons/close.svg',
-      notFound: 'lib/assets/Icons/searchNotFound.svg',
+    assets: {
+      icons: {
+        search: 'lib/assets/Icons/search.svg',
+        close: 'lib/assets/Icons/close.svg',
+      },
+      images: {
+        notFound: 'lib/assets/Icons/searchNotFound.svg',
+      }
     },
     viewableProducts: 6,
     labelNotFound: 'No products found',
@@ -156,10 +160,14 @@ export const SingleResult: Story = {
         selected: false,
       }
     ],
-    searchIcons: {
-      search: 'lib/assets/Icons/search.svg',
-      close: 'lib/assets/Icons/close.svg',
-      notFound: 'lib/assets/Icons/searchNotFound.svg',
+    assets: {
+      icons: {
+        search: 'lib/assets/Icons/search.svg',
+        close: 'lib/assets/Icons/close.svg',
+      },
+      images: {
+        notFound: 'lib/assets/Icons/searchNotFound.svg',
+      }
     },
     viewableProducts: 6,
     labelNotFound: 'No products found',
@@ -184,10 +192,14 @@ export const NotFoundAll: Story = {
         selected: false,
       }
     ],
-    searchIcons: {
-      search: 'lib/assets/Icons/search.svg',
-      close: 'lib/assets/Icons/close.svg',
-      notFound: 'lib/assets/Icons/searchNotFound.svg',
+    assets: {
+      icons: {
+        search: 'lib/assets/Icons/search.svg',
+        close: 'lib/assets/Icons/close.svg',
+      },
+      images: {
+        notFound: 'lib/assets/Icons/searchNotFound.svg',
+      }
     },
     viewableProducts: 6,
     labelNotFound: 'No products found',
@@ -223,10 +235,14 @@ export const NotFoundProducts: Story = {
         selected: false,
       }
     ],
-    searchIcons: {
-      search: 'lib/assets/Icons/search.svg',
-      close: 'lib/assets/Icons/close.svg',
-      notFound: 'lib/assets/Icons/searchNotFound.svg',
+    assets: {
+      icons: {
+        search: 'lib/assets/Icons/search.svg',
+        close: 'lib/assets/Icons/close.svg',
+      },
+      images: {
+        notFound: 'lib/assets/Icons/searchNotFound.svg',
+      }
     },
     viewableProducts: 6,
     labelNotFound: 'No products found',
@@ -324,10 +340,14 @@ export const NotFoundDesigners: Story = {
         selected: false,
       }
     ],
-    searchIcons: {
-      search: 'lib/assets/Icons/search.svg',
-      close: 'lib/assets/Icons/close.svg',
-      notFound: 'lib/assets/Icons/searchNotFound.svg',
+    assets: {
+      icons: {
+        search: 'lib/assets/Icons/search.svg',
+        close: 'lib/assets/Icons/close.svg',
+      },
+      images: {
+        notFound: 'lib/assets/Icons/searchNotFound.svg',
+      }
     },
     viewableProducts: 6,
     labelNotFound: 'No products found',

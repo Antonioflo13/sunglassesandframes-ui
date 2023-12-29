@@ -11,10 +11,18 @@ export type MobileSearchView = {
     selected: boolean;
 }
 
-export type SearchIcons = {
+export type Icons = {
     search: string;
     close: string;
+}
+
+export type Images = {
     notFound: string;
+}
+
+export type Assets = {
+    icons: Icons;
+    images: Images;
 }
 
 export type CallBacks = {
@@ -26,7 +34,7 @@ export type SearchProps = {
     designers: Designer[];
     products: ProductModel[];
     mobileSearchView: MobileSearchView[];
-    searchIcons: SearchIcons;
+    assets: Assets;
     viewableProducts: number;
     labelNotFound: string;
     callBacks: CallBacks;
