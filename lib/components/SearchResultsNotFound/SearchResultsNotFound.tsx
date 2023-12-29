@@ -7,6 +7,7 @@ import styles from './SearchResultsNotFound.module.css';
 import { SearchResultsNotFoundProps } from '.';
 
 export const SearchResultsNotFound = ({ image, label }: SearchResultsNotFoundProps): JSX.Element => {
+
   return (
     <section className={styles['container']}>
       <ImageWrapper typeImage="image-icon">

@@ -6,6 +6,7 @@ import styles from './SearchResultsDesigners.module.css';
 import { SearchResultsDesignersProps } from '.';
 
 export const SearchResultsDesigners = ({ designers, isMobileView, label }: SearchResultsDesignersProps): JSX.Element => {
+
   return (
     <section >
       <Typography

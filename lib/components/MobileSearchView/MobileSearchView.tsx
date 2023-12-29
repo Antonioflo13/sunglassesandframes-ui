@@ -5,22 +5,12 @@ import styles from './MobileSearchView.module.css';
 
 import { MobileSearchViewProps } from '.';
 
-export const MobileSearchView = ({ filterLabels, setFilterLabels }: MobileSearchViewProps): JSX.Element => {
-
-  const onClickLabel = (clickedLabel: string): void => {
-    const updatedSelections = filterLabels.map(item => {
-      return {
-        ...item,
-        selected: item.label === clickedLabel,
-      };
-    });
-    return setFilterLabels(updatedSelections);
-  };
+export const MobileSearchView = ({ filterLabels, onClick }: MobileSearchViewProps): JSX.Element => {
 
   return (
     <section className={styles['container']}>
       {filterLabels.map((item, key) => (
-        <button key={key} onClick={(): void => onClickLabel(item.label)}>
+        <button key={key} onClick={(): void => onClick(item.label)}>
           <Typography
             className={styles[`${item.selected && 'label-selected'}`]}
             label={item.label}

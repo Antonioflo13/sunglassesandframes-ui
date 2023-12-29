@@ -1,4 +1,4 @@
-import { Search } from '@blocks/Search';
+import Search from '@blocks/Search/Search';
 import { Img } from '@stories/components/ImageWrapper/Img';
 import type { Meta, StoryObj } from '@storybook/react';
 

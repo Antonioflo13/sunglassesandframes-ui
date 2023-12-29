@@ -1,6 +1,6 @@
 import { AnnouncementBar } from '@blocks/AnnouncementBar';
 import { Header } from '@blocks/Header';
-import { Search } from '@blocks/Search/Search';
+import Search from '@blocks/Search/Search';
 
 import { SearchPageProps } from './types';
 

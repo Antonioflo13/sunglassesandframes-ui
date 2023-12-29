@@ -5,10 +5,10 @@ import { Typography } from '@components/Typography';
 
 import styles from './SearchResultsProducts.module.css';
 
-import { getViewButton, getViewItems, SearchResultsProductsProps } from '.';
+import { SearchResultsProductsProps } from '.';
 
-export const SearchResultsProducts = ({ products, isMobileView, viewableProducts, label }: SearchResultsProductsProps): JSX.Element => {
-  const viewButton = getViewButton(products.length, viewableProducts);
+export const SearchResultsProducts = ({ products, isMobileView, label, viewButton }: SearchResultsProductsProps): JSX.Element => {
+
   return (
     <section>
       <Typography
@@ -21,7 +21,7 @@ export const SearchResultsProducts = ({ products, isMobileView, viewableProducts
         <Grid
           className={styles['results']}
           type="products"
-          items={getViewItems(products, viewableProducts)}
+          items={products}
           singleResult={products.length === 1}
         />
         <Button
