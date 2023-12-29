@@ -6,7 +6,7 @@ import { Product, ProductModel } from '../../components/Product';
 import styles from './Grid.module.css';
 import { GridProps } from './types';
 
-export const Grid = ({ items, type, className }: GridProps): JSX.Element => {
+export const Grid = ({ items, type, className, singleResult }: GridProps): JSX.Element => {
   const component = useCallback((item: ProductModel | ArticleModel) => {
     const findComponent
       = item.type === 'product' ? <Product product={item} /> : <Article article={item} />;
@@ -20,7 +20,10 @@ export const Grid = ({ items, type, className }: GridProps): JSX.Element => {
 
   return (
     <section
-      className={`${styles['grid']} ${styles[`grid-${type}`]} ${className ? className : ''}`}
+      className={`
+        ${styles['grid']} 
+        ${singleResult ? styles['single-result'] : styles[`grid-${type}`]} 
+        ${className ? className : ''}`}
     >
       {items.map(item => (
         <React.Fragment key={item.id}>{component(item)}</React.Fragment>

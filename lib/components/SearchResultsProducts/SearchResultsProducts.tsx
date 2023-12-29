@@ -18,7 +18,12 @@ export const SearchResultsProducts = ({ products, isMobileView, viewableProducts
         textSize="lg"
       />
       <div className={`${!isMobileView && styles['not-visible']}`}>
-        <Grid className={styles['results']} type="products" items={getViewItems(products, viewableProducts)} />
+        <Grid
+          className={styles['results']}
+          type="products"
+          items={getViewItems(products, viewableProducts)}
+          singleResult={products.length === 1}
+        />
         <Button
           className={`${viewButton ? styles['view-button'] : styles['not-view-button']}`}
           label='VIEW ALL'

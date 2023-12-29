@@ -39,6 +39,11 @@
   height: 440px;
 }
 
+.image-icon {
+  width: 75px;
+  height: 75px;
+}
+
 @media only screen and (min-width: 768px) {
   .image-secondary {
     max-width: 340px;
@@ -52,6 +57,11 @@
   .article {
     max-width: 340px;
     height: 250px;
+  }
+
+  .image-icon {
+    width: 187px;
+    height: 187px;
   }
 }
 

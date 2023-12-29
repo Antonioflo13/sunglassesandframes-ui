@@ -16,4 +16,5 @@ export type TypeImage =
   | 'image-secondary'
   | 'article'
   | 'plp'
-  | 'pdp';
+  | 'pdp'
+  | 'image-icon';
