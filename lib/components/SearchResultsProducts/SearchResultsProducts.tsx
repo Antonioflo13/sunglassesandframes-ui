@@ -12,7 +12,7 @@ export const SearchResultsProducts = ({ products, isMobileView, viewableProducts
   return (
     <section>
       <Typography
-        className={styles['title']}
+        className={`${styles['title']} ${products.length === 0 && styles['not-found']}`}
         label={`PRODUCTS (${products.length})`}
         fontFamily="helvetica-regular"
         textSize="lg"

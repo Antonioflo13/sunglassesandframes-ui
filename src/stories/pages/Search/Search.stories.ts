@@ -22,6 +22,6 @@ export const Default: Story = {
   args: {
     announcementBarProps: AnnouncementBarDefault.args,
     headerProps: HeaderDefault.args,
-    searchProps: SearchDefault.args
+    searchProps: SearchDefault.args,
   },
 };

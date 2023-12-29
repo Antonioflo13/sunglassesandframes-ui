@@ -6,18 +6,17 @@ import styles from './SearchResultsDesigners.module.css';
 import { SearchResultsDesignersProps } from '.';
 
 export const SearchResultsDesigners = ({ designers, isMobileView }: SearchResultsDesignersProps): JSX.Element => {
-  const singleResult = designers.length === 1;
   return (
-    <section>
+    <section >
       <Typography
-        className={styles['title']}
+        className={`${styles['title']} ${designers.length === 0 && styles['not-found']}`}
         label={`DESIGNER (${designers.length})`}
         fontFamily="helvetica-regular"
         textSize="lg"
       />
       <div className={`
           ${styles['results']} 
-          ${singleResult ? styles['item-center'] : styles['items-grid']} 
+          ${designers.length === 1 ? styles['item-center'] : styles['items-grid']} 
           ${!isMobileView && styles['not-visible']}
         `}>
         {designers.map((designer, key) => (

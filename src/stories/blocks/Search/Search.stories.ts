@@ -116,7 +116,37 @@ export const Default: Story = {
     searchIcons: {
       search: 'lib/assets/Icons/search.svg',
       close: 'lib/assets/Icons/close.svg',
+      notFound: 'lib/assets/Icons/searchNotFound.svg',
     },
-    viewableProducts: 6
+    viewableProducts: 6,
+    labelNotFound: 'No products found',
+    callBackSearch: () => null,
+    callBackCloseSearch: () => null
+  },
+};
+
+export const NotFound: Story = {
+  args: {
+    designers: [],
+    products: [],
+    mobileSearchView: [
+      {
+        label: 'DESIGNERS',
+        selected: true,
+      },
+      {
+        label: 'PRODUCTS',
+        selected: false,
+      }
+    ],
+    searchIcons: {
+      search: 'lib/assets/Icons/search.svg',
+      close: 'lib/assets/Icons/close.svg',
+      notFound: 'lib/assets/Icons/searchNotFound.svg',
+    },
+    viewableProducts: 6,
+    labelNotFound: 'No products found',
+    callBackSearch: () => null,
+    callBackCloseSearch: () => null,
   },
 };

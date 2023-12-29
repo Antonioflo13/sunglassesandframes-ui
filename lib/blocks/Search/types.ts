@@ -14,6 +14,7 @@ export type MobileSearchView = {
 export type SearchIcons = {
     search: string;
     close: string;
+    notFound: string;
 }
 
 export type SearchProps = {
@@ -22,4 +23,7 @@ export type SearchProps = {
     mobileSearchView: MobileSearchView[];
     searchIcons: SearchIcons;
     viewableProducts: number;
+    labelNotFound: string;
+    callBackSearch: (() => void) | undefined;
+    callBackCloseSearch: (() => void) | undefined;
 }

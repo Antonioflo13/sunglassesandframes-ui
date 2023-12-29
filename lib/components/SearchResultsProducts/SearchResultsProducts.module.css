@@ -3,6 +3,10 @@
     justify-content: center;
 }
 
+.not-found {
+    display: none;
+}
+
 .results {
     margin-top: 20px;
     margin-bottom: 30px;
