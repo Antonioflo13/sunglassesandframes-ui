@@ -20,6 +20,12 @@ export type Images = {
     notFound: string;
 }
 
+export type Labels = {
+    designer: string;
+    product: string;
+    notFound: string;
+}
+
 export type Assets = {
     icons: Icons;
     images: Images;
@@ -36,6 +42,6 @@ export type SearchProps = {
     mobileSearchView: MobileSearchView[];
     assets: Assets;
     viewableProducts: number;
-    labelNotFound: string;
+    labels: Labels;
     callBacks: CallBacks;
 }

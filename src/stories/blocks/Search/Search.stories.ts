@@ -123,7 +123,11 @@ export const Default: Story = {
       }
     },
     viewableProducts: 6,
-    labelNotFound: 'No products found',
+    labels: {
+      designer: 'DESIGNERS',
+      product: 'PRODUCTS',
+      notFound: 'No products found',
+    },
     callBacks: {
       onSearch: (): void => {},
       onCloseSearch: (): void => {},
@@ -170,7 +174,11 @@ export const SingleResult: Story = {
       }
     },
     viewableProducts: 6,
-    labelNotFound: 'No products found',
+    labels: {
+      designer: 'DESIGNERS',
+      product: 'PRODUCTS',
+      notFound: 'No products found',
+    },
     callBacks: {
       onSearch: (): void => {},
       onCloseSearch: (): void => {},
@@ -202,7 +210,11 @@ export const NotFoundAll: Story = {
       }
     },
     viewableProducts: 6,
-    labelNotFound: 'No products found',
+    labels: {
+      designer: 'DESIGNERS',
+      product: 'PRODUCTS',
+      notFound: 'No products found',
+    },
     callBacks: {
       onSearch: (): void => {},
       onCloseSearch: (): void => {},
@@ -245,7 +257,11 @@ export const NotFoundProducts: Story = {
       }
     },
     viewableProducts: 6,
-    labelNotFound: 'No products found',
+    labels: {
+      designer: 'DESIGNERS',
+      product: 'PRODUCTS',
+      notFound: 'No products found',
+    },
     callBacks: {
       onSearch: (): void => {},
       onCloseSearch: (): void => {},
@@ -350,7 +366,11 @@ export const NotFoundDesigners: Story = {
       }
     },
     viewableProducts: 6,
-    labelNotFound: 'No products found',
+    labels: {
+      designer: 'DESIGNERS',
+      product: 'PRODUCTS',
+      notFound: 'No products found',
+    },
     callBacks: {
       onSearch: (): void => {},
       onCloseSearch: (): void => {},

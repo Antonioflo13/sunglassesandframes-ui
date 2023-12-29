@@ -7,13 +7,13 @@ import styles from './SearchResultsProducts.module.css';
 
 import { getViewButton, getViewItems, SearchResultsProductsProps } from '.';
 
-export const SearchResultsProducts = ({ products, isMobileView, viewableProducts }: SearchResultsProductsProps): JSX.Element => {
+export const SearchResultsProducts = ({ products, isMobileView, viewableProducts, label }: SearchResultsProductsProps): JSX.Element => {
   const viewButton = getViewButton(products.length, viewableProducts);
   return (
     <section>
       <Typography
         className={`${styles['title']} ${products.length === 0 && styles['not-found']}`}
-        label={`PRODUCTS (${products.length})`}
+        label={`${label} (${products.length})`}
         fontFamily="helvetica-regular"
         textSize="lg"
       />

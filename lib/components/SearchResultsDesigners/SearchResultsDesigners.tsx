@@ -5,12 +5,12 @@ import styles from './SearchResultsDesigners.module.css';
 
 import { SearchResultsDesignersProps } from '.';
 
-export const SearchResultsDesigners = ({ designers, isMobileView }: SearchResultsDesignersProps): JSX.Element => {
+export const SearchResultsDesigners = ({ designers, isMobileView, label }: SearchResultsDesignersProps): JSX.Element => {
   return (
     <section >
       <Typography
         className={`${styles['title']} ${designers.length === 0 && styles['not-found']}`}
-        label={`DESIGNER (${designers.length})`}
+        label={`${label} (${designers.length})`}
         fontFamily="helvetica-regular"
         textSize="lg"
       />

@@ -15,7 +15,7 @@ export const Search = ({
   mobileSearchView,
   assets,
   viewableProducts,
-  labelNotFound,
+  labels,
   callBacks,
 }: SearchProps): JSX.Element => {
 
@@ -30,12 +30,17 @@ export const Search = ({
     <section className={styles['container']}>
       <MobileSearchView filterLabels={filterLabels} setFilterLabels={setFilterLabels} />
       <SearchInput searchIcons={assets.icons} onSearch={callBacks.onSearch} onCloseSearch={callBacks.onCloseSearch} />
-      {searchNotFound && <SearchResultsNotFound image={assets.images.notFound} labelNotFound={labelNotFound} />}
-      <SearchResultsDesigners designers={designers} isMobileView={isMobileView.designers} />
+      {searchNotFound && <SearchResultsNotFound image={assets.images.notFound} label={labels.notFound} />}
+      <SearchResultsDesigners
+        designers={designers}
+        isMobileView={isMobileView.designers}
+        label={labels.designer}
+      />
       <SearchResultsProducts
         products={products}
         isMobileView={isMobileView.products}
         viewableProducts={viewableProducts}
+        label={labels.product}
       />
     </section>
   );
