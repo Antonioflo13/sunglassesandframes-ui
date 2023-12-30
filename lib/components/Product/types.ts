@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 
 export type ProductProps = {
   product: ProductModel;
+  singleResult?: boolean;
 };
 
 export type ProductModel = {

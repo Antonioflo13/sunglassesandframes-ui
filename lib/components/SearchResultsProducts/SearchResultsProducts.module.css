@@ -1,0 +1,32 @@
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.not-found {
+    display: none;
+}
+
+.results {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.view-button {
+    display: block;
+}
+
+.not-view-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .title {
+        display: none;
+    }
+
+    .not-visible {
+        display: none;
+    }    
+}
