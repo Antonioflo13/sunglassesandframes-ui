@@ -1,27 +1,39 @@
-
-import { Typography } from '@components/Typography';
+import { Typography } from '../../components';
 
 import styles from './SearchResultsDesigners.module.css';
+import { SearchResultsDesignersProps } from './types';
 
-import { SearchResultsDesignersProps } from '.';
-
-export const SearchResultsDesigners = ({ designers, isMobileView, label }: SearchResultsDesignersProps): JSX.Element => {
-
+export const SearchResultsDesigners = ({
+  designers,
+  label,
+  className,
+}: SearchResultsDesignersProps): JSX.Element => {
   return (
-    <section >
+    <section
+      className={`
+      ${designers.length === 0 ? styles['hidden'] : ''} 
+      ${className ? className : ''}
+      `}
+    >
       <Typography
-        className={`${styles['title']} ${designers.length === 0 && styles['not-found']}`}
+        className={styles['title']}
         label={`${label} (${designers.length})`}
-        fontFamily="helvetica-regular"
-        textSize="lg"
+        fontFamily="helvetica-medium"
+        textSize="md"
       />
-      <div className={`
-          ${styles['results']} 
+      <div
+        className={`
+          ${styles['results']}
           ${designers.length === 1 ? styles['item-center'] : styles['items-grid']} 
-          ${!isMobileView && styles['not-visible']}
-        `}>
+        `}
+      >
         {designers.map((designer, key) => (
-          <Typography key={key} label={designer.name} fontFamily="helvetica-regular" textSize="lg" />
+          <Typography
+            key={key}
+            className={styles['designer-item']}
+            label={designer.name}
+            fontFamily="helvetica-regular"
+          />
         ))}
       </div>
     </section>

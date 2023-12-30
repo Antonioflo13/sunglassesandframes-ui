@@ -17,5 +17,5 @@ export type TypeImage =
   | 'article'
   | 'plp'
   | 'pdp'
-  | 'image-icon'
+  | 'search-not-found'
   | 'related-color';

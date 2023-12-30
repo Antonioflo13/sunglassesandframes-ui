@@ -23,3 +23,4 @@ export { PdpBuy } from './blocks/PdpDesktop/PdpBuy';
 export { PdpImages } from './blocks/PdpDesktop/PdpImages';
 export { PdpInfos } from './blocks/PdpDesktop/PdpInfos';
 export { PdpRelatedColors } from './blocks/PdpDesktop/PdpRelatedColors';
+export { Search } from './blocks/Search';
