@@ -1,35 +1,34 @@
-
-import { Grid } from '@blocks/Grid';
-import { Button } from '@components/Button';
-import { Typography } from '@components/Typography';
+import { Grid } from '../../blocks/Grid';
+import { Button, Typography } from '../../components';
 
 import styles from './SearchResultsProducts.module.css';
+import { SearchResultsProductsProps } from './types';
 
-import { SearchResultsProductsProps } from '.';
-
-export const SearchResultsProducts = ({ products, isMobileView, label, viewButton }: SearchResultsProductsProps): JSX.Element => {
-
+export const SearchResultsProducts = ({
+  products,
+  label,
+  viewButton,
+  className,
+}: SearchResultsProductsProps): JSX.Element => {
   return (
-    <section>
+    <section
+      className={`
+    ${products.length === 0 ? styles['hidden'] : ''} 
+    ${className ? className : ''}
+    `}
+    >
       <Typography
-        className={`${styles['title']} ${products.length === 0 && styles['not-found']}`}
+        className={styles['title']}
         label={`${label} (${products.length})`}
         fontFamily="helvetica-regular"
         textSize="lg"
       />
-      <div className={`${!isMobileView && styles['not-visible']}`}>
-        <Grid
-          className={styles['results']}
-          type="products"
-          items={products}
-          singleResult={products.length === 1}
-        />
-        <Button
-          className={`${viewButton ? styles['view-button'] : styles['not-view-button']}`}
-          label='VIEW ALL'
-          fontFamily='helvetica-regular'
-        />
-      </div>
+      <Grid className={styles['results']} type="products" items={products} />
+      <Button
+        className={`${viewButton ? styles['visible-button'] : styles['hidden-button']}`}
+        label="VIEW ALL"
+        fontFamily="helvetica-regular"
+      />
     </section>
   );
 };

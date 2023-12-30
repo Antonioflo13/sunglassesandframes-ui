@@ -1,39 +1,44 @@
-import { MobileSearchView } from '@components/MobileSearchView';
-import { SearchInput } from '@components/SearchInput';
-import { SearchResultsDesigners } from '@components/SearchResultsDesigners';
-import { SearchResultsNotFound } from '@components/SearchResultsNotFound';
-import { SearchResultsProducts } from '@components/SearchResultsProducts';
-import { useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
+
+import {
+  MobileSearchViewLabels,
+  SearchInput,
+  SearchResultsDesigners,
+  SearchResultsNotFound,
+  SearchResultsProducts,
+} from '../../components';
 
 import styles from './Search.module.css';
+import { SearchProps } from './types';
 import { getViewButton, getViewItems } from './utils';
 
-import { SearchProps } from '.';
-
-const Search = ({
+export const Search = ({
   designers,
   products,
-  mobileSearchView,
+  mobileViews,
   assets,
   viewableProducts,
   labels,
   callBacks,
 }: SearchProps): JSX.Element => {
-  const [filterLabels, setFilterLabels] = useState(mobileSearchView);
+  const [viewLabels, setViewLabels] = useState(mobileViews);
 
-  const onClickChangeView = (clickedLabel: string): void => {
-    const updatedSelections = filterLabels.map(item => ({
-      ...item,
-      selected: item.label === clickedLabel,
-    }));
-    setFilterLabels(updatedSelections);
-  };
+  const changeView = useCallback(
+    (selectedLabel: string): void => {
+      const updatedSelections = viewLabels.map(item => ({
+        ...item,
+        selected: item.label === selectedLabel,
+      }));
+      setViewLabels(updatedSelections);
+    },
+    [viewLabels],
+  );
 
-  const isMobileView = filterLabels.find(selection => selection.selected)?.label;
+  const view = useMemo(() => viewLabels.find(selection => selection.selected)?.label, [viewLabels]);
 
   return (
-    <section className={styles.container}>
-      <MobileSearchView filterLabels={filterLabels} onClick={onClickChangeView} />
+    <section className={styles['container-search']}>
+      <MobileSearchViewLabels viewLabels={viewLabels} onClick={changeView} />
       <SearchInput
         searchIcons={assets.icons}
         onSearch={callBacks.onSearch}
@@ -43,18 +48,16 @@ const Search = ({
         <SearchResultsNotFound image={assets.images.notFound} label={labels.notFound} />
       )}
       <SearchResultsDesigners
+        className={`${styles['visible']} ${view !== 'DESIGNERS' ? styles['hidden'] : ''}`}
         designers={designers}
-        isMobileView={isMobileView === 'DESIGNERS'}
         label={labels.designer}
       />
       <SearchResultsProducts
+        className={`${styles['visible']} ${view !== 'PRODUCTS' ? styles['hidden'] : ''}`}
         products={getViewItems(products, viewableProducts)}
-        isMobileView={isMobileView === 'PRODUCTS'}
         label={labels.product}
         viewButton={getViewButton(products.length, viewableProducts)}
       />
     </section>
   );
 };
-
-export default Search;

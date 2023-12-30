@@ -1,5 +1,9 @@
-import Search from '@blocks/Search/Search';
+import { Search } from '@blocks/Search/Search';
+import notFound from '@stories/assets/icons/search/search-not-found.png';
+import search from '@stories/assets/icons/search/search.svg';
+import xMark from '@stories/assets/icons/search/xmark.svg';
 import { Img } from '@stories/components/ImageWrapper/Img';
+import { icon } from '@stories/components/example/icon/icon';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const metaSearch = {
@@ -21,13 +25,13 @@ export const Default: Story = {
       {
         id: '0',
         name: 'Designer1',
-        link: '/'
+        link: '/',
       },
       {
         id: '1',
         name: 'Designer2',
-        link: '/'
-      }
+        link: '/',
+      },
     ],
     products: [
       {
@@ -103,7 +107,7 @@ export const Default: Story = {
         type: 'product',
       },
     ],
-    mobileSearchView: [
+    mobileViews: [
       {
         label: 'DESIGNERS',
         selected: true,
@@ -111,16 +115,16 @@ export const Default: Story = {
       {
         label: 'PRODUCTS',
         selected: false,
-      }
+      },
     ],
     assets: {
       icons: {
-        search: 'lib/assets/Icons/search.svg',
-        close: 'lib/assets/Icons/close.svg',
+        search: icon(search),
+        close: icon(xMark),
       },
       images: {
-        notFound: 'lib/assets/Icons/searchNotFound.svg',
-      }
+        notFound: icon(notFound),
+      },
     },
     viewableProducts: 6,
     labels: {
@@ -131,7 +135,7 @@ export const Default: Story = {
     callBacks: {
       onSearch: (): void => {},
       onCloseSearch: (): void => {},
-    }
+    },
   },
 };
 
@@ -141,8 +145,8 @@ export const SingleResult: Story = {
       {
         id: '0',
         name: 'Designer1',
-        link: '/'
-      }
+        link: '/',
+      },
     ],
     products: [
       {
@@ -152,9 +156,9 @@ export const SingleResult: Story = {
         designer: 'Designer',
         price: '123',
         type: 'product',
-      }
+      },
     ],
-    mobileSearchView: [
+    mobileViews: [
       {
         label: 'DESIGNERS',
         selected: true,
@@ -162,16 +166,16 @@ export const SingleResult: Story = {
       {
         label: 'PRODUCTS',
         selected: false,
-      }
+      },
     ],
     assets: {
       icons: {
-        search: 'lib/assets/Icons/search.svg',
-        close: 'lib/assets/Icons/close.svg',
+        search: icon(search),
+        close: icon(xMark),
       },
       images: {
-        notFound: 'lib/assets/Icons/searchNotFound.svg',
-      }
+        notFound: icon(notFound),
+      },
     },
     viewableProducts: 6,
     labels: {
@@ -182,7 +186,7 @@ export const SingleResult: Story = {
     callBacks: {
       onSearch: (): void => {},
       onCloseSearch: (): void => {},
-    }
+    },
   },
 };
 
@@ -190,7 +194,7 @@ export const NotFoundAll: Story = {
   args: {
     designers: [],
     products: [],
-    mobileSearchView: [
+    mobileViews: [
       {
         label: 'DESIGNERS',
         selected: true,
@@ -198,16 +202,16 @@ export const NotFoundAll: Story = {
       {
         label: 'PRODUCTS',
         selected: false,
-      }
+      },
     ],
     assets: {
       icons: {
-        search: 'lib/assets/Icons/search.svg',
-        close: 'lib/assets/Icons/close.svg',
+        search: icon(search),
+        close: icon(xMark),
       },
       images: {
-        notFound: 'lib/assets/Icons/searchNotFound.svg',
-      }
+        notFound: icon(notFound),
+      },
     },
     viewableProducts: 6,
     labels: {
@@ -218,7 +222,7 @@ export const NotFoundAll: Story = {
     callBacks: {
       onSearch: (): void => {},
       onCloseSearch: (): void => {},
-    }
+    },
   },
 };
 
@@ -228,16 +232,16 @@ export const NotFoundProducts: Story = {
       {
         id: '0',
         name: 'Designer1',
-        link: '/'
+        link: '/',
       },
       {
         id: '1',
         name: 'Designer2',
-        link: '/'
-      }
+        link: '/',
+      },
     ],
     products: [],
-    mobileSearchView: [
+    mobileViews: [
       {
         label: 'DESIGNERS',
         selected: true,
@@ -245,16 +249,16 @@ export const NotFoundProducts: Story = {
       {
         label: 'PRODUCTS',
         selected: false,
-      }
+      },
     ],
     assets: {
       icons: {
-        search: 'lib/assets/Icons/search.svg',
-        close: 'lib/assets/Icons/close.svg',
+        search: icon(search),
+        close: icon(xMark),
       },
       images: {
-        notFound: 'lib/assets/Icons/searchNotFound.svg',
-      }
+        notFound: icon(notFound),
+      },
     },
     viewableProducts: 6,
     labels: {
@@ -265,7 +269,7 @@ export const NotFoundProducts: Story = {
     callBacks: {
       onSearch: (): void => {},
       onCloseSearch: (): void => {},
-    }
+    },
   },
 };
 
@@ -346,7 +350,7 @@ export const NotFoundDesigners: Story = {
         type: 'product',
       },
     ],
-    mobileSearchView: [
+    mobileViews: [
       {
         label: 'DESIGNERS',
         selected: true,
@@ -354,16 +358,16 @@ export const NotFoundDesigners: Story = {
       {
         label: 'PRODUCTS',
         selected: false,
-      }
+      },
     ],
     assets: {
       icons: {
-        search: 'lib/assets/Icons/search.svg',
-        close: 'lib/assets/Icons/close.svg',
+        search: icon(search),
+        close: icon(xMark),
       },
       images: {
-        notFound: 'lib/assets/Icons/searchNotFound.svg',
-      }
+        notFound: icon(notFound),
+      },
     },
     viewableProducts: 6,
     labels: {
@@ -374,6 +378,6 @@ export const NotFoundDesigners: Story = {
     callBacks: {
       onSearch: (): void => {},
       onCloseSearch: (): void => {},
-    }
+    },
   },
 };

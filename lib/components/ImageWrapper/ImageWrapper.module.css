@@ -39,7 +39,7 @@
   height: 440px;
 }
 
-.image-icon {
+.search-not-found {
   width: 75px;
   height: 75px;
 }
@@ -79,5 +79,10 @@
   .pdp {
     width: 550px;
     height: 350px;
+  }
+
+  .search-not-found {
+    width: 187.5px;
+    height: 187.5px;
   }
 }
