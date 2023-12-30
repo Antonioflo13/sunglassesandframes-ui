@@ -1,0 +1,42 @@
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.not-found {
+    display: none;
+}
+
+.results {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.items-grid {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 15px;
+}
+
+.item-center {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .title {
+        display: none;
+    }
+
+    .results {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 10px;
+    }
+
+    .not-visible {
+        display: none;
+    }
+}

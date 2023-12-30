@@ -6,4 +6,5 @@ export type GridProps = {
   items: ProductModel[] | ArticleModel[];
   type: 'products' | 'articles';
   className?: string;
+  singleResult?: boolean;
 };

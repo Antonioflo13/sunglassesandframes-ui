@@ -39,6 +39,11 @@
   height: 440px;
 }
 
+.image-icon {
+  width: 75px;
+  height: 75px;
+}
+
 .related-color {
   width: 175px;
   height: 150px;
@@ -58,6 +63,11 @@
   .article {
     max-width: 340px;
     height: 250px;
+  }
+
+  .image-icon {
+    width: 187px;
+    height: 187px;
   }
 }
 
