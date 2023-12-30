@@ -6,7 +6,7 @@ export * from './CartSummaryMobile';
 export * from './Grid';
 export * from './Header';
 export * from './InfoBox';
-export * from './PdpBottomCard';
+export * from './PdpMobileBuy';
 export * from './PdpImage';
 export * from './PdpMobile';
 export * from './Slider';
