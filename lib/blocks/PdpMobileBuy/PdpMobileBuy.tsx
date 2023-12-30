@@ -1,18 +1,17 @@
 import { Button, Price, Typography } from '../../components';
 
-import styles from './PdpBottomCard.module.css';
-import { PdpBottomCardProps } from './types';
+import styles from './PdpMobileBuy.module.css';
+import { PdpMobileBuyProps } from './types';
 
-export const PdpBottomCard = ({
+export const PdpMobileBuy = ({
   product,
   buttonLabel,
   callback,
-}: PdpBottomCardProps): JSX.Element => {
+}: PdpMobileBuyProps): JSX.Element => {
   return (
     <section id="bottom-card" className={styles['container-pdp-bottom-card']}>
       <div className={styles['pdp-bottom-card-item']}>
         <Typography label={product.name} fontFamily="helvetica-medium" textSize="xl" />
-
         <div className={styles['container-pdp-bottom-card-price']}>
           {product.discountPrice && (
             <Price price={product.discountPrice} textSize="lg" discount={true} />
