@@ -1,6 +1,6 @@
 import styles from './Footer.module.css';
 
-import { BlockTypes, CtaBlock, FooterProps, LogoBlock } from '.';
+import { BlockTypes, FooterProps, LogoBlock } from '.';
 
 export function Footer({ blocks }: FooterProps): JSX.Element {
 
