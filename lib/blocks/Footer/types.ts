@@ -36,7 +36,7 @@ type Mobile = {
     disposition: Disposition;
 }
 
-type Position = {
+export type Position = {
   desktop: Desktop;
   mobile: Mobile;
 };
@@ -51,7 +51,6 @@ type BaseBlock = {
 export type LogoBlock = BaseBlock & {
   logo: JSX.Element;
   callback: CallbackFunction;
-  item?: string;
 };
 
 type CtaItems = {
@@ -65,9 +64,10 @@ type CtaItems = {
 
 export type CtaBlock = BaseBlock & {
   items: CtaItems[];
+  item: string;
 };
 
-type NewsletterBlock = BaseBlock & {
+export type NewsletterBlock = BaseBlock & {
   title: string;
   subTitle: string;
   buttonCta: string;
@@ -80,7 +80,7 @@ type IconsItems = {
   callback: CallbackFunction;
 };
 
-type IconsBlock = BaseBlock & {
+export type IconsBlock = BaseBlock & {
   items: IconsItems[];
 };
 
@@ -89,15 +89,16 @@ type MenuItems = {
   callback: CallbackFunction;
 };
 
-type MenuBlock = BaseBlock & {
+export type MenuBlock = BaseBlock & {
   items: MenuItems[];
+  item: string;
 };
 
-type CopyrightBlock = BaseBlock & {
+export type CopyrightBlock = BaseBlock & {
   label: string;
 };
 
-type Block = LogoBlock | CtaBlock | NewsletterBlock | IconsBlock | MenuBlock | CopyrightBlock;
+export type Block = LogoBlock | CtaBlock | NewsletterBlock | IconsBlock | MenuBlock | CopyrightBlock;
 
 export type FooterProps = {
   blocks: Block[];
