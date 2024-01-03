@@ -113,7 +113,7 @@ export const Default: Story = {
             disposition: 'center'
           }
         },
-        items: [
+        icons: [
           {
             icon: '/src/stories/assets/amex.svg',
           },
@@ -128,23 +128,9 @@ export const Default: Story = {
           },
           {
             icon: '/src/stories/assets/amex.svg',
-          },
-        ],
-      },
-      {
-        type: BlockTypes.ICONS_BLOCK,
-        position: {
-          desktop: {
-            row: 3,
-            disposition: undefined,
-            column: 1
-          },
-          mobile: {
-            row: 7,
-            disposition: 'center'
           }
-        },
-        items: [
+        ],
+        socialIcons: [
           {
             icon: '/src/stories/assets/instagram.svg',
             callback: () => console.log('ciao'),
@@ -160,8 +146,8 @@ export const Default: Story = {
           {
             icon: '/src/stories/assets/instagram.svg',
             callback: () => console.log('ciao')
-          },
-        ],
+          }
+        ]
       },
       {
         type: BlockTypes.MENU_BLOCK,
@@ -274,7 +260,7 @@ export const Default: Story = {
         type: BlockTypes.COPYRIGHT_BLOCK,
         position: {
           desktop: {
-            row: 3,
+            row: 4,
             disposition: 'left',
             column: undefined
           },

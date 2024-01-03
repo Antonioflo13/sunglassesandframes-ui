@@ -41,6 +41,7 @@ export function Footer({ blocks }: FooterProps): JSX.Element {
   return (
     <footer className={styles['container']}>
       {blocks.map((block, key) => (
+        console.log('block.position.desktop.row', block.position.desktop.row),
         <div
           key={key}
           className={`

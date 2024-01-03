@@ -9,17 +9,32 @@ type IconsProps = {
 
 export function Icons({ block }: IconsProps): JSX.Element {
 
+  console.log('block', block);
+
   return (
-    <section className={styles['container']}>
-      {block.items.map((item, key) => (
-        <div key={key} onClick={item.callback}>
-          <IconWrapper
-            className={`${styles['icon']} ${item.callback && styles['cursor-pointer']}`}
-            src={item.icon}
-            size={item.callback ? 25 : 38}
-          />
-        </div>
-      ))}
+    <section>
+      <div className={styles['container-icons']}>
+        {block.icons.map((item, key) => (
+          <div key={key}>
+            <IconWrapper
+              className={styles['icon']}
+              src={item.icon}
+              size={38}
+            />
+          </div>
+        ))}
+      </div>
+      <div className={styles['container-icons-social']}>
+        {block.socialIcons.map((item, key) => (
+          <div key={key} onClick={item.callback}>
+            <IconWrapper
+              className={styles['icon-social']}
+              src={item.icon}
+              size={25}
+            />
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

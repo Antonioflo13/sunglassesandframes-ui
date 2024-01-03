@@ -58,13 +58,17 @@ export type NewsletterBlock = BaseBlock & {
   callback: CallbackFunction;
 };
 
-type IconsItems = {
+type BaseIcons = {
   icon: string;
-  callback?: CallbackFunction;
+};
+
+type SocialIcons = BaseIcons & {
+  callback: CallbackFunction;
 };
 
 export type IconsBlock = BaseBlock & {
-  items: IconsItems[];
+  icons: BaseIcons[];
+  socialIcons: SocialIcons[];
 };
 
 type MenuItems = {
