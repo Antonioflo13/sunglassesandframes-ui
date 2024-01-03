@@ -8,7 +8,7 @@ export const MobileSearchViewLabels = ({
   onClick,
 }: MobileSearchLabelsProps): JSX.Element => {
   return (
-    <section className={styles['container-search-view-labels']}>
+    <section id="view-label-container" className={styles['container-search-view-labels']}>
       {viewLabels.map((item, idx) => (
         <Button
           key={idx}

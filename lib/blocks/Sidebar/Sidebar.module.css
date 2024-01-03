@@ -1,6 +1,7 @@
 .sidebar {
   padding: 10px 0;
   overflow-y: auto;
+  background-color: white;
 }
 
 .sidebar::-webkit-scrollbar {

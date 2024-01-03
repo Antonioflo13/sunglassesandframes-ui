@@ -8,26 +8,28 @@ export const SearchResultsProducts = ({
   products,
   label,
   viewButton,
+  onClickViewAll,
   className,
 }: SearchResultsProductsProps): JSX.Element => {
   return (
     <section
       className={`
-    ${products.length === 0 ? styles['hidden'] : ''} 
+    ${products?.items.length === 0 ? styles['hidden'] : ''} 
     ${className ? className : ''}
     `}
     >
       <Typography
         className={styles['title']}
-        label={`${label} (${products.length})`}
-        fontFamily="helvetica-regular"
-        textSize="lg"
+        label={`${label} (${products?.resultNumber})`}
+        fontFamily="helvetica-medium"
+        textSize="md"
       />
-      <Grid className={styles['results']} type="products" items={products} />
+      {products && <Grid className={styles['results']} type="products" items={products.items} />}
       <Button
         className={`${viewButton ? styles['visible-button'] : styles['hidden-button']}`}
         label="VIEW ALL"
         fontFamily="helvetica-regular"
+        callback={onClickViewAll}
       />
     </section>
   );

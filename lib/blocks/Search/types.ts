@@ -1,9 +1,10 @@
 import { ProductModel } from '@components/Product/types';
+import { ReactNode } from 'react';
 
 export type Designer = {
-  id: string;
-  name: string;
-  link: string;
+  id: string | number;
+  title: string;
+  wrapper?: (children: ReactNode) => JSX.Element;
 };
 
 export type MobileViews = {
@@ -32,16 +33,24 @@ export type Assets = {
 };
 
 export type CallBacks = {
-  onSearch: () => void;
+  onSearch: (input: string) => void;
   onCloseSearch: () => void;
+  onClickViewAll: () => void;
 };
 
 export type SearchProps = {
-  designers: Designer[];
-  products: ProductModel[];
   mobileViews: MobileViews[];
   assets: Assets;
   viewableProducts: number;
   labels: Labels;
   callBacks: CallBacks;
+  className?: string;
+  designers?: {
+    items: Designer[];
+    resultNumber: number;
+  };
+  products?: {
+    items: ProductModel[];
+    resultNumber: number;
+  };
 };

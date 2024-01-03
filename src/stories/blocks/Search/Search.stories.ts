@@ -21,92 +21,96 @@ type Story = StoryObj<typeof metaSearch>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Default: Story = {
   args: {
-    designers: [
-      {
-        id: '0',
-        name: 'Designer1',
-        link: '/',
-      },
-      {
-        id: '1',
-        name: 'Designer2',
-        link: '/',
-      },
-    ],
-    products: [
-      {
-        id: '0',
-        image: Img('230x110'),
-        productName: 'Product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '1',
-        image: Img('230x110'),
-        productName: 'product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '2',
-        image: Img('230x110'),
-        productName: 'product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '3',
-        image: Img('230x110'),
-        productName: 'Product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '4',
-        image: Img('230x110'),
-        productName: 'product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '5',
-        image: Img('230x110'),
-        productName: 'product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '6',
-        image: Img('230x110'),
-        productName: 'Product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '7',
-        image: Img('230x110'),
-        productName: 'product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '8',
-        image: Img('230x110'),
-        productName: 'product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-    ],
+    designers: {
+      items: [
+        {
+          id: '0',
+          title: 'Designer1',
+        },
+        {
+          id: '1',
+          title: 'Designer2',
+        },
+      ],
+      resultNumber: 2,
+    },
+    products: {
+      items: [
+        {
+          id: '0',
+          image: Img('230x110'),
+          productName: 'Product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '1',
+          image: Img('230x110'),
+          productName: 'product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '2',
+          image: Img('230x110'),
+          productName: 'product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '3',
+          image: Img('230x110'),
+          productName: 'Product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '4',
+          image: Img('230x110'),
+          productName: 'product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '5',
+          image: Img('230x110'),
+          productName: 'product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '6',
+          image: Img('230x110'),
+          productName: 'Product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '7',
+          image: Img('230x110'),
+          productName: 'product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '8',
+          image: Img('230x110'),
+          productName: 'product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+      ],
+      resultNumber: 9,
+    },
     mobileViews: [
       {
         label: 'DESIGNERS',
@@ -135,29 +139,35 @@ export const Default: Story = {
     callBacks: {
       onSearch: (): void => {},
       onCloseSearch: (): void => {},
+      onClickViewAll: (): void => {},
     },
   },
 };
 
 export const SingleResult: Story = {
   args: {
-    designers: [
-      {
-        id: '0',
-        name: 'Designer1',
-        link: '/',
-      },
-    ],
-    products: [
-      {
-        id: '0',
-        image: Img('230x110'),
-        productName: 'Product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-    ],
+    designers: {
+      items: [
+        {
+          id: '0',
+          title: 'Designer1',
+        },
+      ],
+      resultNumber: 1,
+    },
+    products: {
+      items: [
+        {
+          id: '0',
+          image: Img('230x110'),
+          productName: 'Product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+      ],
+      resultNumber: 1,
+    },
     mobileViews: [
       {
         label: 'DESIGNERS',
@@ -186,14 +196,21 @@ export const SingleResult: Story = {
     callBacks: {
       onSearch: (): void => {},
       onCloseSearch: (): void => {},
+      onClickViewAll: (): void => {},
     },
   },
 };
 
 export const NotFoundAll: Story = {
   args: {
-    designers: [],
-    products: [],
+    designers: {
+      items: [],
+      resultNumber: 0,
+    },
+    products: {
+      items: [],
+      resultNumber: 0,
+    },
     mobileViews: [
       {
         label: 'DESIGNERS',
@@ -222,25 +239,30 @@ export const NotFoundAll: Story = {
     callBacks: {
       onSearch: (): void => {},
       onCloseSearch: (): void => {},
+      onClickViewAll: (): void => {},
     },
   },
 };
 
 export const NotFoundProducts: Story = {
   args: {
-    designers: [
-      {
-        id: '0',
-        name: 'Designer1',
-        link: '/',
-      },
-      {
-        id: '1',
-        name: 'Designer2',
-        link: '/',
-      },
-    ],
-    products: [],
+    designers: {
+      items: [
+        {
+          id: '0',
+          title: 'Designer1',
+        },
+        {
+          id: '1',
+          title: 'Designer2',
+        },
+      ],
+      resultNumber: 2,
+    },
+    products: {
+      items: [],
+      resultNumber: 0,
+    },
     mobileViews: [
       {
         label: 'DESIGNERS',
@@ -269,87 +291,94 @@ export const NotFoundProducts: Story = {
     callBacks: {
       onSearch: (): void => {},
       onCloseSearch: (): void => {},
+      onClickViewAll: (): void => {},
     },
   },
 };
 
 export const NotFoundDesigners: Story = {
   args: {
-    designers: [],
-    products: [
-      {
-        id: '0',
-        image: Img('230x110'),
-        productName: 'Product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '1',
-        image: Img('230x110'),
-        productName: 'product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '2',
-        image: Img('230x110'),
-        productName: 'product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '3',
-        image: Img('230x110'),
-        productName: 'Product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '4',
-        image: Img('230x110'),
-        productName: 'product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '5',
-        image: Img('230x110'),
-        productName: 'product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '6',
-        image: Img('230x110'),
-        productName: 'Product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '7',
-        image: Img('230x110'),
-        productName: 'product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-      {
-        id: '8',
-        image: Img('230x110'),
-        productName: 'product id',
-        designer: 'Designer',
-        price: '123',
-        type: 'product',
-      },
-    ],
+    designers: {
+      items: [],
+      resultNumber: 0,
+    },
+    products: {
+      items: [
+        {
+          id: '0',
+          image: Img('230x110'),
+          productName: 'Product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '1',
+          image: Img('230x110'),
+          productName: 'product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '2',
+          image: Img('230x110'),
+          productName: 'product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '3',
+          image: Img('230x110'),
+          productName: 'Product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '4',
+          image: Img('230x110'),
+          productName: 'product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '5',
+          image: Img('230x110'),
+          productName: 'product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '6',
+          image: Img('230x110'),
+          productName: 'Product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '7',
+          image: Img('230x110'),
+          productName: 'product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+        {
+          id: '8',
+          image: Img('230x110'),
+          productName: 'product id',
+          designer: 'Designer',
+          price: '123',
+          type: 'product',
+        },
+      ],
+      resultNumber: 9,
+    },
     mobileViews: [
       {
         label: 'DESIGNERS',
@@ -378,6 +407,7 @@ export const NotFoundDesigners: Story = {
     callBacks: {
       onSearch: (): void => {},
       onCloseSearch: (): void => {},
+      onClickViewAll: (): void => {},
     },
   },
 };

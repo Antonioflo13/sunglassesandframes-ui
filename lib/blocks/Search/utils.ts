@@ -7,6 +7,12 @@ export const getViewButton = (productsLength: number, viewableProducts: number):
   return false;
 };
 
-export const getViewItems = (products: ProductModel[], viewableProducts: number): ProductModel[] => {
-  return products.slice(0, viewableProducts);
+export const getViewItems = ({
+  viewableProducts,
+  products,
+}: {
+  viewableProducts: number;
+  products?: ProductModel[];
+}): ProductModel[] => {
+  return products ? [...products].slice(0, viewableProducts) : [];
 };
