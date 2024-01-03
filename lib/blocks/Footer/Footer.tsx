@@ -1,28 +1,55 @@
-import { Copyright } from '@components/FooterBlocks/Copyright/Copyright';
-import { Cta } from '@components/FooterBlocks/Cta/Cta';
-import { Icons } from '@components/FooterBlocks/Icons/Icons';
-import { Logo } from '@components/FooterBlocks/Logo/Logo';
-import { Menu } from '@components/FooterBlocks/Menu/Menu';
-import { Newsletter } from '@components/FooterBlocks/Newsletter/Newsletter';
+import { Copyright } from '@components/FooterBlocks/Copyright';
+import { Cta } from '@components/FooterBlocks/Cta';
+import { Icons } from '@components/FooterBlocks/Icons';
+import { Logo } from '@components/FooterBlocks/Logo';
+import { Menu } from '@components/FooterBlocks/Menu';
+import { Newsletter } from '@components/FooterBlocks/Newsletter';
+import { useCallback } from 'react';
 
 import styles from './Footer.module.css';
 
-import { BlockTypes, CopyrightBlock, CtaBlock, FooterProps, IconsBlock, LogoBlock, MenuBlock, NewsletterBlock } from '.';
+import { Block, BlockTypes, CopyrightBlock, CtaBlock, FooterProps, IconsBlock, LogoBlock, MenuBlock, NewsletterBlock } from '.';
 
 export function Footer({ blocks }: FooterProps): JSX.Element {
 
+  const footerBlocks = useCallback((block: Block) => {
+    switch (block.type) {
+
+      case BlockTypes.LOGO_BLOCK:
+        return <Logo block={block as LogoBlock} />;
+
+      case BlockTypes.CTA_BLOCK:
+        return <Cta block={block as CtaBlock} />;
+
+      case BlockTypes.NEWSLETTER_BLOCK:
+        return <Newsletter block={block as NewsletterBlock} />;
+
+      case BlockTypes.ICONS_BLOCK:
+        return <Icons block={block as IconsBlock} />;
+
+      case BlockTypes.MENU_BLOCK:
+        return <Menu block={block as MenuBlock} />;
+
+      case BlockTypes.COPYRIGHT_BLOCK:
+        return <Copyright block={block as CopyrightBlock} />;
+
+      default:
+        console.warn(`Unknown block type: ${block.type}`);
+        return null;
+    }
+  }, []);
   return (
-    <>
+    <footer className={styles['container']}>
       {blocks.map((block, key) => (
-        <footer className={styles['container']} key={key}>
-          {block.type === BlockTypes.LOGO_BLOCK && <Logo block={block as LogoBlock} position={block.position} />}
-          {block.type === BlockTypes.CTA_BLOCK && <Cta block={block as CtaBlock} />}
-          {block.type === BlockTypes.NEWSLETTER_BLOCK && <Newsletter block={block as NewsletterBlock} />}
-          {block.type === BlockTypes.ICONS_BLOCK && <Icons block={block as IconsBlock} />}
-          {block.type === BlockTypes.MENU_BLOCK && <Menu block={block as MenuBlock} />}
-          {block.type === BlockTypes.COPYRIGHT_BLOCK && <Copyright block={block as CopyrightBlock} position={block.position} />}
-        </footer>
+        <div
+          key={key}
+          className={`
+          ${styles[`desktop-${block.position.desktop.disposition}`]} 
+          ${styles[`mobile-${block.position.mobile.disposition}`]} 
+        `}>
+          {footerBlocks(block)}
+        </div>
       ))}
-    </>
+    </footer>
   );
 }

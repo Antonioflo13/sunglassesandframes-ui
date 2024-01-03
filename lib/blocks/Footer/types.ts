@@ -7,22 +7,6 @@ export enum BlockTypes {
   COPYRIGHT_BLOCK = 'COPYRIGHT_BLOCK',
 }
 
-export enum IconsFooter {
-  INSTAGRAM = 'instagram',
-  FACEBOOK = 'facebook',
-  TIKTOK = 'tiktok',
-  PINTEREST = 'pinterest',
-  AMEX = 'amex',
-  APPLE_PAY = 'applePay',
-  VISA = 'visa',
-  MASTERCARD = 'masterCard',
-  PAY_PAL = 'payPal',
-  SUNGLASSES_ICON = 'sunglasses',
-  CUSTOMER_SERVICE = 'customerService',
-  FAST_SHIPPING = 'fastShipping',
-  FIRST_CLASS_SERVICE = 'firstClassService'
-}
-
 type Disposition = 'left' | 'center' | 'right' | undefined;
 
 type Desktop = {
@@ -54,12 +38,11 @@ export type LogoBlock = BaseBlock & {
 };
 
 type CtaItems = {
-  icon: IconsFooter;
+  icon: string;
   title: string;
   description: string;
   cta: string;
   callback: CallbackFunction;
-  itemColumn: number;
 };
 
 export type CtaBlock = BaseBlock & {
@@ -76,8 +59,8 @@ export type NewsletterBlock = BaseBlock & {
 };
 
 type IconsItems = {
-  icon: IconsFooter;
-  callback: CallbackFunction;
+  icon: string;
+  callback?: CallbackFunction;
 };
 
 export type IconsBlock = BaseBlock & {

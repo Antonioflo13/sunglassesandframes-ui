@@ -2,3 +2,36 @@
     background-color: #D9D9D9;
     padding: 50px;
 }
+
+.mobile-left {
+    text-align: left;
+    justify-content: left;
+}
+
+.mobile-center {
+    text-align: center;
+    justify-content: center;
+}
+
+.mobile-right {
+    text-align: right;
+    justify-content: right;
+}
+
+
+@media (min-width: 768px) {
+    .desktop-left {
+        text-align: left;
+        justify-content: left;
+    }
+    
+    .desktop-center {
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .desktop-right {
+        text-align: right;
+        justify-content: right;
+    }
+}

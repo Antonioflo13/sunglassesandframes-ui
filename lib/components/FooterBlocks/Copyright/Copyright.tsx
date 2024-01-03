@@ -1,16 +1,10 @@
-import { CopyrightBlock, Position } from '@blocks/Footer';
-
-import styles from './Copyright.module.css';
+import { CopyrightBlock } from '@blocks/Footer';
+import { Typography } from '@components/Typography';
 
 type CopyrightProps = {
     block: CopyrightBlock;
-    position: Position;
 }
-export function Copyright({ block, position }: CopyrightProps): JSX.Element {
+export function Copyright({ block }: CopyrightProps): JSX.Element {
 
-  return (
-    <div className={styles[`${position.desktop.disposition} ${position.mobile.disposition}`]}>
-      {block.label}
-    </div>
-  );
+  return <Typography label={block.label} fontFamily="helvetica-regular" />;
 }

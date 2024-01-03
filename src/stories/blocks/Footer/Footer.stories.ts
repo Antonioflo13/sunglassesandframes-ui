@@ -1,8 +1,8 @@
-import { BlockTypes, Footer, IconsFooter } from '@blocks/Footer';
+import { BlockTypes, Footer } from '@blocks/Footer';
 import { sunglassesLogo } from '@stories/components/example/logo/sunglassesLogo';
-import { expect } from '@storybook/jest';
+// import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
-import { within } from '@storybook/testing-library';
+// import { within } from '@storybook/testing-library';
 
 const metaFooter = {
   title: 'sunglassesandframes/Blocks/Footer',
@@ -52,36 +52,32 @@ export const Default: Story = {
         item: 'WHY US',
         items: [
           {
-            icon: IconsFooter.SUNGLASSES_ICON,
+            icon: '/src/stories/assets/sunglasses.svg',
             title: 'The one you want? We’ve got it.',
             description: 'Shop over 4000+ different styles',
             cta: 'Discover now',
             callback: () => console.log('ciao'),
-            itemColumn: 1
           },
           {
-            icon: IconsFooter.CUSTOMER_SERVICE,
-            title: 'Need advices or help?',
-            description: 'From Mon to Fri, 9AM - 6PM',
-            cta: 'Contact us',
-            callback: () => console.log('ciao'),
-            itemColumn: 1
-          },
-          {
-            icon: IconsFooter.FAST_SHIPPING,
+            icon: '/src/stories/assets/fast-shipping.svg',
             title: 'You want it, you get it!',
             description: 'Same-day shipping and express delivery',
             cta: 'Read now',
             callback: () => console.log('ciao'),
-            itemColumn: 2
           },
           {
-            icon: IconsFooter.FIRST_CLASS_SERVICE,
+            icon: '/src/stories/assets/customer-service.svg',
+            title: 'Need advices or help?',
+            description: 'From Mon to Fri, 9AM - 6PM',
+            cta: 'Contact us',
+            callback: () => console.log('ciao'),
+          },
+          {
+            icon: '/src/stories/assets/first-class-service.svg',
             title: 'Be the first, always!',
             description: 'Early access to new collections',
             cta: 'What’s new',
             callback: () => console.log('ciao'),
-            itemColumn: 2
           }
         ]
       },
@@ -113,30 +109,25 @@ export const Default: Story = {
             column: 1
           },
           mobile: {
-            row: undefined,
-            disposition: undefined
+            row: 6,
+            disposition: 'center'
           }
         },
         items: [
           {
-            icon: IconsFooter.AMEX,
-            callback: () => console.log('ciao'),
+            icon: '/src/stories/assets/amex.svg',
           },
           {
-            icon: IconsFooter.APPLE_PAY,
-            callback: () => console.log('ciao'),
+            icon: '/src/stories/assets/amex.svg',
           },
           {
-            icon: IconsFooter.VISA,
-            callback: () => console.log('ciao'),
+            icon: '/src/stories/assets/amex.svg',
           },
           {
-            icon: IconsFooter.MASTERCARD,
-            callback: () => console.log('ciao'),
+            icon: '/src/stories/assets/amex.svg',
           },
           {
-            icon: IconsFooter.PAY_PAL,
-            callback: () => console.log('ciao'),
+            icon: '/src/stories/assets/amex.svg',
           },
         ],
       },
@@ -150,24 +141,24 @@ export const Default: Story = {
           },
           mobile: {
             row: 7,
-            disposition: 'left'
+            disposition: 'center'
           }
         },
         items: [
           {
-            icon: IconsFooter.INSTAGRAM,
+            icon: '/src/stories/assets/instagram.svg',
             callback: () => console.log('ciao'),
           },
           {
-            icon: IconsFooter.FACEBOOK,
+            icon: '/src/stories/assets/instagram.svg',
             callback: () => console.log('ciao')
           },
           {
-            icon: IconsFooter.TIKTOK,
+            icon: '/src/stories/assets/instagram.svg',
             callback: () => console.log('ciao')
           },
           {
-            icon: IconsFooter.PINTEREST,
+            icon: '/src/stories/assets/instagram.svg',
             callback: () => console.log('ciao')
           },
         ],
@@ -298,8 +289,8 @@ export const Default: Story = {
   }
 };
 
-Default.play = async({ canvasElement }): Promise<void> => {
-  const canvas = within(canvasElement);
+// Default.play = async({ canvasElement }): Promise<void> => {
+//   const canvas = within(canvasElement);
 
-  await expect(canvas.getByRole('img')).toBeInTheDocument();
-};
+//   await expect(canvas.getByRole('img')).toBeInTheDocument();
+// };

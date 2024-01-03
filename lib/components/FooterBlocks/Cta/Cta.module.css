@@ -1,0 +1,34 @@
+.title {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.container-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cta {
+    display: inline-block;
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .title {
+        display: none;
+    }
+
+    .container-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 600px;
+    }
+}

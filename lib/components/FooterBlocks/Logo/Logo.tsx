@@ -1,18 +1,14 @@
-import { LogoBlock, Position } from '@blocks/Footer';
+import { LogoBlock } from '@blocks/Footer';
 
 import styles from './Logo.module.css';
 
 type LogoProps = {
     block: LogoBlock;
-    position: Position;
 }
-export function Logo({ block, position }: LogoProps): JSX.Element {
+export function Logo({ block }: LogoProps): JSX.Element {
 
   return (
-    <div
-      className={styles[`${position.desktop.disposition} ${position.mobile.disposition}`]}
-      onClick={block.callback}
-    >
+    <div className={styles['container']} onClick={block.callback}>
       {block.logo}
     </div>
   );
