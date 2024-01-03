@@ -48,12 +48,9 @@ export const Search = ({
     setViewLabelsHeight(document.getElementById('view-label-container')?.clientHeight ?? 0);
     setSearchInputHeight(document.getElementById('search-input-container')?.clientHeight ?? 0);
 
-    if (window.innerHeight) {
-      setScrollableAreaHeight(
-        window.innerHeight
-          - (viewLabelsHeight + searchInputHeight + headerHeight + announcementBarHeight),
-      );
-    }
+    setScrollableAreaHeight(
+      viewLabelsHeight + searchInputHeight + headerHeight + announcementBarHeight,
+    );
   }, [announcementBarHeight, headerHeight, searchInputHeight, viewLabelsHeight]);
 
   return (
@@ -71,7 +68,7 @@ export const Search = ({
         <div
           className={styles['container-results']}
           style={{
-            height: scrollableAreaHeight,
+            height: `calc(100dvh - 10px - ${scrollableAreaHeight}px)`,
           }}
         >
           <SearchResultsDesigners
