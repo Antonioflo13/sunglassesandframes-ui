@@ -45,6 +45,7 @@ export function Footer({ blocks }: FooterProps): JSX.Element {
         <div
           key={key}
           className={`
+          ${styles['blocks']}
           ${styles[`desktop-${block.position.desktop.disposition}`]} 
           ${styles[`mobile-${block.position.mobile.disposition}`]} 
         `}>

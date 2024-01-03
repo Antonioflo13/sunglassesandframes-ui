@@ -9,8 +9,6 @@ type IconsProps = {
 
 export function Icons({ block }: IconsProps): JSX.Element {
 
-  console.log('block', block);
-
   return (
     <section>
       <div className={styles['container-icons']}>
