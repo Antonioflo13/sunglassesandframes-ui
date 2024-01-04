@@ -6,5 +6,5 @@ type CopyrightProps = {
 }
 export function Copyright({ block }: CopyrightProps): JSX.Element {
 
-  return <Typography label={block.label} fontFamily="helvetica-regular" />;
+  return <Typography label={block.label} fontFamily="helvetica-light" />;
 }

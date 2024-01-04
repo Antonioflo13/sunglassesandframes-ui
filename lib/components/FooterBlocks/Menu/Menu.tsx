@@ -19,8 +19,10 @@ export function Menu({ block }: MenuProps): JSX.Element {
   return (
     <section className={styles['container']}>
       <div className={styles['container-title-accordion']}>
-        <Typography label={block.item} fontFamily="helvetica-regular" />
-        <div onClick={(): void => toggleAccordion()}>
+        <div onClick={toggleAccordion}>
+          <Typography label={block.item} fontFamily="helvetica-medium" />
+        </div>
+        <div className={styles['container-accordion']} onClick={toggleAccordion}>
           {accordionState
             ? <IconWrapper src={block.accordion.icons.close} size={12} />
             : <IconWrapper src={block.accordion.icons.open} size={12} />
@@ -30,7 +32,7 @@ export function Menu({ block }: MenuProps): JSX.Element {
       {accordionState && (
         block.items.map((item, key) => (
           <div key={key} onClick={item.callback}>
-            <Typography className={styles['menu-item']} label={item.label} fontFamily="helvetica-regular" />
+            <Typography className={styles['menu-item']} label={item.label} fontFamily="helvetica-light" />
           </div>
         )))
       }

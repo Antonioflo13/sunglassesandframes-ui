@@ -2,4 +2,12 @@
   width: 106px;
   height: 20px;
   object-fit: contain;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 160px;
+    height: 30px;
+  }
 }
