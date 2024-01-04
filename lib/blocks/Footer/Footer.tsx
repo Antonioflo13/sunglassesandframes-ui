@@ -8,70 +8,56 @@ import { useCallback } from 'react';
 
 import styles from './Footer.module.css';
 
-import { Block, BlockTypes, CopyrightBlock, CtaBlock, FooterProps, IconsBlock, LogoBlock, MenuBlock, NewsletterBlock } from '.';
+import {
+  BlockTypes,
+  Columns,
+  CopyrightBlock,
+  CtaBlock,
+  FooterProps,
+  IconsBlock,
+  LogoBlock,
+  MenuBlock,
+  NewsletterBlock,
+} from '.';
 
 export function Footer({ blocks }: FooterProps): JSX.Element {
 
-  const gridDesktop: Block[][] = Array.from(
-    { length: Math.max(...blocks.map(block => block.position.desktop.row)) },
-    () => []
-  );
-  blocks.forEach(block => {
-    const row = block.position.desktop.row - 1;
-    gridDesktop[row].push(block);
-  });
-
-  const gridMobile: Block[][] = Array.from(
-    { length: Math.max(...blocks.map(block => block.position.mobile.row)) },
-    () => []
-  );
-  blocks.forEach(block => {
-    const row = block.position.mobile.row - 1;
-    gridMobile[row].push(block);
-  });
-
-  const footerBlocks = useCallback((block: Block) => {
-    switch (block.type) {
-
+  const footerBlocks = useCallback((columns: Columns) => {
+    switch (columns.type) {
       case BlockTypes.LOGO_BLOCK:
-        return <Logo block={block as LogoBlock} />;
+        return <Logo block={columns as LogoBlock} />;
 
       case BlockTypes.CTA_BLOCK:
-        return <Cta block={block as CtaBlock} />;
+        return <Cta block={columns as CtaBlock} />;
 
       case BlockTypes.NEWSLETTER_BLOCK:
-        return <Newsletter block={block as NewsletterBlock} />;
+        return <Newsletter block={columns as NewsletterBlock} />;
 
       case BlockTypes.ICONS_BLOCK:
-        return <Icons block={block as IconsBlock} />;
+        return <Icons block={columns as IconsBlock} />;
 
       case BlockTypes.MENU_BLOCK:
-        return <Menu block={block as MenuBlock} />;
+        return <Menu block={columns as MenuBlock} />;
 
       case BlockTypes.COPYRIGHT_BLOCK:
-        return <Copyright block={block as CopyrightBlock} />;
+        return <Copyright block={columns as CopyrightBlock} />;
 
       default:
-        console.warn(`Unknown block type: ${block.type}`);
+        console.warn(`Unknown block type: ${columns.type}`);
         return null;
     }
   }, []);
 
   return (
     <footer className={styles['container']}>
-      {gridDesktop.map((row, key) => (
+      {blocks.rows.map((row, key) => (
         console.log('row', row),
-        <div key={key} className={styles['row']}>
-          {row.map((block, key) => (
-            <div
-              key={key}
-              className={`
-              ${styles['blocks']}
-              ${styles[`desktop-${block.position.desktop.disposition}`]}
-              ${styles[`mobile-${block.position.mobile.disposition}`]}
-            `}
-            >
-              {footerBlocks(block)}
+        <div
+          key={key}
+          className={`${styles['row']} ${styles[`position-${row.position}`]}`}>
+          {row.columns.map((column, key) => (
+            <div key={key}>
+              {footerBlocks(column)}
             </div>
           ))}
         </div>

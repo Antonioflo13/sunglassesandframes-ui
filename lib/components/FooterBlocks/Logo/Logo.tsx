@@ -8,8 +8,8 @@ type LogoProps = {
 export function Logo({ block }: LogoProps): JSX.Element {
 
   return (
-    <div className={styles['container']} onClick={block.callback}>
+    <section className={styles['container']} onClick={block.callback}>
       {block.logo}
-    </div>
+    </section>
   );
 }

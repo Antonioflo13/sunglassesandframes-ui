@@ -7,7 +7,6 @@
     display: flex;
     gap: 12px;
     margin-bottom: 20px;
-    width: 300px;
 }
 
 .content {
@@ -29,6 +28,5 @@
     .container-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        width: 600px;
     }
 }

@@ -7,23 +7,10 @@ export enum BlockTypes {
   COPYRIGHT_BLOCK = 'COPYRIGHT_BLOCK',
 }
 
-type Disposition = 'left' | 'center' | 'right';
-
-type Positions = {
-  row: number;
-  disposition: Disposition;
-}
-
-export type Position = {
-  desktop: Positions;
-  mobile: Positions;
-};
-
 type CallbackFunction = () => void;
 
 type BaseBlock = {
   type: BlockTypes;
-  position: Position;
 };
 
 export type LogoBlock = BaseBlock & {
@@ -79,8 +66,26 @@ export type CopyrightBlock = BaseBlock & {
   label: string;
 };
 
-export type Block = LogoBlock | CtaBlock | NewsletterBlock | IconsBlock | MenuBlock | CopyrightBlock;
+export enum PositionType {
+  LEFT = 'left',
+  CENTER = 'center',
+  RIGHT = 'right',
+  TYPE_COLUMNS = 'columns',
+}
+
+export type Columns = LogoBlock | CtaBlock | NewsletterBlock | IconsBlock | MenuBlock | CopyrightBlock;
+
+export type Rows = {
+  marginBottom: number;
+  separator: boolean;
+  position: PositionType;
+  columns: Columns[];
+};
+
+type Blocks = {
+  rows: Rows[];
+}
 
 export type FooterProps = {
-  blocks: Block[];
+  blocks: Blocks;
 };
