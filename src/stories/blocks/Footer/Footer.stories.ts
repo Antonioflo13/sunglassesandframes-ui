@@ -136,6 +136,13 @@ export const Default: Story = {
             },
             {
               type: BlockTypes.MENU_BLOCK,
+              accordion: {
+                icons: {
+                  open: '/src/stories/assets/plus.svg',
+                  close: '/src/stories/assets/minus.svg',
+                },
+                isOpen: true
+              },
               item: 'SHOP NOW',
               items: [
                 {
@@ -162,6 +169,13 @@ export const Default: Story = {
             },
             {
               type: BlockTypes.MENU_BLOCK,
+              accordion: {
+                icons: {
+                  open: '/src/stories/assets/plus.svg',
+                  close: '/src/stories/assets/minus.svg',
+                },
+                isOpen: true
+              },
               item: 'ASSISTANCE CENTER',
               items: [
                 {
@@ -192,6 +206,13 @@ export const Default: Story = {
             },
             {
               type: BlockTypes.MENU_BLOCK,
+              accordion: {
+                icons: {
+                  open: '/src/stories/assets/plus.svg',
+                  close: '/src/stories/assets/minus.svg',
+                },
+                isOpen: true
+              },
               item: 'ABOUT US',
               items: [
                 {
@@ -321,6 +342,13 @@ export const Mobile: Story = {
           columns: [
             {
               type: BlockTypes.MENU_BLOCK,
+              accordion: {
+                icons: {
+                  open: '/src/stories/assets/plus.svg',
+                  close: '/src/stories/assets/minus.svg',
+                },
+                isOpen: true
+              },
               item: 'SHOP NOW',
               items: [
                 {
@@ -357,6 +385,13 @@ export const Mobile: Story = {
           columns: [
             {
               type: BlockTypes.MENU_BLOCK,
+              accordion: {
+                icons: {
+                  open: '/src/stories/assets/plus.svg',
+                  close: '/src/stories/assets/minus.svg',
+                },
+                isOpen: true
+              },
               item: 'SHOP NOW',
               items: [
                 {
@@ -396,6 +431,13 @@ export const Mobile: Story = {
           columns: [
             {
               type: BlockTypes.MENU_BLOCK,
+              accordion: {
+                icons: {
+                  open: '/src/stories/assets/plus.svg',
+                  close: '/src/stories/assets/minus.svg',
+                },
+                isOpen: true
+              },
               item: 'SHOP NOW',
               items: [
                 {

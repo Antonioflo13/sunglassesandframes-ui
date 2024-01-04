@@ -57,9 +57,20 @@ type MenuItems = {
   callback: CallbackFunction;
 };
 
+type Icons = {
+  open: string;
+  close: string;
+}
+
+type Accordion = {
+  icons: Icons;
+  isOpen: boolean;
+}
+
 export type MenuBlock = BaseBlock & {
   items: MenuItems[];
   item: string;
+  accordion: Accordion;
 };
 
 export type CopyrightBlock = BaseBlock & {

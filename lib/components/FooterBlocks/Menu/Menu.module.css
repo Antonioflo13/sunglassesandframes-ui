@@ -1,3 +1,8 @@
 .menu-item {
     cursor: pointer;
 }
+
+.container-title-accordion {
+    display: flex;
+    justify-content: space-between;
+}
