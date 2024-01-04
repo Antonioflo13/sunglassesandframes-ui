@@ -5,6 +5,8 @@
 
 .blocks {
     display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .mobile-left {
@@ -32,4 +34,10 @@
     .desktop-right {
         justify-content: right;
     }
+
+    .row {
+        display: grid;
+        grid-auto-flow: column; 
+        margin-bottom: 40px;
+      }
 }

@@ -12,6 +12,24 @@ import { Block, BlockTypes, CopyrightBlock, CtaBlock, FooterProps, IconsBlock, L
 
 export function Footer({ blocks }: FooterProps): JSX.Element {
 
+  const gridDesktop: Block[][] = Array.from(
+    { length: Math.max(...blocks.map(block => block.position.desktop.row)) },
+    () => []
+  );
+  blocks.forEach(block => {
+    const row = block.position.desktop.row - 1;
+    gridDesktop[row].push(block);
+  });
+
+  const gridMobile: Block[][] = Array.from(
+    { length: Math.max(...blocks.map(block => block.position.mobile.row)) },
+    () => []
+  );
+  blocks.forEach(block => {
+    const row = block.position.mobile.row - 1;
+    gridMobile[row].push(block);
+  });
+
   const footerBlocks = useCallback((block: Block) => {
     switch (block.type) {
 
@@ -38,18 +56,24 @@ export function Footer({ blocks }: FooterProps): JSX.Element {
         return null;
     }
   }, []);
+
   return (
     <footer className={styles['container']}>
-      {blocks.map((block, key) => (
-        console.log('block.position.desktop.row', block.position.desktop.row),
-        <div
-          key={key}
-          className={`
-          ${styles['blocks']}
-          ${styles[`desktop-${block.position.desktop.disposition}`]} 
-          ${styles[`mobile-${block.position.mobile.disposition}`]} 
-        `}>
-          {footerBlocks(block)}
+      {gridDesktop.map((row, key) => (
+        console.log('row', row),
+        <div key={key} className={styles['row']}>
+          {row.map((block, key) => (
+            <div
+              key={key}
+              className={`
+              ${styles['blocks']}
+              ${styles[`desktop-${block.position.desktop.disposition}`]}
+              ${styles[`mobile-${block.position.mobile.disposition}`]}
+            `}
+            >
+              {footerBlocks(block)}
+            </div>
+          ))}
         </div>
       ))}
     </footer>

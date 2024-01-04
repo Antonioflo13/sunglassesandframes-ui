@@ -7,22 +7,16 @@ export enum BlockTypes {
   COPYRIGHT_BLOCK = 'COPYRIGHT_BLOCK',
 }
 
-type Disposition = 'left' | 'center' | 'right' | undefined;
+type Disposition = 'left' | 'center' | 'right';
 
-type Desktop = {
-    row: number | undefined;
-    disposition: Disposition;
-    column: number | undefined;
-}
-
-type Mobile = {
-    row: number | undefined;
-    disposition: Disposition;
+type Positions = {
+  row: number;
+  disposition: Disposition;
 }
 
 export type Position = {
-  desktop: Desktop;
-  mobile: Mobile;
+  desktop: Positions;
+  mobile: Positions;
 };
 
 type CallbackFunction = () => void;

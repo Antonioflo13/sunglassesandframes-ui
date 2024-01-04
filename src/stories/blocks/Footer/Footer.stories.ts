@@ -26,7 +26,6 @@ export const Default: Story = {
           desktop: {
             row: 1,
             disposition: 'center',
-            column: undefined
           },
           mobile: {
             row: 1,
@@ -41,12 +40,11 @@ export const Default: Story = {
         position: {
           desktop: {
             row: 2,
-            disposition: undefined,
-            column: 1
+            disposition: 'left'
           },
           mobile: {
             row: 3,
-            disposition: undefined
+            disposition: 'left'
           }
         },
         item: 'WHY US',
@@ -86,12 +84,11 @@ export const Default: Story = {
         position: {
           desktop: {
             row: 2,
-            disposition: undefined,
-            column: 2
+            disposition: 'left',
           },
           mobile: {
             row: 2,
-            disposition: undefined
+            disposition: 'left'
           }
         },
         title: 'JOIN OUR CLUB',
@@ -105,8 +102,7 @@ export const Default: Story = {
         position: {
           desktop: {
             row: 3,
-            disposition: undefined,
-            column: 1
+            disposition: 'left',
           },
           mobile: {
             row: 6,
@@ -154,8 +150,7 @@ export const Default: Story = {
         position: {
           desktop: {
             row: 3,
-            disposition: undefined,
-            column: 2
+            disposition: 'left',
           },
           mobile: {
             row: 4,
@@ -191,8 +186,7 @@ export const Default: Story = {
         position: {
           desktop: {
             row: 3,
-            disposition: undefined,
-            column: 3
+            disposition: 'left',
           },
           mobile: {
             row: 5,
@@ -232,8 +226,7 @@ export const Default: Story = {
         position: {
           desktop: {
             row: 3,
-            disposition: undefined,
-            column: 4
+            disposition: 'left',
           },
           mobile: {
             row: 6,
@@ -262,7 +255,6 @@ export const Default: Story = {
           desktop: {
             row: 4,
             disposition: 'left',
-            column: undefined
           },
           mobile: {
             row: 8,
