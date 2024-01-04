@@ -66,6 +66,11 @@ export type CopyrightBlock = BaseBlock & {
   label: string;
 };
 
+type Margin = {
+  top: number;
+  bottom: number;
+}
+
 export enum PositionType {
   LEFT = 'left',
   CENTER = 'center',
@@ -76,7 +81,7 @@ export enum PositionType {
 export type Columns = LogoBlock | CtaBlock | NewsletterBlock | IconsBlock | MenuBlock | CopyrightBlock;
 
 export type Rows = {
-  marginBottom: number;
+  margin: Margin;
   separator: boolean;
   position: PositionType;
   columns: Columns[];

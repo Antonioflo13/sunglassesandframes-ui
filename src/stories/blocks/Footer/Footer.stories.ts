@@ -22,8 +22,11 @@ export const Default: Story = {
     blocks: {
       rows: [
         {
-          marginBottom: 20,
-          separator: true,
+          margin: {
+            top: 54,
+            bottom: 19,
+          },
+          separator: false,
           position: PositionType.CENTER,
           columns: [
             {
@@ -34,7 +37,10 @@ export const Default: Story = {
           ]
         },
         {
-          marginBottom: 20,
+          margin: {
+            top: 19,
+            bottom: 50,
+          },
           separator: true,
           position: PositionType.TYPE_COLUMNS,
           columns: [
@@ -83,8 +89,11 @@ export const Default: Story = {
           ]
         },
         {
-          marginBottom: 20,
-          separator: true,
+          margin: {
+            top: 42,
+            bottom: 10,
+          },
+          separator: false,
           position: PositionType.TYPE_COLUMNS,
           columns: [
             {
@@ -203,8 +212,11 @@ export const Default: Story = {
           ]
         },
         {
-          marginBottom: 20,
-          separator: true,
+          margin: {
+            top: 10,
+            bottom: 30,
+          },
+          separator: false,
           position: PositionType.LEFT,
           columns: [
             {

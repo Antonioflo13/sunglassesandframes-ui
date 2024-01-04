@@ -51,16 +51,23 @@ export function Footer({ blocks }: FooterProps): JSX.Element {
   return (
     <footer className={styles['container']}>
       {blocks.rows.map((row, key) => (
-        console.log('row', row),
-        <div
-          key={key}
-          className={`${styles['row']} ${styles[`position-${row.position}`]}`}>
-          {row.columns.map((column, key) => (
-            <div key={key}>
-              {footerBlocks(column)}
-            </div>
-          ))}
+        <div key={key} className={styles['row-container']}>
+          {row.separator && <div className={styles['separator']} />}
+          <div
+            style={{
+              paddingBottom: row.margin.bottom,
+              paddingTop: row.margin.top
+            }}
+            className={`${styles['row']} ${styles[`position-${row.position}`]}`}
+          >
+            {row.columns.map((column, key) => (
+              <div key={key}>
+                {footerBlocks(column)}
+              </div>
+            ))}
+          </div>
         </div>
+
       ))}
     </footer>
   );
