@@ -10,7 +10,7 @@ type MenuProps = {
 export function Menu({ block }: MenuProps): JSX.Element {
 
   return (
-    <section>
+    <section className={styles['container']}>
       <Typography label={block.item} fontFamily="helvetica-regular" />
       {block.items.map((item, key) => (
         <div key={key} onClick={item.callback}>

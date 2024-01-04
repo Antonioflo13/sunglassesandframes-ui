@@ -1,6 +1,6 @@
 .container {
     background-color: #D9D9D9;
-    padding: 0px 50px;
+    padding: 0px 10px;
 }
 
 .row-container {
@@ -38,4 +38,10 @@
 .separator {
     border-bottom: 1px solid black;
     width: 100%;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0px 50px;
+    }
 }
