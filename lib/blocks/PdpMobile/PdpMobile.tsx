@@ -23,9 +23,7 @@ export const PdpMobile = ({
     setHeaderHeight(document.querySelector('nav')?.clientHeight ?? 0);
     setBottomCardHeight(document.getElementById('bottom-card')?.clientHeight ?? 0);
 
-    if (window.innerHeight && headerHeight && bottomCardHeight) {
-      setImagesSwiperHeight(window.innerHeight - (headerHeight + bottomCardHeight));
-    }
+    setImagesSwiperHeight(headerHeight + bottomCardHeight);
   }, [bottomCardHeight, headerHeight]);
 
   const memoizedCallback = useCallback(
@@ -44,7 +42,7 @@ export const PdpMobile = ({
       {products.map(product => (
         <SwiperSlide key={product.id}>
           <Swiper
-            style={{ height: imagesSwiperHeight ? `${imagesSwiperHeight}px` : 'auto' }}
+            style={{ height: `calc(100dvh - ${imagesSwiperHeight}px)` }}
             pagination={true}
             direction={'vertical'}
             loop={true}
