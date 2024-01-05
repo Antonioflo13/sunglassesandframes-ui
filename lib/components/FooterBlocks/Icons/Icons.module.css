@@ -1,0 +1,13 @@
+.container-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.container-icons-social {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-social {
+    cursor: pointer;
+}

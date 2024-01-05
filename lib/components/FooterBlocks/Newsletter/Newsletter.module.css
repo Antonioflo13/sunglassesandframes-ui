@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    margin-bottom: 10px;
+}
+
+.form-email {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.input-email {
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    border: solid 1px black;
+}
+
+.button-email {
+    display: block;
+    background-color: black;
+    color: white;
+    width: 60px;
+    height: 25px;
+    align-self: center;
+    
+}
+
+.description {
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) { 
+    
+    .container {
+        width: 300px;
+    }
+
+    .input-email {
+        width: 220px;
+    }    
+}

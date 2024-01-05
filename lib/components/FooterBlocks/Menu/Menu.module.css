@@ -1,0 +1,18 @@
+.menu-item {
+    cursor: pointer;
+}
+
+.container-title-accordion {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-accordion {
+    display: block;
+}
+
+@media (min-width: 768px) { 
+  .container-accordion {
+    display: none;
+  }
+}
